@@ -15,6 +15,23 @@ dieselbe wie bei TestFlight.)
 
 Neueste Version zuoben. Build-Nummer wie bei TestFlight.
 
+### 0.9.122 (Build 221)
+
+- **Ein totes Eltern-iPhone loswerden.** Auf dem Kinder-iPhone unter
+  Eltern-Code → „Gerät“ → „Eltern-iPhones“ steht zu jedem gekoppelten
+  Eltern-iPhone, wann zuletzt etwas von ihm kam („Zuletzt gemeldet: …“ oder
+  „Noch nichts empfangen“). So fällt ein Eltern-iPhone auf, das es nicht mehr
+  gibt (App gelöscht, Handy weg).
+- **Einzeln entfernen:** Einen Eintrag nach links wischen → „Entfernen“, dann
+  bestätigen. Ist es nicht das letzte Eltern-iPhone, bleiben alle Regeln und
+  die anderen Eltern-iPhones bestehen. Ist es das letzte, gilt wie bisher:
+  Das Kinder-iPhone wird komplett entkoppelt und alle Sperren fallen.
+- **Eltern-iPhone neu installiert:** Wer die App auf dem Eltern-iPhone löscht
+  und neu einrichtet, startet jetzt wirklich frisch – die alten Kopplungen
+  aus dem Schlüsselbund werden bei der Rollenwahl verworfen. Danach wie bei
+  einem weiteren Elternteil: auf dem Kinder-iPhone „Weiteres Eltern-iPhone
+  koppeln“, dann den alten Eintrag dort wegwischen.
+
 ### 0.9.121 (Build 220)
 
 - **Alle Limits an einem Ort.** Auf der Kinderseite ganz unten steht jetzt die
