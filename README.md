@@ -15,6 +15,17 @@ dieselbe wie bei TestFlight.)
 
 Neueste Version zuoben. Build-Nummer wie bei TestFlight.
 
+### 0.9.124 (Build 223)
+
+- **Harmlose Apps kommen durch die Internetsperre.** Apps, die ihr auf ihrer
+  Seite als harmlos markiert habt („Immer erlaubt“), behalten ihre
+  Verbindung, auch wenn „Ganzes Internet sperren“ gerade gilt – so wie sie
+  schon durch jede andere Sperre gehen. Prüfen: eine App als harmlos
+  markieren, Internetsperre setzen, die App lädt weiter, andere nicht.
+- Im Editor der Internetsperre („Internet“-Kachel antippen) steht das jetzt
+  unten: harmlose Apps, iCloud, Push und familydevice bleiben erreichbar, eine
+  erlaubte Anfrage lässt das Internet so lange durch.
+
 ### 0.9.123 (Build 222)
 
 - **Mehr Zeit heißt das ganze iPhone.** Wird die Bildschirmzeit genehmigt
