@@ -15,6 +15,25 @@ dieselbe wie bei TestFlight.)
 
 Neueste Version zuoben. Build-Nummer wie bei TestFlight.
 
+### 0.9.121 (Build 220)
+
+- **Alle Limits an einem Ort.** Auf der Kinderseite ganz unten steht jetzt die
+  Zeile „Erweiterte Einstellungen“ (mit dem Status als Wert, orange wenn dort
+  etwas ansteht) – das Zahnrad in der Navigationsleiste ist weg.
+- **Tageslimits:** Die Sperre fürs ganze Internet zu bestimmten Zeiten (bisher
+  versteckt unter Netzwerk → „Ganzes Internet sperren …“) ist eine Kachel
+  „Internet“ neben den App-Limits – rot, solange sie gerade gilt, darunter das
+  Zeitfenster. Antippen ändert die Zeiten.
+- **„+ Limit“ ist die eine Stelle, an der jedes Limit beginnt:** Bildschirmzeit,
+  Apps, eine Gruppe, „Internet zu bestimmten Zeiten …“ und unter „Erweiterte
+  Limits“ ein Zeitplan, eine Freizeit oder eine Wenn-Dann-Regel.
+- Die Zeilen unter den Kacheln heißen „Erweiterte Limits“ (Zeitpläne,
+  Freizeiten, Wenn-Dann, Immer erlaubt); Orte, Apps und Sicherheit stehen
+  getrennt darunter.
+- 41 Texte, die bisher nie in den Übersetzungskatalog kamen (etwa in den
+  Apps-Listen und beim Anpingen), sind jetzt drin; die Übersetzungen folgen mit
+  dem nächsten Build. Bis dahin sind diese Texte auf Englisch noch deutsch.
+
 ### 0.9.120 (Build 219)
 
 - **Eltern und Kinder strikt getrennt.** Alles zum eigenen Eltern-iPhone steckt
