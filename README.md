@@ -15,6 +15,36 @@ dieselbe wie bei TestFlight.)
 
 Neueste Version zuoben. Build-Nummer wie bei TestFlight.
 
+### 0.9.123 (Build 222)
+
+- **Mehr Zeit heißt das ganze iPhone.** Wird die Bildschirmzeit genehmigt
+  („Mehr Zeit anfragen“ → „Erlauben“) oder von den Eltern verlängert, sind für
+  diese Zeit alle Apps frei – auch die, die ein Zeitplan wie die Nachtruhe
+  gerade sperrt oder ausblendet, und auch die mit eigenem aufgebrauchtem
+  Tageslimit. Bisher fiel nur die Sperre über alles, die anderen Sperren
+  blieben. Prüfen: Nachtruhe mit „Ausblenden“ aktiv, Bildschirmzeit
+  aufgebraucht, Anfrage erlauben → die Apps sind wieder auf dem
+  Home-Bildschirm, nach Ablauf wieder weg.
+- **Zeitpläne in der Limitübersicht.** Unter „Erweiterte Einstellungen“ heißt
+  die Kachel-Übersicht jetzt „Limits“; neben Bildschirmzeit, App-Limits und
+  Internet steht jeder Zeitplan als Kachel – „Nachtruhe“ mit Mond, rot mit
+  „bis 07:00“, solange er gilt, sonst die Uhrzeiten, grau „Aus“, wenn er
+  abgeschaltet ist. Antippen öffnet den Zeitplan. Die Zeile „Zeitpläne“ unter
+  „Erweiterte Limits“ gibt es weiterhin.
+- **Ausgeblendete Apps anfragen.** Ausgeblendete Apps haben keinen
+  Sperrbildschirm – deshalb steht auf der Kinder-Startseite in familydevice bei
+  einer ausgeblendeten Gruppe „Ausgeblendet bis … · Nachtruhe“ und ein Knopf
+  „Mehr Zeit anfragen“ bzw. „Freigabe anfragen“.
+- **Internet anfragen.** Ist das ganze Internet zu bestimmten Zeiten gesperrt,
+  steht es auf der Kinder-Startseite als Zeile „Internet“ mit „Zeit anfragen“.
+  In Safari zeigt die Sperrseite von iOS einen Knopf „Zeit anfragen“, der
+  familydevice mit dieser Anfrage öffnet – bitte auf einem echten Kinder-iPhone
+  testen, der Knopf öffnet einen familydevice://-Link. Erlauben die Eltern,
+  geht das Internet bis zum Ablauf durch (ebenso bei „Alles frei“ oder
+  genehmigter Bildschirmzeit); die Eltern sehen auf der Kachel „Internet“ dann
+  „frei bis …“. Andere Apps als Safari bekommen keine Seite, sie laufen nach
+  der Freigabe einfach wieder.
+
 ### 0.9.122 (Build 221)
 
 - **Ein totes Eltern-iPhone loswerden.** Auf dem Kinder-iPhone unter
