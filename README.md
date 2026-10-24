@@ -15,6 +15,25 @@ dieselbe wie bei TestFlight.)
 
 Neueste Version zuoben. Build-Nummer wie bei TestFlight.
 
+### 0.9.125 (Build 224)
+
+- **Nachgezogen nach einer Durchsicht von 0.9.123/0.9.124.** Eine Freigabe
+  fürs Internet öffnet nur die Internetsperre – Apps und Websites einer
+  gesperrten Gruppe (Nachtruhe, Tageslimit) bleiben zu. Hat eine Website ein
+  eigenes Zeitfenster (etwa YouTube 20–07 Uhr), gilt das auch, wenn das
+  Internet gerade freigegeben ist.
+- Erlauben die Eltern vor Beginn der Internetsperre etwas, das sie aufhebt
+  („Alles frei“, Bildschirmzeit genehmigt), weiß der Filter das auch, wenn
+  das Zeitfenster dann beginnt – vorher konnte Safari in dem Fall die
+  Sperrseite zeigen, obwohl nichts gesperrt war.
+- Genehmigte Bildschirmzeit gibt auch Apps frei, die in keiner Gruppe sind.
+- Solange alles frei ist, steht überall „Alles frei bis …“ – vorher blieb
+  oben „Fokus bis …“ oder „Ausgeblendet bis …“ stehen, während alle Zeilen
+  grün waren.
+- Der Anfrage-Knopf bei ausgeblendeten Apps und beim Internet fehlt, wenn
+  er nichts bringen kann: iPhone bei iCloud abgemeldet oder
+  Bildschirmzeit-Zugriff weg.
+
 ### 0.9.124 (Build 223)
 
 - **Harmlose Apps kommen durch die Internetsperre.** Apps, die ihr auf ihrer
