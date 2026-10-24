@@ -15,6 +15,21 @@ dieselbe wie bei TestFlight.)
 
 Neueste Version zuoben. Build-Nummer wie bei TestFlight.
 
+### 0.9.126 (Build 225)
+
+- **„Zeit anfragen“ auf der Safari-Sperrseite geht über die Website.** Ist
+  das ganze Internet gesperrt und das Kind öffnet in Safari eine Seite,
+  führt der Knopf auf der iOS-Sperrseite jetzt zu familydevice.com/anfrage
+  (in der Sprache des iPhones). Diese Seite öffnet sofort familydevice mit
+  der Anfrage fürs Internet und hat einen großen Knopf dafür, falls iOS erst
+  nachfragt. familydevice.com ist von der Internetsperre immer ausgenommen,
+  wie Apples Domains. Prüfen auf einem echten Kinder-iPhone: Internetsperre
+  aktiv, in Safari eine beliebige Seite öffnen → Sperrseite → „Zeit
+  anfragen“ → familydevice öffnet die Anfrage „Internet“.
+- Die Übersetzungen der neuen Texte (Limits, Zeit anfragen, Ausgeblendet
+  bis, Mehr Zeit anfragen, die Seite /anfrage) laufen; bis sie da sind, sind
+  diese Texte in allen Sprachen deutsch.
+
 ### 0.9.125 (Build 224)
 
 - **Nachgezogen nach einer Durchsicht von 0.9.123/0.9.124.** Eine Freigabe
