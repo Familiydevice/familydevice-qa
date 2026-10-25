@@ -22,8 +22,8 @@ Neueste Version zuoben. Build-Nummer wie bei TestFlight.
   Zeitleiste der Nutzung alles eine Stunde verschoben: eine Viertelstunde um
   16:30 stand bei 15:30, die Nachtruhe „bis 07:00“ endete um 06:00. Jetzt
   steht alles bei seiner Uhrzeit. Die Sperren selbst waren nicht betroffen.
-  Prüfen: Kind antippen → Nutzung → Zeitleiste von heute; die Nachtruhe
-  endet um 07:00 und beginnt um 21:00 (bzw. eure eingestellten Zeiten).
+  Prüfen: die Nutzungs-Zeitleiste eines Kindes für heute ansehen; die
+  Nachtruhe beginnt und endet bei den eingestellten Uhrzeiten.
 
 ### 0.9.126 (Build 225)
 
