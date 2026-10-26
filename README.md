@@ -15,6 +15,20 @@ dieselbe wie bei TestFlight.)
 
 Neueste Version zuoben. Build-Nummer wie bei TestFlight.
 
+### 0.9.135
+
+- **Einrichtung sagt, warum – und was es kostet.** Jede Frage in der
+  Einrichtung (Mitteilungen, Standort, Bewegung, Netzwerkfilter), der Schritt
+  „Bildschirmzeit-Zugriff erlauben“ und die Kopplungsseiten („Lokales
+  Netzwerk“) zeigen jetzt eine grüne Plus- und eine orange Minus-Zeile.
+  Prüfen: Einrichtung auf Kinder- und Eltern-iPhone durchgehen; die Zeilen
+  stehen unter jeder Frage, nichts wird mit „…“ abgeschnitten.
+- **Aufenthaltsort startet nach Hin und Zurück neu.** War das Kind seit
+  Donnerstag zu Hause, ist am Sonntag kurz weg und wieder da, stand trotzdem
+  „zu Hause seit Donnerstag“. Jetzt zählt die Zeit ab der Rückkehr.
+  Prüfen: mit Ortsverlauf kurz das Zuhause verlassen und zurückkommen; auf
+  der Kinderseite steht „seit“ mit der Uhrzeit der Rückkehr.
+
 ### 0.9.134
 
 - **Soziale Netzwerke: nur freigegebene Profile.** Neue Zeile „Soziale
@@ -90,6 +104,25 @@ Neueste Version zuoben. Build-Nummer wie bei TestFlight.
   Prüfen: einen Schalter einschalten und eine bekannte Seite der Kategorie
   aufrufen – sie lädt nicht; Schalter aus – sie lädt wieder. Eine Domain unter
   „Immer erlauben“ geht trotz Liste durch.
+
+### 0.9.129
+
+- **Anfragen mit Wischen beantworten.** Offene Anfragen auf der Familienseite
+  und der Kinderseite: nach rechts wischen erlaubt für die angefragte Dauer,
+  nach links lehnt ab. Antippen öffnet weiter das Blatt (kürzere Dauer,
+  Notiz). Die Überschriften „Offene Anfragen“/„Anfragen“ sind weg.
+  Prüfen: vom Kinder-iPhone eine Anfrage schicken, auf dem Eltern-iPhone
+  wischen; das Kind bekommt die Antwort.
+
+### 0.9.128 (Build 231)
+
+- **VPN auf dem Eltern-iPhone erst nach Einschalten.** Das Eltern-iPhone
+  startet die Netzwerk-Messung (VPN) nicht mehr von selbst, und die Frage
+  „Werbung & Tracker blockieren?“ beim ersten Start ist weg. Eingeschaltet
+  wird unter Profil → „VPN & Filter“ oder auf der Netzwerk-Seite; wer es
+  schon an hatte, behält es.
+  Prüfen: App frisch installieren – kein VPN-Hinweis von iOS; Schalter an –
+  iOS fragt nach dem VPN.
 
 ### 0.9.127 (Build 229)
 
