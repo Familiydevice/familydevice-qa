@@ -15,6 +15,19 @@ dieselbe wie bei TestFlight.)
 
 Neueste Version zuoben. Build-Nummer wie bei TestFlight.
 
+### 0.9.130
+
+- **Neue Sperrlisten: Pornografie, Pillen & Drogen, Glücksspiel & Poker.**
+  Neben „Werbung & Tracker“ und „Schadsoftware & Phishing“ gibt es drei neue
+  Schalter. Sie sperren solche Seiten in jeder App, nicht nur in Safari.
+  Wo: Kind → Zahnrad → Filter (unter „Werbung & Tracker blockieren“), auf der
+  Netzwerk-Seite des Kindes unter „Regeln“, und auf dem Eltern-iPhone unter
+  Profil → „VPN & Filter“ (nur mit eingeschaltetem VPN). Ein neu angelegtes
+  Kind hat alle drei an, bestehende Kinder nicht.
+  Prüfen: einen Schalter einschalten und eine bekannte Seite der Kategorie
+  aufrufen – sie lädt nicht; Schalter aus – sie lädt wieder. Eine Domain unter
+  „Immer erlauben“ geht trotz Liste durch.
+
 ### 0.9.127 (Build 229)
 
 - **Nutzungs-Zeitleiste an Tagen mit Zeitumstellung.** Am Tag der Umstellung
