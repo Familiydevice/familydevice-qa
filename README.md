@@ -15,6 +15,20 @@ dieselbe wie bei TestFlight.)
 
 Neueste Version zuoben. Build-Nummer wie bei TestFlight.
 
+### 0.9.132
+
+- **Neue Sperrliste: VPN, Proxy & Tor.** Fünfter Schalter neben den anderen
+  Sperrlisten (Kind → „Erweiterte Limits“ → „Sicherheit“, Netzwerk →
+  „Regeln“, Eltern-iPhone → „VPN & Filter“). Er sperrt VPN-Dienste,
+  Web-Proxys, verschlüsseltes DNS, iCloud Privat-Relay und torproject.org;
+  auf dem Kinder-iPhone zusätzlich alle Verbindungen ins Tor-Netzwerk. Ein neu
+  angelegtes Kind hat ihn an.
+  Prüfen: einschalten, nordvpn.com oder torproject.org aufrufen – lädt nicht.
+  Mit installiertem Onion Browser (App Store kurz freigeben) auf dem
+  Kinder-iPhone: Tor verbindet sich nicht. Ist iCloud Privat-Relay an, meldet
+  Safari, dass es nicht verfügbar ist – das ist gewollt.
+- **Pornografie-Liste sperrt auch Suchmaschinen ohne sichere Suche.**
+
 ### 0.9.131
 
 - **Werbefilter fängt auch Pop-ups.** „Werbung & Tracker blockieren“ sperrt
