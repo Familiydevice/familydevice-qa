@@ -15,6 +15,19 @@ dieselbe wie bei TestFlight.)
 
 Neueste Version zuoben. Build-Nummer wie bei TestFlight.
 
+### 0.9.131
+
+- **Werbefilter fängt auch Pop-ups.** „Werbung & Tracker blockieren“ sperrt
+  jetzt zusätzlich Pop-up- und Weiterleitungswerbung (rund 48.000 Domains
+  mehr). Prüfen: mit eingeschaltetem Werbefilter auf Seiten surfen, die sonst
+  Fenster oder Weiterleitungen öffnen.
+- **Vierte Sperrliste: Raubkopien & illegales Streaming.** Neuer Schalter
+  neben Pornografie, Pillen & Drogen und Glücksspiel & Poker, an denselben
+  drei Stellen (Kind → „Erweiterte Limits“ → „Sicherheit“, Netzwerk →
+  „Regeln“, Eltern-iPhone → „VPN & Filter“). Ein neu angelegtes Kind hat ihn
+  an. Prüfen: einschalten, eine bekannte illegale Streamingseite aufrufen –
+  sie lädt nicht.
+
 ### 0.9.130
 
 - **Neue Sperrlisten: Pornografie, Pillen & Drogen, Glücksspiel & Poker.**
