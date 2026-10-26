@@ -15,6 +15,29 @@ dieselbe wie bei TestFlight.)
 
 Neueste Version zuoben. Build-Nummer wie bei TestFlight.
 
+### 0.9.134
+
+- **Soziale Netzwerke: nur freigegebene Profile.** Neue Zeile „Soziale
+  Netzwerke“ beim Kind, gleich unter „Sicherheit“: ein Schalter je Netzwerk
+  (Instagram, TikTok, YouTube, X, Threads, Facebook, Snapchat, Reddit, Twitch,
+  Pinterest) und darunter die freigeschalteten Profile (per @name oder Link
+  hinzufügen, wegwischen zum Entfernen). Ist ein Netzwerk an, verschwindet
+  seine App vom Kinder-iPhone; in Safari öffnen sich nur freigeschaltete
+  Profile. Alles andere – fremde Profile, Reels und Videos, Feed, Suche,
+  Chats – zeigt Safaris Sperrseite mit „Profil freischalten lassen“. Der Knopf
+  öffnet familydevice direkt auf dem iPhone (keine Website dazwischen), die
+  App findet bei einem Reel oder Video heraus, wem es gehört, und schickt die
+  Anfrage. Bei den Eltern: „Leo möchte Instagram @name sehen“ – „Ansehen“
+  öffnet das Profil, Erlauben (Wischen oder im Blatt) schaltet es dauerhaft frei.
+  Prüfen (nur auf echten iPhones, der Filter läuft nicht im Simulator):
+  Instagram einschalten, auf dem Kinder-iPhone in Safari
+  instagram.com/reel/DeNiNA7tSxM/ öffnen – Sperrseite; „Profil freischalten
+  lassen“ tippen – familydevice öffnet sich mit „Instagram @joridemilens“;
+  senden, auf dem Eltern-iPhone erlauben, Link erneut öffnen – lädt. Ein
+  anderes Profil und instagram.com/explore bleiben gesperrt; die Instagram-App
+  ist vom Home-Bildschirm verschwunden. Im Simulator nur die Zeile „Soziale
+  Netzwerke“ und das Hinzufügen/Entfernen von Profilen ansehen.
+
 ### 0.9.133
 
 - **Tor auch über Brücken gesperrt.** Mit „VPN, Proxy & Tor blockieren“
