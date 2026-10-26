@@ -15,6 +15,18 @@ dieselbe wie bei TestFlight.)
 
 Neueste Version zuoben. Build-Nummer wie bei TestFlight.
 
+### 0.9.133
+
+- **Tor auch über Brücken gesperrt.** Mit „VPN, Proxy & Tor blockieren“
+  verschwinden auf dem Kinder-iPhone 48 Tor-, VPN- und Proxy-Apps vom
+  Home-Bildschirm (Onion Browser, Orbot, OrNET, NordVPN, Proton VPN, Psiphon,
+  WireGuard, Shadowrocket, Opera, Aloha …), und ihre Verbindungen werden
+  abgebrochen – auch die getarnten Tor-Brücken (obfs4, Snowflake).
+  Prüfen: App Store kurz freigeben, Onion Browser oder Orbot installieren,
+  Schalter an – die App verschwindet vom Home-Bildschirm; Schalter aus – sie
+  ist wieder da. Mit Schalter an und schon laufendem Orbot-VPN: kein Internet
+  über Orbot.
+
 ### 0.9.132
 
 - **Neue Sperrliste: VPN, Proxy & Tor.** Fünfter Schalter neben den anderen
