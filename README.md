@@ -24,6 +24,44 @@ Für 0.9.127 wurde der QA-Download von Build 229 auf Build 230 aktualisiert.
 Die Versions- und Build-Anzeige des verwendeten Downloads ist für einen
 Fehlerbericht maßgeblich.
 
+### 0.9.151 (Build 258)
+
+_Der Build wird im [CI-Lauf 258](https://github.com/Familiydevice/familydevice/actions/runs/40591072369) erstellt. Der [Simulator-Download v0.9.151](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.151) erscheint nach erfolgreicher Veröffentlichung. Diese Version bündelt alle aktuellen Korrekturen an Sperren, Anfragen und der Entfernung des Eltern-VPN._
+
+- **Eine neue Sofortsperre gilt auch nach einer Freigabe.** Auf der
+  Eltern-Startseite zuerst „15 Minuten alles erlauben“ und danach
+  „1 Stunde sperren“ oder „Ausblenden“ ausführen. Die neuere Sperre muss
+  sofort gelten, auch wenn die frühere Freigabe noch läuft oder verspätet
+  ankommt. Eine bewusst danach erteilte Freigabe bleibt möglich; nach
+  deren Ablauf gilt die verbleibende Sperre wieder. Bereits genehmigte
+  Anfragen bleiben im Verlauf sichtbar.
+  Prüfen: beide Reihenfolgen und die Anzeige auf Eltern- und Kinderseite
+  in der Simulation kontrollieren; die tatsächliche App-Sperre und das
+  Ausblenden zusätzlich auf zwei dafür vorgesehenen echten Test-iPhones.
+- **Erreichte Tageslimits bleiben erhalten.** Gleichzeitige Aktualisierungen
+  der Bildschirmzeit und einzelner Apps dürfen einen erreichten Grenzwert
+  nicht mehr überschreiben. Auch App und Erweiterungen stimmen das Setzen
+  der Sperren miteinander ab.
+  Prüfen auf einem echten Kinder-Test-iPhone: ein Tageslimit erreichen,
+  mehrere geschützte Apps öffnen und familydevice zwischendurch neu
+  öffnen. Die Apps müssen gesperrt bleiben; familydevice muss für
+  Freigabeanfragen erreichbar sein. Die Netzsperre getrennt prüfen.
+- **„Mehr Zeit anfragen“ reagiert sichtbar.** Auf dem familydevice-
+  Sperrbildschirm einer geschützten App öffnet der Button ab iOS 26.5
+  familydevice direkt und übergibt die Anfrage. Auf älteren iOS-Versionen
+  bestätigt der Sperrbildschirm die vorgemerkte beziehungsweise bereits
+  laufende Anfrage oder erklärt die Wartezeit nach einer Ablehnung.
+  Wiederholtes Tippen darf keine doppelten Anfragen erzeugen.
+  Prüfen: Anfrage senden, auf der Elternseite empfangen und entscheiden;
+  danach den Status beim Kind kontrollieren. Auch ohne sichtbaren
+  Mitteilungsbanner testen. Der Ablauf innerhalb der App ist im Simulator
+  prüfbar; Apples echten Sperrbildschirm auf einem echten Test-iPhone prüfen.
+- **Entfernung des Eltern-VPN abgeschlossen.** Die verbliebenen Bestandteile
+  der früheren VPN-Messung auf dem Eltern-iPhone sind aus dem App-Build
+  entfernt. Netzwerkdetails des Kindergeräts bleiben erreichbar.
+  Prüfen: Eltern-App öffnen, „Meine Nutzung“ und die Netzwerkdetails des
+  Kindes ansehen; es darf kein Eltern-VPN eingerichtet oder gestartet werden.
+
 ### 0.9.150 (Build 255)
 
 _Der Build wird im [CI-Lauf 255](https://github.com/Familiydevice/familydevice/actions/runs/40571835819) erstellt. Der Simulator-Download erscheint nach erfolgreicher Veröffentlichung. Dieser Stand enthält auch die Kopplungskorrekturen aus 0.9.148 und 0.9.149._
