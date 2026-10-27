@@ -24,6 +24,38 @@ Für 0.9.127 wurde der QA-Download von Build 229 auf Build 230 aktualisiert.
 Die Versions- und Build-Anzeige des verwendeten Downloads ist für einen
 Fehlerbericht maßgeblich.
 
+### 0.9.149 (Build 254)
+
+_Der Build wird im [CI-Lauf 254](https://github.com/Familiydevice/familydevice/actions/runs/40566519753) erstellt. Der Simulator-Download erscheint nach erfolgreicher Veröffentlichung. Dieser Stand enthält auch die WLAN-Korrektur aus 0.9.148._
+
+- **WLAN und QR-Code sind zwei gleichzeitige Wege.** Unter „Mit
+  Eltern-iPhone verbinden“ erklärt das Kinder-iPhone jetzt, dass es auf
+  das suchende Eltern-iPhone wartet. Die WLAN-Bereitschaft steht oberhalb
+  von „Alternativ per QR-Code verbinden“. Auf dem Eltern-iPhone erklärt
+  „Kinder-iPhone hinzufügen“, wo der QR-Code zu finden ist und dass dafür
+  iCloud, aber kein gemeinsames WLAN nötig ist.
+  Prüfen: beide Kopplungsseiten öffnen und die Anleitung lesen; auf zwei
+  echten Test-iPhones sowohl die Geräteliste als auch den QR-Weg testen.
+- **Netzwerkfreigabe wird beim Koppeln geprüft.** Die Seite prüft den
+  Zugriff auf „Lokales Netzwerk“. Nach einer früheren Ablehnung gibt es
+  „Einstellungen öffnen“; zurück in der App wird erneut geprüft.
+  Bei bestätigter Freigabe verschwindet der Freigabehinweis vollständig.
+  Prüfen auf echten Test-iPhones: erstmals erlauben, ablehnen und später
+  in den Einstellungen einschalten. Danach muss die Kopplung weitergehen.
+  Im Simulator steht ausdrücklich, dass dort keine Freigabeanfrage kommt.
+  Echtes Gerät erforderlich: die echte iOS-Abfrage und Geräteverbindung
+  sind durch die Simulation nicht nachgewiesen.
+- **Apple-Einstellungen Schritt für Schritt.** „Schutz prüfen“ führt
+  zuerst durch den Bildschirmzeit-Code und danach durch die Kaufanfrage
+  auf dem Eltern-iPhone. Beide Schritte haben Apples Anleitung und die
+  ausdrückliche Bestätigung „In iOS eingerichtet – von mir bestätigt“.
+  Die App erklärt, dass sie diese Apple-Einstellungen nicht selbst öffnen,
+  setzen oder auslesen kann. Die automatischen Sperren lassen sich aufklappen.
+  Prüfen in der Simulation: erst den Code bestätigen, dann muss der zweite
+  Schritt erscheinen. „Weiter zum Verbinden“ bleibt bis zur zweiten
+  Bestätigung gesperrt. Die echten Einstellungen gesondert auf dafür
+  vorgesehenen Test-iPhones prüfen.
+
 ### 0.9.148 (Build 253)
 
 _Der Build wird im [CI-Lauf 253](https://github.com/Familiydevice/familydevice/actions/runs/40564027134) erstellt. Der Simulator-Download erscheint nach erfolgreicher Veröffentlichung._
