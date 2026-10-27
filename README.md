@@ -24,6 +24,47 @@ Für 0.9.127 wurde der QA-Download von Build 229 auf Build 230 aktualisiert.
 Die Versions- und Build-Anzeige des verwendeten Downloads ist für einen
 Fehlerbericht maßgeblich.
 
+### 0.9.150 (Build 255)
+
+_Der Build wird im [CI-Lauf 255](https://github.com/Familiydevice/familydevice/actions/runs/40571835819) erstellt. Der Simulator-Download erscheint nach erfolgreicher Veröffentlichung. Dieser Stand enthält auch die Kopplungskorrekturen aus 0.9.148 und 0.9.149._
+
+- **Limits direkt auf der Startseite.** Auf der Eltern-Startseite beim
+  Kind stehen die Tageslimits jetzt neben Anfragen und Aktivität. Ein
+  Antippen öffnet die gewohnte Bearbeitung.
+  Prüfen: ein Limit ändern, schließen und kontrollieren, dass der neue
+  Wert direkt auf der Startseite steht.
+- **Anfragen durch Wischen bearbeiten.** Auf dem Eltern-iPhone bietet
+  Wischen nach rechts bei offenen Anfragen „Annehmen“, nach links
+  „Ablehnen“. Erledigte Einträge lassen sich nach links mit „Löschen“ aus
+  dem Verlauf entfernen; der Knopf darunter blendet sie wieder ein.
+  Das Löschen gilt nur für den Verlauf auf diesem iPhone und ändert keine
+  Entscheidung, laufende Freigabe oder Wartezeit nach einer Ablehnung.
+  Prüfen: annehmen, ablehnen, einen erledigten Eintrag löschen, die App
+  neu öffnen und wiederherstellen. Auf dem Kinder-iPhone dürfen eigene
+  offene Anfragen keine Annehmen- oder Ablehnen-Aktion haben.
+- **Limit-Zählung und erneutes Sperren korrigiert.** Die für Anfragen
+  weiter erreichbare familydevice-App wird beim Bildschirmzeit-Zähler
+  über dieselbe dauerhafte Ausnahme berücksichtigt wie bei der Sperre.
+  Auch eine wiederholte, bereits gespeicherte Limitmeldung setzt die
+  Sperre erneut. Die gemeldete Nutzung wird nicht künstlich auf das
+  Tageslimit gekürzt.
+  Prüfen auf einem dafür vorgesehenen echten Kinder-iPhone: ein festes
+  Tageslimit ohne Zusatzzeit erreichen und anschließend geschützte Apps
+  öffnen. Sie müssen gesperrt sein; familydevice muss für eine Anfrage
+  erreichbar bleiben. Nutzung der eigenen App und Änderungen der
+  Zählerstände getrennt beobachten.
+  **Echtes Gerät erforderlich:** Ein Simulator-Test belegt keine echte
+  Screen-Time-Sperre. Die konkrete Ursache des gemeldeten Falls mit
+  4 Stunden 15 Minuten bei einem 3-Stunden-Limit ist damit noch nicht
+  auf dem betroffenen Gerät nachgewiesen.
+- **Apple-Auszeit im Einrichtungsassistenten.** Der Assistent führt nach
+  Bildschirmzeit-Code und Kaufanfrage auch durch Apples zusätzliche
+  Auszeit. Er ist zusätzlich in den Einstellungen erreichbar und erklärt,
+  welche Apple-Einstellungen die Eltern selbst prüfen müssen.
+  Prüfen: Die drei Schritte nacheinander bestätigen; erst danach darf
+  der Abschlussknopf aktiv sein. Die Häkchen sind Bestätigungen der
+  Eltern und ändern keine iOS-Einstellung.
+
 ### 0.9.149 (Build 254)
 
 _Der Build wird im [CI-Lauf 254](https://github.com/Familiydevice/familydevice/actions/runs/40566519753) erstellt. Der Simulator-Download erscheint nach erfolgreicher Veröffentlichung. Dieser Stand enthält auch die WLAN-Korrektur aus 0.9.148._
