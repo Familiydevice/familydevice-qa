@@ -24,6 +24,24 @@ Für 0.9.127 wurde der QA-Download von Build 229 auf Build 230 aktualisiert.
 Die Versions- und Build-Anzeige des verwendeten Downloads ist für einen
 Fehlerbericht maßgeblich.
 
+### 0.9.148 (Build 253)
+
+_Der Build wird im [CI-Lauf 253](https://github.com/Familiydevice/familydevice/actions/runs/40564027134) erstellt. Der Simulator-Download erscheint nach erfolgreicher Veröffentlichung._
+
+- **Nach dem Entkoppeln wieder über WLAN koppeln.** Die direkte Kopplung
+  konnte bei „Verbinde …“ hängen bleiben. Die Verbindung bleibt jetzt bis
+  zum Vergleichscode bestehen; auch das Bestätigen des Codes darf länger
+  als 15 Sekunden dauern.
+  Prüfen auf zwei echten Test-iPhones: entkoppeln und das Kinder-iPhone
+  erneut bis „Mit Eltern-iPhone verbinden“ einrichten. Auf dem Eltern-iPhone
+  „Kinder-iPhone hinzufügen“ öffnen und den Namen des Kinder-iPhones in der
+  Liste antippen. Beide Geräte müssen denselben sechsstelligen Code zeigen.
+  Vor dem Bestätigen mindestens 20 Sekunden warten, dann auf beiden Geräten
+  bestätigen und mit „Weiter“ abschließen. Anschließend eine Regel ändern
+  und ihre Ankunft beim Kind prüfen. Auch Abbrechen und erneutes Koppeln
+  sowie die Kopplung per QR-Code prüfen. Echtes Gerät erforderlich;
+  diese Verbindungen sind durch die Simulation nicht nachgewiesen.
+
 ### 0.9.147 (Build 251)
 
 _Simulator-Download: [v0.9.147](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.147)._
