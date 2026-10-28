@@ -24,6 +24,25 @@ Für 0.9.127 wurde der QA-Download von Build 229 auf Build 230 aktualisiert.
 Die Versions- und Build-Anzeige des verwendeten Downloads ist für einen
 Fehlerbericht maßgeblich.
 
+### 0.9.152 (Build 260)
+
+_Der Build wird im [CI-Lauf 260](https://github.com/Familiydevice/familydevice/actions/runs/40722304662) erstellt. Nach erfolgreicher Veröffentlichung ersetzt der [Simulator-Download v0.9.152](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.152) den bisherigen Build 259. Die Versionsnummer bleibt gleich; unter „Einstellungen → Über“ muss Build 260 stehen._
+
+- **Wiederholte Abstürze im Hintergrund korrigiert.** Das Kinder-iPhone
+  soll beim automatischen Aktualisieren der Bildschirmzeit-Regeln nicht
+  mehr wiederholt eine Absturzmeldung zeigen, obwohl familydevice nicht
+  erneut geöffnet wurde. Betroffen waren Meldungen von einem iPhone 12
+  mit iOS 18.2.
+  **Echtes Gerät erforderlich:** Auf dem dafür vorgesehenen Kinder-
+  Test-iPhone Build 260 öffnen, bei aktiven Tageslimits in eine andere App
+  wechseln und das Gerät zwischendurch sperren. Währenddessen auf der
+  Elternseite ein Limit ändern und eine Freigabe erteilen. Mindestens
+  35 Minuten beobachten: keine neue Absturzmeldung; Änderungen und der
+  Ablauf einer Freigabe müssen weiterhin die vorgesehenen Sperren setzen.
+  Ein erreichtes Tageslimit muss auch nach erneutem Öffnen von familydevice
+  erhalten bleiben. Der Simulator kann diese Hintergrund-Abstürze und
+  die echten Bildschirmzeit-Sperren nicht bestätigen.
+
 ### 0.9.152 (Build 259)
 
 _Der Build wird im [CI-Lauf 259](https://github.com/Familiydevice/familydevice/actions/runs/40611970146) erstellt. Der [Simulator-Download v0.9.152](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.152) erscheint nach erfolgreicher Veröffentlichung. Für den Gerätevergleich Eltern- und Kinder-App auf diese Version aktualisieren._
