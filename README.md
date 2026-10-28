@@ -24,6 +24,44 @@ Für 0.9.127 wurde der QA-Download von Build 229 auf Build 230 aktualisiert.
 Die Versions- und Build-Anzeige des verwendeten Downloads ist für einen
 Fehlerbericht maßgeblich.
 
+### 0.9.152 (Build 259)
+
+_Der Build wird im [CI-Lauf 259](https://github.com/Familiydevice/familydevice/actions/runs/40611970146) erstellt. Der [Simulator-Download v0.9.152](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.152) erscheint nach erfolgreicher Veröffentlichung. Für den Gerätevergleich Eltern- und Kinder-App auf diese Version aktualisieren._
+
+- **Limits und Zeitpläne in die gewünschte Reihenfolge bringen.** Auf der
+  Elternseite beim Kind unter „Limits“ die neue Zeile „Priorität“ öffnen.
+  In „Stärkste zuerst“ lassen sich Tageslimits und Zeitpläne an den Griffen
+  verschieben. Für eine App bestimmt die oberste aktive Regel, ob sie
+  gesperrt oder ausgeblendet wird; inaktive Regeln werden übersprungen.
+  Die Reihenfolge bleibt gespeichert und wird an das Kinder-iPhone übertragen.
+  Prüfen: eine inaktive Regel über die aktive Nachtruhe ziehen. Nachtruhe
+  muss weiter gelten. Danach ein aufgebrauchtes Bildschirmzeit-Limit über
+  Nachtruhe setzen und beide Reihenfolgen vergleichen. Auch nach dem
+  Schließen und erneuten Öffnen der Liste muss die Reihenfolge stimmen.
+- **Die gerade stärkste Regel ist erkennbar.** Über den Limit-Kacheln und
+  in der Prioritätenliste stehen „Jetzt stärkste Regel“, die Aktion und
+  ihre Endzeit. Die passende Kachel und die bestimmende Listenzeile tragen
+  eine „1“-Markierung; andere aktive Regeln bleiben als „Aktiv“ sichtbar.
+  Auch die Kinderansicht nennt die stärkste Regel.
+  Prüfen: Nachtruhe auf „Ausblenden“ und das aufgebrauchte Bildschirmzeit-
+  Limit auf „Sperren“ stellen. Mit Nachtruhe weiter oben muss „Ausblenden
+  bis …“ erscheinen, mit Bildschirmzeit weiter oben „Sperren bis …“.
+  Die Markierung muss beim Umsortieren sofort mitwechseln. Endet die
+  stärkste Regel, muss die nächste noch aktive Regel übernehmen.
+- **„Ausblenden“ gilt auch für die gesamte Bildschirmzeit.** Eine
+  Nachtruhe, die „Bildschirmzeit“ umfasst, berücksichtigt jetzt auch die
+  bekannten und einzeln gewählten Apps anderer Gruppen. Ein höher
+  priorisiertes „Sperren“ lässt deren Symbole sichtbar, schützt die Apps
+  aber mit dem Sperrbildschirm. „Immer erlaubt“, familydevice selbst und
+  gültige Freigaben bleiben ausgenommen.
+  **Echtes Gerät erforderlich:** Auf einem dafür vorgesehenen Kinder-
+  Test-iPhone die Symbole und das Öffnen der Apps in beiden Reihenfolgen
+  prüfen, danach eine Freigabe erteilen und deren Ablauf abwarten. Apps,
+  die nur über eine ganze Kategorie erfasst sind und nicht einzeln bekannt
+  sind, kann iOS nicht zum Ausblenden auflisten; sie bleiben gesperrt.
+  Der Simulator prüft Reihenfolge und Anzeige, nicht das tatsächliche
+  Verschwinden der Apps auf dem Home-Bildschirm.
+
 ### 0.9.151 (Build 258)
 
 _Der Build wird im [CI-Lauf 258](https://github.com/Familiydevice/familydevice/actions/runs/40591072369) erstellt. Der [Simulator-Download v0.9.151](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.151) erscheint nach erfolgreicher Veröffentlichung. Diese Version bündelt alle aktuellen Korrekturen an Sperren, Anfragen und der Entfernung des Eltern-VPN._
