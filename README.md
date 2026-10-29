@@ -24,6 +24,44 @@ Für 0.9.127 wurde der QA-Download von Build 229 auf Build 230 aktualisiert.
 Die Versions- und Build-Anzeige des verwendeten Downloads ist für einen
 Fehlerbericht maßgeblich.
 
+### 0.9.156 (Build 266)
+
+_Der Release-Tag ist [ios-v0.9.156](https://github.com/Familiydevice/familydevice/tree/ios-v0.9.156). Der Build wird im [CI-Lauf 266](https://github.com/Familiydevice/familydevice/actions/runs/40976693564) erstellt. Der [Simulator-Download v0.9.156](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.156) erscheint nach erfolgreicher Veröffentlichung. Unter „Einstellungen → Über“ muss Version 0.9.156 mit Build 266 stehen._
+
+- **Nur das geöffnete Spiel anfragen, auch bei einer Kategorie-Sperre.**
+  Öffnet das Kind beispielsweise Minecraft und tippt auf „Nur diese App
+  anfragen“, soll bei den Eltern Minecraft mit dem Hinweis „Nur diese App“
+  ankommen. Das gilt auch dann, wenn die Sperre für die Kategorie „Spiele“
+  oder für die gesamte Bildschirmzeit gesetzt wurde. Der andere Button
+  „Mehr Bildschirmzeit anfragen“ bleibt eine getrennte Anfrage für das Gerät.
+  **Echtes Gerät erforderlich:** Eltern- und Kinder-App aktualisieren, zwei
+  Spiele derselben gesperrten Gruppe verwenden und eine neue Minecraft-
+  Einzelanfrage erlauben. Minecraft muss funktionieren, das zweite Spiel
+  (zum Beispiel Roblox) muss einschließlich seiner Internetverbindungen
+  gesperrt bleiben. Nach Ablauf muss Minecraft wieder gesperrt sein.
+  Bereits genehmigte Gruppenfreigaben früherer Versionen bleiben bis zu
+  ihrem Ablauf gültig; sie werden nicht rückwirkend in Einzelanfragen
+  umgewandelt. Für diese Prüfung eine frische Anfrage nach deren Ablauf nutzen.
+- **Eine Mitteilung behält den Bezug zum einzelnen Spiel.** Beim Tippen
+  auf die lokale Mitteilung zur Spiel-Anfrage darf kein Gruppenformular
+  erscheinen, auch wenn die Anfrage im Hintergrund schon gesendet wurde.
+  Das Formular und die Navigation lassen sich im Simulator mit
+  `-FDScreen category-app-request` prüfen. Die Simulation bestätigt keine
+  echte iOS-Kategorie-Sperre und keine Zustellung zwischen zwei iPhones.
+- **Nachtruhe um Mitternacht verständlich anzeigen.** Unter „Limits →
+  Priorität“ steht bei einer laufenden Nachtregel jetzt „Durch Freigabe
+  aufgehoben“, wenn eine Gesamt- oder Gruppenfreigabe ihre Sperre gerade
+  überstimmt. Oben erscheint „Freigabe hat Vorrang“, darunter das reguläre
+  Regelende. Das wird nicht mehr pauschal „Inaktiv“ genannt. Nach Ablauf
+  der Freigabe aktualisiert sich die Ansicht automatisch und die Nachtregel
+  bestimmt die Sperre wieder. Eine Einzel-Spiel-Freigabe lässt die Nachtruhe
+  für die übrigen Spiele aktiv.
+  Prüfen: um 00:54 Nachtruhe 21:00–07:00 und eine Gesamtfreigabe bis 01:09
+  vergleichen; danach den Ablauf sowie eine reine Einzel-Spiel-Freigabe
+  prüfen. Der Simulator zeigt den ersten Fall mit
+  `-FDScreen freed-rule-priorities`. Die tatsächlichen Geräteeinstellungen
+  und Sperren müssen am vorgesehenen Kinder-Test-iPhone geprüft werden.
+
 ### 0.9.155 (Build 265)
 
 _Der Release-Tag ist [ios-v0.9.155](https://github.com/Familiydevice/familydevice/tree/ios-v0.9.155). Der Build wird im [CI-Lauf 265](https://github.com/Familiydevice/familydevice/actions/runs/40970142006) erstellt. Der [Simulator-Download v0.9.155](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.155) erscheint nach erfolgreicher Veröffentlichung. Unter „Einstellungen → Über“ muss Version 0.9.155 mit Build 265 stehen._
