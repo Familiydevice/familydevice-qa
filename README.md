@@ -24,6 +24,39 @@ Für 0.9.127 wurde der QA-Download von Build 229 auf Build 230 aktualisiert.
 Die Versions- und Build-Anzeige des verwendeten Downloads ist für einen
 Fehlerbericht maßgeblich.
 
+### 0.9.154 (Build 264)
+
+_Der Release-Tag ist [ios-v0.9.154](https://github.com/Familiydevice/familydevice/tree/ios-v0.9.154). Der Build wird im [CI-Lauf 264](https://github.com/Familiydevice/familydevice/actions/runs/40792353364) erstellt. Der [Simulator-Download v0.9.154](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.154) erscheint nach erfolgreicher Veröffentlichung. Unter „Einstellungen → Über“ muss Version 0.9.154 mit Build 264 stehen._
+
+- **Zwei getrennte Anfragen direkt an der gesperrten App.** Das Kind kann
+  „Nur diese App anfragen“ oder „Mehr Bildschirmzeit anfragen“ wählen.
+  Die einzelne App wird für 30 Minuten angefragt; Eltern können die Zeit
+  kürzen, erlauben oder ablehnen. In der Eltern-Anfrage stehen der App-Name
+  und „Nur diese App“. Andere Apps bleiben bei einer einzelnen Freigabe
+  gesperrt. Beide Anfragen behalten ihren eigenen Status und überschreiben
+  einander nicht. Mehr Bildschirmzeit lässt sich auch anfragen, wenn nur
+  eine App-Gruppe gesperrt ist.
+  **Echtes Gerät erforderlich:** Eine gesperrte App auf dem Kinder-iPhone
+  öffnen, beide Buttons getrennt testen und auf dem Eltern-iPhone
+  entscheiden. Bei einer einzelnen Freigabe nur diese App einschließlich
+  ihrer Internetverbindung prüfen; eine zweite App muss gesperrt bleiben.
+  Danach Ablauf und Ablehnung testen. Das Formular ist im Simulator mit
+  `-FDScreen app-request` erreichbar; Apples Sperrbildschirm und die
+  tatsächliche Durchsetzung benötigen ein echtes Kinder-Test-iPhone.
+- **Internet folgt einer gültigen Freigabe.** Wenn Bildschirmzeit oder
+  Internet freigegeben wurden, berücksichtigt die nächste Verbindung diese
+  Entscheidung. Nach Ablauf muss die laufende Internetsperre wieder gelten.
+  **Echtes Gerät erforderlich:** Während einer Internetsperre Zeit
+  genehmigen, im Browser eine Seite öffnen und nach Ablauf erneut prüfen.
+  Eine reine Internetfreigabe darf eine getrennte App-Sperre nicht aufheben.
+- **Sofortsperren stehen in der Prioritätenliste.** Auf der Elternseite
+  beim Kind unter „Limits → Priorität“ erscheinen auch laufende temporäre
+  Sperren. Eine neue Sofortsperre steht zuerst und lässt sich umsortieren.
+  Prüfen: eine einstündige Sperre starten, gegenüber Nachtruhe verschieben
+  und anschließend beenden. Nach ihrem Ende muss die nächste aktive Regel
+  übernehmen. Die Anzeige lässt sich im Simulator mit
+  `-FDScreen quick-action-limits` prüfen; die echten Sperren am Test-iPhone.
+
 ### 0.9.153 (Build 263)
 
 _Dieser zusätzliche Build derselben Version wird im [CI-Lauf 263](https://github.com/Familiydevice/familydevice/actions/runs/40792117135) erstellt. Der [Simulator-Download v0.9.153](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.153) wird nach erfolgreicher Veröffentlichung aktualisiert. Unter „Einstellungen → Über“ muss Build 263 stehen._
