@@ -24,6 +24,31 @@ Für 0.9.127 wurde der QA-Download von Build 229 auf Build 230 aktualisiert.
 Die Versions- und Build-Anzeige des verwendeten Downloads ist für einen
 Fehlerbericht maßgeblich.
 
+### 0.9.153 (Build 263)
+
+_Dieser zusätzliche Build derselben Version wird im [CI-Lauf 263](https://github.com/Familiydevice/familydevice/actions/runs/40792117135) erstellt. Der [Simulator-Download v0.9.153](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.153) wird nach erfolgreicher Veröffentlichung aktualisiert. Unter „Einstellungen → Über“ muss Build 263 stehen._
+
+- **Eine einzelne App statt des ganzen Geräts anfragen.** Auf dem
+  Sperrbildschirm einer App gibt es zwei getrennte Aktionen:
+  „Nur diese App anfragen“ und „Mehr Bildschirmzeit anfragen“.
+  Die erste fragt 30 Minuten nur für die gerade geöffnete App an;
+  die zweite fragt zusätzliche Zeit für das ganze Gerät an.
+  Auch wenn nur eine App-Gruppe gesperrt ist, funktioniert die zweite
+  Aktion. Offene oder abgelehnte Anfragen werden getrennt angezeigt;
+  zwei vorgemerkte Anfragen überschreiben sich nicht.
+- **Eltern erkennen den Umfang der Freigabe.** Bei der einzelnen App
+  stehen deren Name und „Nur diese App“ in der Anfrage. Eltern können
+  erlauben, die Dauer kürzen oder ablehnen. Eine genehmigte App bleibt
+  nutzbar, während andere Apps und die gesamte Bildschirmzeit gesperrt
+  bleiben. Nach Ablauf greift die Sperre wieder, auch ohne Verbindung.
+  **Echtes Gerät erforderlich:** Eltern- und Kinder-App aktualisieren,
+  eine gesperrte App öffnen und beide Buttons getrennt testen. Eine
+  App-Freigabe erlauben und prüfen, dass nur diese App einschließlich
+  ihrer Internetverbindung funktioniert; eine zweite App muss gesperrt
+  bleiben. Danach Ablauf und Ablehnung prüfen. Der Simulator kann das
+  Anfrageformular mit `-FDScreen app-request` zeigen, aber Apples echten
+  Sperrbildschirm und die Durchsetzung nicht bestätigen.
+
 ### 0.9.153 (Build 261)
 
 _Der Release-Tag ist [ios-v0.9.153](https://github.com/Familiydevice/familydevice/tree/ios-v0.9.153). Der Build wird im [CI-Lauf 261](https://github.com/Familiydevice/familydevice/actions/runs/40724204383) erstellt. Der [Simulator-Download v0.9.153](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.153) erscheint nach erfolgreicher Veröffentlichung. Unter „Einstellungen → Über“ muss Version 0.9.153 mit Build 261 stehen._
