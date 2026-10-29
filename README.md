@@ -24,6 +24,32 @@ Für 0.9.127 wurde der QA-Download von Build 229 auf Build 230 aktualisiert.
 Die Versions- und Build-Anzeige des verwendeten Downloads ist für einen
 Fehlerbericht maßgeblich.
 
+### 0.9.155 (Build 265)
+
+_Der Release-Tag ist [ios-v0.9.155](https://github.com/Familiydevice/familydevice/tree/ios-v0.9.155). Der Build wird im [CI-Lauf 265](https://github.com/Familiydevice/familydevice/actions/runs/40970142006) erstellt. Der [Simulator-Download v0.9.155](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.155) erscheint nach erfolgreicher Veröffentlichung. Unter „Einstellungen → Über“ muss Version 0.9.155 mit Build 265 stehen._
+
+- **Eine einzelne App freigeben, ohne die ganze Gruppe zu öffnen.**
+  „Nur diese App anfragen“ auf dem Sperrbildschirm bleibt eine Anfrage
+  für genau die geöffnete App, auch wenn deren Name gerade nicht verfügbar
+  ist. Eine solche Anfrage darf keine Gruppenfreigabe auslösen.
+  **Echtes Gerät erforderlich:** Eltern- und Kinder-App aktualisieren,
+  zwei Apps derselben gesperrten Gruppe bereithalten, eine davon öffnen
+  und nur diese App anfragen. Auf dem Eltern-iPhone die Anfrage erlauben:
+  Die angefragte App muss sich öffnen lassen, die zweite bleibt gesperrt.
+  Nach Ablauf der genehmigten Zeit muss auch die erste wieder gesperrt sein.
+- **Push-Mitteilungen werden nach einem Fehler erneut versucht.**
+  Schlägt das Senden einer sichtbaren Mitteilung fehl, bleibt sie für
+  den nächsten Abgleich vorgemerkt. Eine fehlgeschlagene Einrichtung der
+  Push-Mitteilungen wird ebenfalls erneut versucht, ohne die App neu
+  starten zu müssen. Das Aufräumen einer alten Mitteilung darf die nächste
+  nicht verhindern.
+  **Echtes Gerät erforderlich:** Eine neue App-Anfrage senden und die
+  Mitteilung auf dem Eltern-iPhone prüfen, dann die Antwort auf dem
+  Kinder-iPhone. Den Push-Test auf der Elternseite beim Kind ausführen.
+  Anschließend einen vorübergehenden Verbindungsabbruch und mehrere
+  aufeinanderfolgende Anfragen prüfen. Der Simulator bestätigt keine
+  echte Push-Zustellung zwischen zwei iPhones.
+
 ### 0.9.154 (Build 264)
 
 _Der Release-Tag ist [ios-v0.9.154](https://github.com/Familiydevice/familydevice/tree/ios-v0.9.154). Der Build wird im [CI-Lauf 264](https://github.com/Familiydevice/familydevice/actions/runs/40792353364) erstellt. Der [Simulator-Download v0.9.154](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.154) erscheint nach erfolgreicher Veröffentlichung. Unter „Einstellungen → Über“ muss Version 0.9.154 mit Build 264 stehen._
