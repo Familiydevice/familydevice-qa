@@ -24,6 +24,40 @@ Für 0.9.127 wurde der QA-Download von Build 229 auf Build 230 aktualisiert.
 Die Versions- und Build-Anzeige des verwendeten Downloads ist für einen
 Fehlerbericht maßgeblich.
 
+### 0.9.157 (Build 267)
+
+_Der Release-Tag ist [ios-v0.9.157](https://github.com/Familiydevice/familydevice/tree/ios-v0.9.157). Der Build wird im [CI-Lauf 267](https://github.com/Familiydevice/familydevice/actions/runs/40978596016) erstellt. Der [Simulator-Download v0.9.157](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.157) erscheint nach erfolgreicher Veröffentlichung. Unter „Einstellungen → Über“ muss Version 0.9.157 mit Build 267 stehen._
+
+- **Laufende Freigaben sind unter „Limits“ sichtbar.** Eine erteilte
+  Freigabe erscheint als grüne Kachel mit offenem Schloss. Dort stehen
+  die betroffene App oder Gruppe, ihr Umfang, die Endzeit und die laufende
+  Restzeit. „Gesamtes Gerät“, „Ganze Gruppe“ und „Nur diese App“ sind klar
+  getrennt. Eine Gesamtfreigabe erscheint einmal, statt für jede dadurch
+  mitfreigegebene Gruppe einen eigenen Eintrag zu erzeugen.
+  Prüfen: Auf der Elternseite beim Kind eine Gesamtfreigabe starten, eine
+  Gruppe freigeben und eine Einzel-App-Anfrage genehmigen. In „Limits“
+  müssen die passenden Einträge erscheinen. Nach Ablauf verschwinden sie.
+  Eine ältere Freigabe, die durch eine neue Sofortsperre unwirksam geworden
+  ist, darf nicht weiterhin als wirksame Freigabe erscheinen.
+- **„Priorität“ nennt die Freigabe, die eine Sperre überstimmt.** Eine
+  grüne Kachel öffnet die Übersicht. Unter „Laufende Freigaben“ stehen
+  derselbe Umfang, Endzeit und Countdown sowie die Quelle, zum Beispiel
+  „Von Mama freigegeben“ oder „Von Mama genehmigt“. Auch laufende Freizeit-,
+  Workflow-, Internet- und App-Store-Freigaben werden berücksichtigt.
+  Diese Einträge erklären die Freigaben über den Sperrregeln; sie verändern
+  deren gespeicherte Reihenfolge nicht.
+- **Die Kacheln stehen bündig.** Temporäre Sperren, Tageslimits,
+  Nachtruhe, Freigaben und die Plus-Kachel richten Symbole und Titel oben
+  aus, auch wenn Beschriftungen unterschiedlich viele Zeilen benötigen.
+  Die Fortschrittsrahmen bleiben innerhalb derselben Außenkanten wie
+  die gefüllten Symbole. Prüfen: eine Sofortsperre mit Prioritätszeile neben
+  Bildschirmzeit und Nachtruhe vergleichen, auch mit längerem Namen.
+  `-FDScreen active-grants` zeigt dafür das echte Limits-Grid mit drei
+  synthetischen Freigaben und verschieden hohen Kacheln;
+  `-FDScreen active-grant-priorities` zeigt ihre Detailübersicht.
+  Die Simulation bestätigt die Anzeige, nicht die tatsächlichen
+  iOS-Sperren oder eine Zustellung zwischen physischen iPhones.
+
 ### 0.9.156 (Build 266)
 
 _Der Release-Tag ist [ios-v0.9.156](https://github.com/Familiydevice/familydevice/tree/ios-v0.9.156). Der Build wird im [CI-Lauf 266](https://github.com/Familiydevice/familydevice/actions/runs/40976693564) erstellt. Der [Simulator-Download v0.9.156](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.156) erscheint nach erfolgreicher Veröffentlichung. Unter „Einstellungen → Über“ muss Version 0.9.156 mit Build 266 stehen._
