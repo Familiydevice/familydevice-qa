@@ -24,6 +24,35 @@ Für 0.9.127 wurde der QA-Download von Build 229 auf Build 230 aktualisiert.
 Die Versions- und Build-Anzeige des verwendeten Downloads ist für einen
 Fehlerbericht maßgeblich.
 
+### 0.9.159 (Build 276)
+
+_Der Release-Tag ist [ios-v0.9.159](https://github.com/Familiydevice/familydevice/tree/ios-v0.9.159). Der Build wird im [CI-Lauf 276](https://github.com/Familiydevice/familydevice/actions/runs/41549136925) erstellt. Der [Simulator-Download v0.9.159](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.159) erscheint nach erfolgreicher Veröffentlichung. Unter „Einstellungen → Über“ muss Version 0.9.159 mit Build 276 stehen._
+
+- **Mitteilungen bleiben bei einem fehlgeschlagenen Versand vorgemerkt.**
+  Wenn das Senden hakt und gleich danach ein weiterer Abgleich läuft,
+  wird die wartende Mitteilung nicht mehr versehentlich als erledigt
+  behandelt. Das betrifft Anfragen nach mehr Zeit und andere sichtbare
+  Nachrichten. Auch eine inzwischen neu hinzugekommene Mitteilung bleibt
+  zum erneuten Versand vorgemerkt.
+- **Ein Problem mit iCloud-Mitteilungen wird auf der Startseite sichtbar.**
+  Nimmt iCloud die Anmeldung für sichtbare Mitteilungen nicht an, zeigt
+  die App einen Push-Fehler mit „Erneut versuchen“. Ein erfolgreicher
+  Abgleich mit einem zweiten Kind verdeckt den Fehler beim ersten Kind
+  nicht mehr. Die Anmeldung wird beim nächsten Abgleich erneut versucht.
+- **Zeitkritische Mitteilungen behalten ihre Berechtigung im Release.**
+  Anfragen, Antworten und Regelmeldungen sollen auch bei einem Fokus
+  erscheinen können, wenn iOS und dieser Fokus zeitkritische Mitteilungen
+  zulassen. Die dafür vorgesehene Berechtigung ging bisher beim Erstellen
+  des veröffentlichten Builds wieder verloren.
+  **Echtes Gerät erforderlich:** Beide iPhones auf 0.9.159 aktualisieren.
+  Mit geschlossener Eltern-App eine neue Anfrage über „Mehr Zeit anfragen“
+  senden und zusätzlich eine Regelmeldung sowie die Antwort auf eine
+  Anfrage prüfen; anschließend mit einem Fokus wiederholen, der
+  zeitkritische Mitteilungen erlaubt. Eine fehlgeschlagene Anmeldung muss
+  als Fehler sichtbar sein und nach erfolgreichem Wiederholen verschwinden.
+  Simulator und automatische Tests belegen keine echte Push-Zustellung
+  zwischen zwei iPhones; diese Prüfung steht noch aus.
+
 ### 0.9.157 (Build 267)
 
 _Der Release-Tag ist [ios-v0.9.157](https://github.com/Familiydevice/familydevice/tree/ios-v0.9.157). Der Build wird im [CI-Lauf 267](https://github.com/Familiydevice/familydevice/actions/runs/40978596016) erstellt. Der [Simulator-Download v0.9.157](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.157) erscheint nach erfolgreicher Veröffentlichung. Unter „Einstellungen → Über“ muss Version 0.9.157 mit Build 267 stehen._
