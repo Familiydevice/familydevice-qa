@@ -27,7 +27,7 @@ Fehlerbericht maßgeblich.
 
 ### Schnellüberblick: alle Versionen
 
-Die Tabelle enthält jede Version von **0.9.105 bis 0.9.161**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
+Die Tabelle enthält jede Version von **0.9.105 bis 0.9.162**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
 
 Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, keine neu ausgeführten Tests. Frühere Menüs können später entfernt worden sein; das Eltern-VPN beispielsweise ab 0.9.146. Echte Sperren, iCloud-Kopplung und Push benötigen weiterhin Prüfungen auf echten Test-iPhones.
 
@@ -35,6 +35,7 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 
 | Version | Download / dokumentierter Stand | Was hat sich geändert? |
 |---|---|---|
+| [0.9.162](#v0-9-162) | [Build 291](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.162) | Kinder können auf dem Sperrbildschirm nur die geöffnete App oder die ganze Gruppe anfragen. |
 | [0.9.161](#v0-9-161) | [Build 287](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.161) | Eine neue Freigabe bleibt auch bei verspäteten Games-Limitmeldungen wirksam. Leere App-Auswahlen werden gespeichert; freigegebene Games erscheinen grün. |
 | [0.9.160](#v0-9-160) | [Build 279](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.160) | Push-Berechtigung bei Apple freigeschaltet, Signierungsprofil erneuert und die signierte iPhone-App vor dem TestFlight-Upload geprüft. |
 | [0.9.159](#v0-9-159) | [Build 277](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.159) | Wartende Mitteilungen gehen bei einem schnellen erneuten Abgleich nicht mehr verloren; Fehler bei iCloud-Mitteilungen werden sichtbar. |
@@ -92,6 +93,13 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 | [0.9.107](#v0-9-107) | CI 206, kein eigener Download | Die automatische Übertragung der Simulator-Builds ins QA-Repository wurde weiter eingerichtet. |
 | [0.9.106](#v0-9-106) | CI 205, kein eigener Download | Automatische Simulator-Builds mit derselben Build-Nummer wie bei TestFlight wurden vorbereitet. |
 | [0.9.105](#v0-9-105) | [Build 204](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.105) | Der erste veröffentlichte Simulator-Build erlaubt die Eltern-/Kind-Simulation und einen Tagesverlauf hinter der Bildschirmzeit-Karte. |
+
+<a id="v0-9-162"></a>
+### 0.9.162 (Build 291)
+
+Auf dem Kinder-iPhone gibt es beim Öffnen einer gesperrten App zwei Möglichkeiten. Das Kind kann Zeit nur für diese App anfragen oder für die ganze angezeigte Gruppe. Die Anfrage geht über iCloud an die gekoppelten Eltern. Auch wenn iOS keinen App-Namen liefert, gilt eine genehmigte Einzelanfrage nur für die geöffnete App.
+
+**Zum Prüfen auf zwei iPhones:** YouTube und eine zweite App derselben gesperrten Videogruppe zuordnen. Auf dem Kindergerät YouTube öffnen und nur diese App anfragen. Nach der Genehmigung auf dem Elterngerät muss YouTube aufgehen und die zweite App gesperrt bleiben. Anschließend über deren Sperrbildschirm die Gruppe anfragen und prüfen, dass die Genehmigung beide Apps öffnet.
 
 <a id="v0-9-161"></a>
 ### 0.9.161 (Build 287)
