@@ -19,14 +19,87 @@ spätere Änderungen stehen weiter oben.
 Bei veröffentlichten Simulator-Builds entspricht die Build-Nummer dem
 jeweiligen CI-Build. Einige Versionen haben keinen eigenen QA-Download;
 bei ihnen ist stattdessen der zugehörige CI-Lauf genannt. Der verlinkte
-nächste verfügbare Download enthält diese Änderungen ebenfalls.
+nächste verfügbare Download nennt den späteren QA-Stand; dessen
+Versionshinweise zusätzlich beachten.
 Für 0.9.127 wurde der QA-Download von Build 229 auf Build 230 aktualisiert.
 Die Versions- und Build-Anzeige des verwendeten Downloads ist für einen
 Fehlerbericht maßgeblich.
 
+### Schnellüberblick: alle Versionen
+
+Die Tabelle enthält jede Version von **0.9.105 bis 0.9.160**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
+
+Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, keine neu ausgeführten Tests. Frühere Menüs können später entfernt worden sein; das Eltern-VPN beispielsweise ab 0.9.146. Echte Sperren, iCloud-Kopplung und Push benötigen weiterhin Prüfungen auf echten Test-iPhones.
+
+**Beleglage:** Download- und Build-Angaben wurden mit den veröffentlichten [QA-Releases](https://github.com/Familiydevice/familydevice-qa/releases) abgeglichen. Die inhaltlichen Erklärungen stammen aus der freigegebenen QA-Historie. Für 0.9.158 fehlen inhaltliche Änderungsnotizen; bei mehreren nachträglich aktualisierten Builds ist die genaue Reichweite älterer Notizen gekennzeichnet.
+
+| Version | Download / dokumentierter Stand | Was hat sich geändert? |
+|---|---|---|
+| [0.9.160](#v0-9-160) | [Build 279](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.160) | Push-Berechtigung bei Apple freigeschaltet, Signierungsprofil erneuert und die signierte iPhone-App vor dem TestFlight-Upload geprüft. |
+| [0.9.159](#v0-9-159) | [Build 277](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.159) | Wartende Mitteilungen gehen bei einem schnellen erneuten Abgleich nicht mehr verloren; Fehler bei iCloud-Mitteilungen werden sichtbar. |
+| [0.9.158](#v0-9-158) | [Build 275](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.158) | QA-Build 275 ist veröffentlicht; eine freigegebene Beschreibung seiner inhaltlichen Änderungen fehlt noch. |
+| [0.9.157](#v0-9-157) | [Build 271](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.157) | Laufende Freigaben erscheinen als grüne Kacheln mit Umfang, Restzeit und Ende; die Prioritätenliste erklärt, welche Sperre sie aufheben. |
+| [0.9.156](#v0-9-156) | CI 266, kein eigener Download | Einzel-App-Anfragen bleiben auch bei Kategorie-Sperren auf die geöffnete App begrenzt; Nachtruhe zeigt eine überstimmende Freigabe verständlicher. |
+| [0.9.155](#v0-9-155) | [Build 265](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.155) | Eine App-Freigabe öffnet nicht die ganze Gruppe; fehlgeschlagene Push-Versuche und Mitteilungsanmeldungen werden erneut versucht. |
+| [0.9.154](#v0-9-154) | [Build 264](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.154) | Einzel-App- und Bildschirmzeit-Anfragen sind getrennt; gültige Freigaben werden beim Internet berücksichtigt, Sofortsperren lassen sich priorisieren. |
+| [0.9.153](#v0-9-153) | [Build 262](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.153) | Hintergrund-Abstürze beim Aktualisieren der Regeln wurden korrigiert. Einzel-App-Anfragen sind zusätzlich für Stand 263 dokumentiert; deren Umfang im Download 262 ist nicht belegt. |
+| [0.9.152](#v0-9-152) | [Build 259](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.152) | Limits und Zeitpläne lassen sich nach Stärke sortieren; die wirksame Regel wird angezeigt und „Ausblenden“ berücksichtigt die gesamte Bildschirmzeit. |
+| [0.9.151](#v0-9-151) | [Build 258](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.151) | Neuere Sofortsperren überstimmen frühere Freigaben; erreichte Tageslimits bleiben bestehen und „Mehr Zeit anfragen“ gibt sichtbare Rückmeldung. |
+| [0.9.150](#v0-9-150) | [Build 257](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.150) | Tageslimits stehen direkt auf der Startseite; Anfragen lassen sich durch Wischen bearbeiten und erledigte Einträge ausblenden. Limit-Zählung und Einrichtung wurden korrigiert. |
+| [0.9.149](#v0-9-149) | CI 254, kein eigener Download | WLAN und QR-Code werden beim Koppeln verständlicher erklärt; die Freigabe fürs lokale Netzwerk wird geprüft und Apple-Einstellungen werden schrittweise angeleitet. |
+| [0.9.148](#v0-9-148) | CI 253, kein eigener Download | Erneutes Koppeln über WLAN bleibt nach dem Entkoppeln nicht mehr bei „Verbinde …“ hängen; für die Code-Bestätigung bleibt mehr Zeit. |
+| [0.9.147](#v0-9-147) | [Build 251](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.147) | Die Datenschutztexte beschreiben kein Eltern-VPN mehr und wurden in allen App-Sprachen angepasst. |
+| [0.9.146](#v0-9-146) | CI 249, kein eigener Download | Das VPN und die eigene Netzwerk-Messung auf dem Eltern-iPhone wurden entfernt; der Filter auf dem Kinder-iPhone bleibt erhalten. |
+| [0.9.145](#v0-9-145) | [Build 248](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.145) | Das Kinder-iPhone wird vor dem Koppeln fertig eingerichtet; jede Freigabe hat einen eigenen Knopf und iCloud-Mitteilungen werden beim Verbinden eingerichtet. |
+| [0.9.144](#v0-9-144) | CI 247, kein eigener Download | Koppeln per QR-Code funktioniert auch ohne gemeinsames WLAN; beide iPhones bestätigen weiterhin denselben Vergleichscode. |
+| [0.9.143](#v0-9-143) | CI 246, kein eigener Download | Der Sicherheitszähler berücksichtigt zusätzlich „QUIC unterbinden“ und zeigt bei allen eingeschalteten Schaltern „10 von 10“. |
+| [0.9.142](#v0-9-142) | CI 245, kein eigener Download | Ein weiteres Eltern-iPhone lässt sich koppeln, während ein bereits verbundenes Eltern-iPhone in der Nähe ist. |
+| [0.9.141](#v0-9-141) | CI 244, kein eigener Download | Der Sicherheitszähler verwendet die richtige Gesamtzahl und zeigt für den damaligen Stand „9 von 9“ statt etwa „9 von 4“. |
+| [0.9.140](#v0-9-140) | CI 243, kein eigener Download | Nach vollständigem Entkoppeln wird der Bildschirmzeit-Zugriff zurückgegeben, damit sich die App wieder löschen lässt. |
+| [0.9.139](#v0-9-139) | [Build 242](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.139) | Ein neu installiertes Eltern-iPhone kann seine alte Verbindung ersetzen, während Regeln und Limits erhalten bleiben. |
+| [0.9.138](#v0-9-138) | CI 241, kein eigener Download | Lange ausbleibende Eltern-Verbindungen werden erkannt; das Kind sieht eine Warnung und bei vollständigem Ausfall einen Schutzstatus mit Möglichkeiten zum erneuten Koppeln. |
+| [0.9.137](#v0-9-137) | CI 240, kein eigener Download | „Mehr Zeit anfragen“ kann direkt vom Sperrbildschirm eine 30-Minuten-Anfrage senden und berücksichtigt bereits offene oder gerade abgelehnte Anfragen. |
+| [0.9.136](#v0-9-136) | CI 239, kein eigener Download | Erlaubte Social-Media-Profile öffnen nicht das ganze Netzwerk; aufgebrauchte Bildschirmzeit und vorgemerkte Anfragen werden verständlicher behandelt. |
+| [0.9.135](#v0-9-135) | [Build 238](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.135) | Die Einrichtung erklärt Nutzen und Nachteile jeder Freigabe; ein Aufenthalt beginnt nach Verlassen und Rückkehr mit der neuen Ankunftszeit. |
+| [0.9.134](#v0-9-134) | CI 237, kein eigener Download | Eltern können für soziale Netzwerke einzelne Profile dauerhaft erlauben; das Kind kann weitere Profile anfragen. |
+| [0.9.133](#v0-9-133) | CI 236, kein eigener Download | Der Tor-Schutz berücksichtigt auch Brücken und blendet bekannte Tor-, VPN- und Proxy-Apps auf dem Kinder-iPhone aus. |
+| [0.9.132](#v0-9-132) | CI 235, kein eigener Download | Eine neue Sperrliste erfasst VPN, Proxy und Tor; die Pornografie-Liste berücksichtigt zusätzlich Suchmaschinen ohne sichere Suche. |
+| [0.9.131](#v0-9-131) | CI 234, kein eigener Download | Der Werbefilter erfasst mehr Pop-ups und Weiterleitungen; eine weitere Sperrliste richtet sich gegen Raubkopien und illegales Streaming. |
+| [0.9.130](#v0-9-130) | CI 233, kein eigener Download | Neue Schalter blockieren Pornografie, Pillen und Drogen sowie Glücksspiel und Poker; ausdrücklich erlaubte Domains bleiben ausgenommen. |
+| [0.9.129](#v0-9-129) | CI 232, kein eigener Download | Eltern können offene Anfragen durch Wischen erlauben oder ablehnen; Antippen öffnet weiter die ausführliche Entscheidung. |
+| [0.9.128](#v0-9-128) | [Build 231](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.128) | Das damalige Eltern-VPN startet erst nach bewusstem Einschalten; bei einer frischen Einrichtung erscheint kein automatischer VPN-Dialog mehr. |
+| [0.9.127](#v0-9-127) | [Build 230](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.127) | Die Nutzungs-Zeitleiste zeigt Tage mit Sommer- oder Winterzeit bei den richtigen Uhrzeiten; die Sperrregeln selbst waren nicht betroffen. |
+| [0.9.126](#v0-9-126) | [Build 225](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.126) | Der Anfrage-Knopf auf Safaris Internet-Sperrseite führt über die Website zurück in die passende Internet-Anfrage der App. |
+| [0.9.125](#v0-9-125) | [Build 224](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.125) | Internetfreigaben lassen getrennte App- und Website-Sperren bestehen; gültige Gesamtfreigaben und „Alles frei bis …“ werden konsistenter berücksichtigt. |
+| [0.9.124](#v0-9-124) | [Build 223](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.124) | Als harmlos markierte, immer erlaubte Apps behalten ihre Verbindung auch bei einer Sperre des gesamten Internets. |
+| [0.9.123](#v0-9-123) | CI 222, kein eigener Download | Zusätzliche Bildschirmzeit gibt das ganze iPhone frei; Zeitpläne erscheinen als Limit-Kacheln und auch ausgeblendete Apps sowie das Internet können angefragt werden. |
+| [0.9.122](#v0-9-122) | [Build 221](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.122) | Nicht mehr verwendete Eltern-Verbindungen können einzeln entfernt werden; eine neu installierte Eltern-App startet mit einer frischen Kopplung. |
+| [0.9.121](#v0-9-121) | CI 220, kein eigener Download | Limits, Internetsperren und Zeitpläne sind zentral erreichbar; „+ Limit“ ist der gemeinsame Einstieg und weitere Optionen liegen unter „Erweiterte Einstellungen“. |
+| [0.9.120](#v0-9-120) | [Build 219](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.120) | Einstellungen des Eltern-iPhones und des Kindes sind getrennt; das damalige Eltern-VPN und seine Filter liegen im Profil-Menü. |
+| [0.9.119](#v0-9-119) | [Build 218](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.119) | Das damalige Eltern-VPN, Werbefilter und Phishing-Schutz stehen als zusammengehöriger Abschnitt mit gekoppelten Schaltern bereit. |
+| [0.9.118](#v0-9-118) | [Build 217](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.118) | Ein zunächst aktiver Filter blendet Apple-Apps, Erweiterungen und harmlose Apps in den Nutzungslisten aus; ein Tipp zeigt sie wieder. |
+| [0.9.117](#v0-9-117) | [Build 216](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.117) | „Jetzt“ und „Heute“ verbergen dieselben harmlosen Apps; eine Erklärung nennt den jeweiligen Zeitraum und die Datenquelle. |
+| [0.9.116](#v0-9-116) | [Build 215](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.116) | Tageslimits können für jeden Wochentag oder getrennt fürs Wochenende eingestellt werden; Orts- und Aktivitätsanzeigen wurden angepasst. |
+| [0.9.115](#v0-9-115) | [Build 214](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.115) | Häufige Aktionen sind mit wenigen Schritten erreichbar; bei nur einem Kind öffnet dessen Seite direkt und die Ortsanzeige ist präsenter. |
+| [0.9.114](#v0-9-114) | [Build 213](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.114) | Der Tagesverlauf trennt Apples Nutzungsdaten von der Netzwerk-Schätzung; App-Seiten beginnen mit Freigeben, Sperren und Ausblenden. |
+| [0.9.113](#v0-9-113) | [Build 212](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.113) | „Heute“ zeigt Apples Bildschirmzeit, „Jetzt“ bleibt die Netzwerk-Schätzung; längere Verbindungen und verständliche App-Namen werden berücksichtigt. |
+| [0.9.112](#v0-9-112) | [Build 211](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.112) | Netzwerkverkehr bei gesperrtem Bildschirm erhöht die Datenmenge, aber nicht mehr die geschätzten Nutzungsminuten oder Öffnungen. |
+| [0.9.111](#v0-9-111) | [Build 210](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.111) | Die Bildschirmzeit-Karte zeigt die angerechnete Zeit am Tageslimit; die gemessene entsperrte Zeit wird getrennt angezeigt. |
+| [0.9.110](#v0-9-110) | CI 209, kein eigener Download | Das Simulator-Paket wurde verkleinert und enthält neutralisierte Build-Pfade; es gibt keinen eigenen veröffentlichten QA-Download. |
+| [0.9.109](#v0-9-109) | [Build 208](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.109) | Der Umschalter „Jetzt“ erscheint in der gewählten App-Sprache. |
+| [0.9.108](#v0-9-108) | [Build 207](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.108) | Fertige Simulator-Builds werden als versionierte Releases und über „Neuester Build“ bereitgestellt. |
+| [0.9.107](#v0-9-107) | CI 206, kein eigener Download | Die automatische Übertragung der Simulator-Builds ins QA-Repository wurde weiter eingerichtet. |
+| [0.9.106](#v0-9-106) | CI 205, kein eigener Download | Automatische Simulator-Builds mit derselben Build-Nummer wie bei TestFlight wurden vorbereitet. |
+| [0.9.105](#v0-9-105) | [Build 204](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.105) | Der erste veröffentlichte Simulator-Build erlaubt die Eltern-/Kind-Simulation und einen Tagesverlauf hinter der Bildschirmzeit-Karte. |
+
+<a id="v0-9-160"></a>
 ### 0.9.160 (Build 279)
 
-_Der Release-Tag ist [ios-v0.9.160](https://github.com/Familiydevice/familydevice/tree/ios-v0.9.160). [CI-Lauf 279](https://github.com/Familiydevice/familydevice/actions/runs/41551993846) ist erfolgreich: Signierung, Prüfung der fertigen App und TestFlight-Upload sind bestätigt. Der [Simulator-Download v0.9.160](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.160) ist veröffentlicht. Unter „Einstellungen → Über“ muss Version 0.9.160 mit Build 279 stehen. Auf dem iPhone erscheint der Build nach Apples TestFlight-Verarbeitung._
+**Kurz erklärt:** Push-Berechtigung bei Apple freigeschaltet, Signierungsprofil erneuert und die signierte iPhone-App vor dem TestFlight-Upload geprüft.
+
+**Wo anschauen:** Mitteilungen auf Eltern- und Kinder-iPhone; TestFlight-Update.
+
+_Veröffentlichter QA-Download: [v0.9.160](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.160), Build 279. Für Fehlerberichte müssen Version 0.9.160 und Build 279 aus der App genannt werden._
 
 - **Die Push-Korrektur ist jetzt für die iPhone-Verteilung signiert.** Diese
   Version enthält die unten beschriebenen Reparaturen für wartende
@@ -45,9 +118,14 @@ _Der Release-Tag ist [ios-v0.9.160](https://github.com/Familiydevice/familydevic
   Simulator und automatische Tests bestätigen keine echte Zustellung
   zwischen zwei iPhones. Diese Prüfung steht noch aus.
 
+<a id="v0-9-159"></a>
 ### 0.9.159 (Build 277)
 
-_Der Release-Tag ist [ios-v0.9.159](https://github.com/Familiydevice/familydevice/tree/ios-v0.9.159). Der Build wird im [CI-Lauf 277](https://github.com/Familiydevice/familydevice/actions/runs/41550873393) erstellt. Der [Simulator-Download v0.9.159](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.159) erscheint nach erfolgreicher Veröffentlichung. Unter „Einstellungen → Über“ muss Version 0.9.159 mit Build 277 stehen._
+**Kurz erklärt:** Wartende Mitteilungen gehen bei einem schnellen erneuten Abgleich nicht mehr verloren; Fehler bei iCloud-Mitteilungen werden sichtbar.
+
+**Wo anschauen:** Startseite: Push-Fehler und „Erneut versuchen“; neue Anfrage senden.
+
+_Veröffentlichter QA-Download: [v0.9.159](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.159), Build 277. Für Fehlerberichte müssen Version 0.9.159 und Build 277 aus der App genannt werden._
 
 **Veröffentlichungsstand:** Der Simulator-Download wurde veröffentlicht.
 TestFlight wurde bei der Signierung gestoppt. Die spätere Xcode-Prüfung
@@ -83,9 +161,31 @@ enthält einen weiteren Signierungsversuch, der ebenfalls gestoppt wurde.
   Simulator und automatische Tests belegen keine echte Push-Zustellung
   zwischen zwei iPhones; diese Prüfung steht noch aus.
 
-### 0.9.157 (Build 267)
+<a id="v0-9-158"></a>
+### 0.9.158 (Build 275)
 
-_Der Release-Tag ist [ios-v0.9.157](https://github.com/Familiydevice/familydevice/tree/ios-v0.9.157). Der Build wird im [CI-Lauf 267](https://github.com/Familiydevice/familydevice/actions/runs/40978596016) erstellt. Der [Simulator-Download v0.9.157](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.157) erscheint nach erfolgreicher Veröffentlichung. Unter „Einstellungen → Über“ muss Version 0.9.157 mit Build 267 stehen._
+**Kurz erklärt:** QA-Build 275 ist veröffentlicht; eine freigegebene Beschreibung seiner inhaltlichen Änderungen fehlt noch.
+
+**Wo anschauen:** Versionsanzeige und Release-Metadaten; Änderungsdetails offen.
+
+_Veröffentlichter QA-Download: [v0.9.158](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.158), Build 275. Für Fehlerberichte müssen Version 0.9.158 und Build 275 aus der App genannt werden._
+
+**Änderungsdetails noch nicht freigegeben dokumentiert.** Der veröffentlichte QA-Download trägt Version 0.9.158 und Build 275. Seine Release-Beschreibung nennt den Build und den zugehörigen Stand, aber keine inhaltlichen Änderungen. Auch in der bisherigen freigegebenen QA-Historie und den öffentlichen QA-Issues gibt es dazu keine Änderungsbeschreibung.
+
+Damit ist nicht belegt, dass sich gegenüber 0.9.157 nichts geändert hat. Für 0.9.158 werden deshalb keine neuen Funktionen oder Fehlerkorrekturen behauptet. Die fehlenden Änderungsdetails bleiben als Dokumentationslücke sichtbar.
+
+Prüfen: Bei einem Fehlerbericht diese Version zusammen mit Build 275 nennen. Die folgenden älteren Versionshinweise beschreiben ihre jeweiligen Stände; sie sind keine Bestätigung sämtlicher Änderungen von 0.9.158.
+
+<a id="v0-9-157"></a>
+### 0.9.157 (Build 271)
+
+**Kurz erklärt:** Laufende Freigaben erscheinen als grüne Kacheln mit Umfang, Restzeit und Ende; die Prioritätenliste erklärt, welche Sperre sie aufheben.
+
+**Wo anschauen:** Kind → „Limits“ und „Priorität“.
+
+_Veröffentlichter QA-Download: [v0.9.157](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.157), Build 271. Für Fehlerberichte müssen Version 0.9.157 und Build 271 aus der App genannt werden._
+
+**Stand der Beschreibung:** Die freigegebenen Änderungsnotizen wurden zunächst für den Stand 267 ([CI-Lauf 267](https://github.com/Familiydevice/familydevice/actions/runs/40978596016)) geschrieben. Der verfügbare QA-Download trägt Build 271. Weitere Änderungen bis zu diesem Download sind nicht separat freigegeben beschrieben.
 
 - **Laufende Freigaben sind unter „Limits“ sichtbar.** Eine erteilte
   Freigabe erscheint als grüne Kachel mit offenem Schloss. Dort stehen
@@ -117,9 +217,14 @@ _Der Release-Tag ist [ios-v0.9.157](https://github.com/Familiydevice/familydevic
   Die Simulation bestätigt die Anzeige, nicht die tatsächlichen
   iOS-Sperren oder eine Zustellung zwischen physischen iPhones.
 
-### 0.9.156 (Build 266)
+<a id="v0-9-156"></a>
+### 0.9.156 (CI-Lauf 266; kein eigener QA-Download)
 
-_Der Release-Tag ist [ios-v0.9.156](https://github.com/Familiydevice/familydevice/tree/ios-v0.9.156). Der Build wird im [CI-Lauf 266](https://github.com/Familiydevice/familydevice/actions/runs/40976693564) erstellt. Der [Simulator-Download v0.9.156](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.156) erscheint nach erfolgreicher Veröffentlichung. Unter „Einstellungen → Über“ muss Version 0.9.156 mit Build 266 stehen._
+**Kurz erklärt:** Einzel-App-Anfragen bleiben auch bei Kategorie-Sperren auf die geöffnete App begrenzt; Nachtruhe zeigt eine überstimmende Freigabe verständlicher.
+
+**Wo anschauen:** Sperrbildschirm, Anfrage-Mitteilung und „Limits → Priorität“.
+
+_Für 0.9.156 gibt es in den veröffentlichten QA-Releases keinen eigenen Download. Dokumentierter Stand: CI-Lauf 266. Der nächste verfügbare Download ist [v0.9.157](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.157) mit Build 271; seine Versionshinweise zusätzlich beachten._
 
 - **Nur das geöffnete Spiel anfragen, auch bei einer Kategorie-Sperre.**
   Öffnet das Kind beispielsweise Minecraft und tippt auf „Nur diese App
@@ -155,9 +260,14 @@ _Der Release-Tag ist [ios-v0.9.156](https://github.com/Familiydevice/familydevic
   `-FDScreen freed-rule-priorities`. Die tatsächlichen Geräteeinstellungen
   und Sperren müssen am vorgesehenen Kinder-Test-iPhone geprüft werden.
 
+<a id="v0-9-155"></a>
 ### 0.9.155 (Build 265)
 
-_Der Release-Tag ist [ios-v0.9.155](https://github.com/Familiydevice/familydevice/tree/ios-v0.9.155). Der Build wird im [CI-Lauf 265](https://github.com/Familiydevice/familydevice/actions/runs/40970142006) erstellt. Der [Simulator-Download v0.9.155](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.155) erscheint nach erfolgreicher Veröffentlichung. Unter „Einstellungen → Über“ muss Version 0.9.155 mit Build 265 stehen._
+**Kurz erklärt:** Eine App-Freigabe öffnet nicht die ganze Gruppe; fehlgeschlagene Push-Versuche und Mitteilungsanmeldungen werden erneut versucht.
+
+**Wo anschauen:** „Nur diese App anfragen“ und Push-Test beim Kind.
+
+_Veröffentlichter QA-Download: [v0.9.155](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.155), Build 265. Für Fehlerberichte müssen Version 0.9.155 und Build 265 aus der App genannt werden._
 
 - **Eine einzelne App freigeben, ohne die ganze Gruppe zu öffnen.**
   „Nur diese App anfragen“ auf dem Sperrbildschirm bleibt eine Anfrage
@@ -181,9 +291,14 @@ _Der Release-Tag ist [ios-v0.9.155](https://github.com/Familiydevice/familydevic
   aufeinanderfolgende Anfragen prüfen. Der Simulator bestätigt keine
   echte Push-Zustellung zwischen zwei iPhones.
 
+<a id="v0-9-154"></a>
 ### 0.9.154 (Build 264)
 
-_Der Release-Tag ist [ios-v0.9.154](https://github.com/Familiydevice/familydevice/tree/ios-v0.9.154). Der Build wird im [CI-Lauf 264](https://github.com/Familiydevice/familydevice/actions/runs/40792353364) erstellt. Der [Simulator-Download v0.9.154](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.154) erscheint nach erfolgreicher Veröffentlichung. Unter „Einstellungen → Über“ muss Version 0.9.154 mit Build 264 stehen._
+**Kurz erklärt:** Einzel-App- und Bildschirmzeit-Anfragen sind getrennt; gültige Freigaben werden beim Internet berücksichtigt, Sofortsperren lassen sich priorisieren.
+
+**Wo anschauen:** Sperrbildschirm, Anfrage auf dem Eltern-iPhone und „Limits → Priorität“.
+
+_Veröffentlichter QA-Download: [v0.9.154](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.154), Build 264. Für Fehlerberichte müssen Version 0.9.154 und Build 264 aus der App genannt werden._
 
 - **Zwei getrennte Anfragen direkt an der gesperrten App.** Das Kind kann
   „Nur diese App anfragen“ oder „Mehr Bildschirmzeit anfragen“ wählen.
@@ -214,9 +329,38 @@ _Der Release-Tag ist [ios-v0.9.154](https://github.com/Familiydevice/familydevic
   übernehmen. Die Anzeige lässt sich im Simulator mit
   `-FDScreen quick-action-limits` prüfen; die echten Sperren am Test-iPhone.
 
-### 0.9.153 (Build 263)
+<a id="v0-9-153"></a>
+### 0.9.153 (Build 262)
 
-_Dieser zusätzliche Build derselben Version wird im [CI-Lauf 263](https://github.com/Familiydevice/familydevice/actions/runs/40792117135) erstellt. Der [Simulator-Download v0.9.153](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.153) wird nach erfolgreicher Veröffentlichung aktualisiert. Unter „Einstellungen → Über“ muss Build 263 stehen._
+**Kurz erklärt:** Hintergrund-Abstürze beim Aktualisieren der Regeln wurden korrigiert. Einzel-App-Anfragen sind zusätzlich für Stand 263 dokumentiert; deren Umfang im Download 262 ist nicht belegt.
+
+**Wo anschauen:** Hintergrundbetrieb mit Limits; die Build-Hinweise dieser Version beachten.
+
+_Veröffentlichter QA-Download: [v0.9.153](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.153), Build 262. Für Fehlerberichte müssen Version 0.9.153 und Build 262 aus der App genannt werden._
+
+**Stand der Beschreibung:** Die freigegebenen Änderungsnotizen wurden zunächst für den Stand 261 ([CI-Lauf 261](https://github.com/Familiydevice/familydevice/actions/runs/40724204383)) geschrieben. Der verfügbare QA-Download trägt Build 262. Weitere Änderungen bis zu diesem Download sind nicht separat freigegeben beschrieben.
+
+#### Dokumentierter Stand: Build 261
+
+- **Wiederholte Abstürze im Hintergrund korrigiert.** Das Kinder-iPhone
+  soll beim automatischen Aktualisieren der Bildschirmzeit-Regeln nicht
+  mehr wiederholt eine Absturzmeldung zeigen, obwohl familydevice nicht
+  erneut geöffnet wurde. Betroffen waren Meldungen von einem iPhone 12
+  mit iOS 18.2.
+  **Echtes Gerät erforderlich:** Auf dem dafür vorgesehenen Kinder-
+  Test-iPhone den tatsächlich verwendeten Build notieren, bei aktiven Tageslimits in eine andere App
+  wechseln und das Gerät zwischendurch sperren. Währenddessen auf der
+  Elternseite ein Limit ändern und eine Freigabe erteilen. Mindestens
+  35 Minuten beobachten: keine neue Absturzmeldung; Änderungen und der
+  Ablauf einer Freigabe müssen weiterhin die vorgesehenen Sperren setzen.
+  Ein erreichtes Tageslimit muss auch nach erneutem Öffnen von familydevice
+  erhalten bleiben. Der Simulator kann diese Hintergrund-Abstürze und
+  die echten Bildschirmzeit-Sperren nicht bestätigen.
+
+<a id="09153-build-263"></a>
+#### Zusätzlich dokumentierter Stand: Build 263
+
+**Build-Zuordnung beachten:** Diese zusätzlichen Änderungen sind für [CI-Lauf 263](https://github.com/Familiydevice/familydevice/actions/runs/40792117135) beschrieben. Der veröffentlichte QA-Download trägt Build 262. Aus den freigegebenen QA-Belegen ist nicht bestätigt, dass die nachfolgenden Einzel-App-Änderungen bereits in diesem Download enthalten sind. Für ihre gezielte Prüfung einen entsprechend dokumentierten späteren Stand verwenden.
 
 - **Eine einzelne App statt des ganzen Geräts anfragen.** Auf dem
   Sperrbildschirm einer App gibt es zwei getrennte Aktionen:
@@ -239,28 +383,14 @@ _Dieser zusätzliche Build derselben Version wird im [CI-Lauf 263](https://githu
   Anfrageformular mit `-FDScreen app-request` zeigen, aber Apples echten
   Sperrbildschirm und die Durchsetzung nicht bestätigen.
 
-### 0.9.153 (Build 261)
-
-_Der Release-Tag ist [ios-v0.9.153](https://github.com/Familiydevice/familydevice/tree/ios-v0.9.153). Der Build wird im [CI-Lauf 261](https://github.com/Familiydevice/familydevice/actions/runs/40724204383) erstellt. Der [Simulator-Download v0.9.153](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.153) erscheint nach erfolgreicher Veröffentlichung. Unter „Einstellungen → Über“ muss Version 0.9.153 mit Build 261 stehen._
-
-- **Wiederholte Abstürze im Hintergrund korrigiert.** Das Kinder-iPhone
-  soll beim automatischen Aktualisieren der Bildschirmzeit-Regeln nicht
-  mehr wiederholt eine Absturzmeldung zeigen, obwohl familydevice nicht
-  erneut geöffnet wurde. Betroffen waren Meldungen von einem iPhone 12
-  mit iOS 18.2.
-  **Echtes Gerät erforderlich:** Auf dem dafür vorgesehenen Kinder-
-  Test-iPhone Build 261 öffnen, bei aktiven Tageslimits in eine andere App
-  wechseln und das Gerät zwischendurch sperren. Währenddessen auf der
-  Elternseite ein Limit ändern und eine Freigabe erteilen. Mindestens
-  35 Minuten beobachten: keine neue Absturzmeldung; Änderungen und der
-  Ablauf einer Freigabe müssen weiterhin die vorgesehenen Sperren setzen.
-  Ein erreichtes Tageslimit muss auch nach erneutem Öffnen von familydevice
-  erhalten bleiben. Der Simulator kann diese Hintergrund-Abstürze und
-  die echten Bildschirmzeit-Sperren nicht bestätigen.
-
+<a id="v0-9-152"></a>
 ### 0.9.152 (Build 259)
 
-_Der Build wird im [CI-Lauf 259](https://github.com/Familiydevice/familydevice/actions/runs/40611970146) erstellt. Der [Simulator-Download v0.9.152](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.152) erscheint nach erfolgreicher Veröffentlichung. Für den Gerätevergleich Eltern- und Kinder-App auf diese Version aktualisieren._
+**Kurz erklärt:** Limits und Zeitpläne lassen sich nach Stärke sortieren; die wirksame Regel wird angezeigt und „Ausblenden“ berücksichtigt die gesamte Bildschirmzeit.
+
+**Wo anschauen:** Kind → „Limits → Priorität“; Home-Bildschirm des Kinder-iPhones.
+
+_Veröffentlichter QA-Download: [v0.9.152](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.152), Build 259. Für Fehlerberichte müssen Version 0.9.152 und Build 259 aus der App genannt werden._
 
 - **Limits und Zeitpläne in die gewünschte Reihenfolge bringen.** Auf der
   Elternseite beim Kind unter „Limits“ die neue Zeile „Priorität“ öffnen.
@@ -296,9 +426,14 @@ _Der Build wird im [CI-Lauf 259](https://github.com/Familiydevice/familydevice/a
   Der Simulator prüft Reihenfolge und Anzeige, nicht das tatsächliche
   Verschwinden der Apps auf dem Home-Bildschirm.
 
+<a id="v0-9-151"></a>
 ### 0.9.151 (Build 258)
 
-_Der Build wird im [CI-Lauf 258](https://github.com/Familiydevice/familydevice/actions/runs/40591072369) erstellt. Der [Simulator-Download v0.9.151](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.151) erscheint nach erfolgreicher Veröffentlichung. Diese Version bündelt alle aktuellen Korrekturen an Sperren, Anfragen und der Entfernung des Eltern-VPN._
+**Kurz erklärt:** Neuere Sofortsperren überstimmen frühere Freigaben; erreichte Tageslimits bleiben bestehen und „Mehr Zeit anfragen“ gibt sichtbare Rückmeldung.
+
+**Wo anschauen:** Sofortaktionen, Tageslimit und Sperrbildschirm; Eltern-VPN entfällt vollständig.
+
+_Veröffentlichter QA-Download: [v0.9.151](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.151), Build 258. Für Fehlerberichte müssen Version 0.9.151 und Build 258 aus der App genannt werden._
 
 - **Eine neue Sofortsperre gilt auch nach einer Freigabe.** Auf der
   Eltern-Startseite zuerst „15 Minuten alles erlauben“ und danach
@@ -334,9 +469,16 @@ _Der Build wird im [CI-Lauf 258](https://github.com/Familiydevice/familydevice/a
   Prüfen: Eltern-App öffnen, „Meine Nutzung“ und die Netzwerkdetails des
   Kindes ansehen; es darf kein Eltern-VPN eingerichtet oder gestartet werden.
 
-### 0.9.150 (Build 255)
+<a id="v0-9-150"></a>
+### 0.9.150 (Build 257)
 
-_Der Build wird im [CI-Lauf 255](https://github.com/Familiydevice/familydevice/actions/runs/40571835819) erstellt. Der Simulator-Download erscheint nach erfolgreicher Veröffentlichung. Dieser Stand enthält auch die Kopplungskorrekturen aus 0.9.148 und 0.9.149._
+**Kurz erklärt:** Tageslimits stehen direkt auf der Startseite; Anfragen lassen sich durch Wischen bearbeiten und erledigte Einträge ausblenden. Limit-Zählung und Einrichtung wurden korrigiert.
+
+**Wo anschauen:** Eltern-Startseite, Anfrageverlauf und Einrichtungsassistent.
+
+_Veröffentlichter QA-Download: [v0.9.150](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.150), Build 257. Für Fehlerberichte müssen Version 0.9.150 und Build 257 aus der App genannt werden._
+
+**Stand der Beschreibung:** Die freigegebenen Änderungsnotizen wurden zunächst für den Stand 255 ([CI-Lauf 255](https://github.com/Familiydevice/familydevice/actions/runs/40571835819)) geschrieben. Der verfügbare QA-Download trägt Build 257. Weitere Änderungen bis zu diesem Download sind nicht separat freigegeben beschrieben.
 
 - **Limits direkt auf der Startseite.** Auf der Eltern-Startseite beim
   Kind stehen die Tageslimits jetzt neben Anfragen und Aktivität. Ein
@@ -375,9 +517,14 @@ _Der Build wird im [CI-Lauf 255](https://github.com/Familiydevice/familydevice/a
   der Abschlussknopf aktiv sein. Die Häkchen sind Bestätigungen der
   Eltern und ändern keine iOS-Einstellung.
 
-### 0.9.149 (Build 254)
+<a id="v0-9-149"></a>
+### 0.9.149 (CI-Lauf 254; kein eigener QA-Download)
 
-_Der Build wird im [CI-Lauf 254](https://github.com/Familiydevice/familydevice/actions/runs/40566519753) erstellt. Der Simulator-Download erscheint nach erfolgreicher Veröffentlichung. Dieser Stand enthält auch die WLAN-Korrektur aus 0.9.148._
+**Kurz erklärt:** WLAN und QR-Code werden beim Koppeln verständlicher erklärt; die Freigabe fürs lokale Netzwerk wird geprüft und Apple-Einstellungen werden schrittweise angeleitet.
+
+**Wo anschauen:** „Kinder-iPhone hinzufügen“, „Mit Eltern-iPhone verbinden“ und „Schutz prüfen“.
+
+_Für 0.9.149 gibt es in den veröffentlichten QA-Releases keinen eigenen Download. Dokumentierter Stand: CI-Lauf 254. Der nächste verfügbare Download ist [v0.9.150](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.150) mit Build 257; seine Versionshinweise zusätzlich beachten._
 
 - **WLAN und QR-Code sind zwei gleichzeitige Wege.** Unter „Mit
   Eltern-iPhone verbinden“ erklärt das Kinder-iPhone jetzt, dass es auf
@@ -407,9 +554,14 @@ _Der Build wird im [CI-Lauf 254](https://github.com/Familiydevice/familydevice/a
   Bestätigung gesperrt. Die echten Einstellungen gesondert auf dafür
   vorgesehenen Test-iPhones prüfen.
 
-### 0.9.148 (Build 253)
+<a id="v0-9-148"></a>
+### 0.9.148 (CI-Lauf 253; kein eigener QA-Download)
 
-_Der Build wird im [CI-Lauf 253](https://github.com/Familiydevice/familydevice/actions/runs/40564027134) erstellt. Der Simulator-Download erscheint nach erfolgreicher Veröffentlichung._
+**Kurz erklärt:** Erneutes Koppeln über WLAN bleibt nach dem Entkoppeln nicht mehr bei „Verbinde …“ hängen; für die Code-Bestätigung bleibt mehr Zeit.
+
+**Wo anschauen:** Kopplung über die Geräteliste; Vergleichscode auf beiden iPhones.
+
+_Für 0.9.148 gibt es in den veröffentlichten QA-Releases keinen eigenen Download. Dokumentierter Stand: CI-Lauf 253. Der nächste verfügbare Download ist [v0.9.150](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.150) mit Build 257; seine Versionshinweise zusätzlich beachten._
 
 - **Nach dem Entkoppeln wieder über WLAN koppeln.** Die direkte Kopplung
   konnte bei „Verbinde …“ hängen bleiben. Die Verbindung bleibt jetzt bis
@@ -425,9 +577,14 @@ _Der Build wird im [CI-Lauf 253](https://github.com/Familiydevice/familydevice/a
   sowie die Kopplung per QR-Code prüfen. Echtes Gerät erforderlich;
   diese Verbindungen sind durch die Simulation nicht nachgewiesen.
 
+<a id="v0-9-147"></a>
 ### 0.9.147 (Build 251)
 
-_Simulator-Download: [v0.9.147](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.147)._
+**Kurz erklärt:** Die Datenschutztexte beschreiben kein Eltern-VPN mehr und wurden in allen App-Sprachen angepasst.
+
+**Wo anschauen:** Profil → „Rechtliches → Datenschutz“.
+
+_Veröffentlichter QA-Download: [v0.9.147](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.147), Build 251. Für Fehlerberichte müssen Version 0.9.147 und Build 251 aus der App genannt werden._
 
 - **Datenschutztext passt zum Wegfall des Eltern-VPN.** Die
   Datenschutzerklärung beschreibt keine DNS-Messung auf dem Eltern-iPhone
@@ -437,9 +594,14 @@ _Simulator-Download: [v0.9.147](https://github.com/Familiydevice/familydevice-qa
   einem Sprachwechsel. Der Text muss laden und darf kein noch vorhandenes
   Eltern-VPN versprechen.
 
+<a id="v0-9-146"></a>
 ### 0.9.146 (CI-Lauf 249; kein eigener QA-Download)
 
-_Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.147](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.147) (Build 251) enthalten._
+**Kurz erklärt:** Das VPN und die eigene Netzwerk-Messung auf dem Eltern-iPhone wurden entfernt; der Filter auf dem Kinder-iPhone bleibt erhalten.
+
+**Wo anschauen:** Eltern-Profil und „Meine Nutzung“; Kinder-Netzwerk getrennt prüfen.
+
+_Für 0.9.146 gibt es in den veröffentlichten QA-Releases keinen eigenen Download. Dokumentierter Stand: CI-Lauf 249. Der nächste verfügbare Download ist [v0.9.147](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.147) mit Build 251; seine Versionshinweise zusätzlich beachten._
 
 - **VPN auf dem Eltern-iPhone entfernt.** Im Profil-Menü gibt es
   „VPN & Filter“ nicht mehr, unter „Meine Nutzung“ entfällt die eigene
@@ -450,9 +612,14 @@ _Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.147](https:/
   anschließend eine freigegebene und eine gesperrte Seite aufrufen und den
   dortigen Filter getrennt prüfen.
 
+<a id="v0-9-145"></a>
 ### 0.9.145 (Build 248)
 
-_Simulator-Download: [v0.9.145](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.145)._
+**Kurz erklärt:** Das Kinder-iPhone wird vor dem Koppeln fertig eingerichtet; jede Freigabe hat einen eigenen Knopf und iCloud-Mitteilungen werden beim Verbinden eingerichtet.
+
+**Wo anschauen:** Einrichtung → Freigaben → „Schutz prüfen“ → Koppeln.
+
+_Veröffentlichter QA-Download: [v0.9.145](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.145), Build 248. Für Fehlerberichte müssen Version 0.9.145 und Build 248 aus der App genannt werden._
 
 - **Kinder-iPhone vor dem Koppeln fertig einrichten.** Die Freigaben und
   „Schutz prüfen“ mit Bildschirmzeit-Code und Kaufanfrage kommen jetzt vor
@@ -469,9 +636,14 @@ _Simulator-Download: [v0.9.145](https://github.com/Familiydevice/familydevice-qa
   auf beiden Geräten ansehen und bei geschlossener Eltern-App eine Anfrage
   senden. Ein Fehler beim Einrichten muss erkennbar sein.
 
+<a id="v0-9-144"></a>
 ### 0.9.144 (CI-Lauf 247; kein eigener QA-Download)
 
-_Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.145](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.145) (Build 248) enthalten._
+**Kurz erklärt:** Koppeln per QR-Code funktioniert auch ohne gemeinsames WLAN; beide iPhones bestätigen weiterhin denselben Vergleichscode.
+
+**Wo anschauen:** „Mit Eltern-iPhone verbinden“ und „Kinder-iPhone hinzufügen → QR-Code scannen“.
+
+_Für 0.9.144 gibt es in den veröffentlichten QA-Releases keinen eigenen Download. Dokumentierter Stand: CI-Lauf 247. Der nächste verfügbare Download ist [v0.9.145](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.145) mit Build 248; seine Versionshinweise zusätzlich beachten._
 
 - **Mit QR-Code koppeln, auch ohne gemeinsames WLAN.** Auf dem
   Kinder-iPhone zeigt „Mit Eltern-iPhone verbinden“ einen QR-Code.
@@ -484,9 +656,14 @@ _Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.145](https:/
   und bestätigen. Danach eine Anfrage und eine Regeländerung übertragen.
   Die bisherige Kopplung im lokalen Netzwerk zusätzlich prüfen.
 
+<a id="v0-9-143"></a>
 ### 0.9.143 (CI-Lauf 246; kein eigener QA-Download)
 
-_Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.145](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.145) (Build 248) enthalten._
+**Kurz erklärt:** Der Sicherheitszähler berücksichtigt zusätzlich „QUIC unterbinden“ und zeigt bei allen eingeschalteten Schaltern „10 von 10“.
+
+**Wo anschauen:** Kind → „Erweiterte Einstellungen → Sicherheit“.
+
+_Für 0.9.143 gibt es in den veröffentlichten QA-Releases keinen eigenen Download. Dokumentierter Stand: CI-Lauf 246. Der nächste verfügbare Download ist [v0.9.145](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.145) mit Build 248; seine Versionshinweise zusätzlich beachten._
 
 - **Sicherheitszähler umfasst auch „QUIC unterbinden“.** Bei Kind →
   „Erweiterte Einstellungen“ → „Sicherheit“ zählt jetzt jeder dortige
@@ -495,9 +672,14 @@ _Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.145](https:/
   einschalten; der Zähler muss passend mitgehen. Die Anzeige lässt sich
   in der Simulation prüfen, die Netzwerkwirkung nur auf einem echten Gerät.
 
+<a id="v0-9-142"></a>
 ### 0.9.142 (CI-Lauf 245; kein eigener QA-Download)
 
-_Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.145](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.145) (Build 248) enthalten._
+**Kurz erklärt:** Ein weiteres Eltern-iPhone lässt sich koppeln, während ein bereits verbundenes Eltern-iPhone in der Nähe ist.
+
+**Wo anschauen:** Zusätzliches Eltern-iPhone koppeln und anschließend eine Regel ändern.
+
+_Für 0.9.142 gibt es in den veröffentlichten QA-Releases keinen eigenen Download. Dokumentierter Stand: CI-Lauf 245. Der nächste verfügbare Download ist [v0.9.145](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.145) mit Build 248; seine Versionshinweise zusätzlich beachten._
 
 - **Erneutes Koppeln bleibt nicht bei „Verbinde …“ hängen.** Ein schon
   verbundenes Eltern-iPhone in der Nähe konnte die Verbindung zum neuen
@@ -507,9 +689,14 @@ _Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.145](https:/
   Kopplungsseiten fertig werden; anschließend vom neuen Eltern-iPhone
   eine Regel ändern und deren Ankunft auf dem Kinder-iPhone prüfen.
 
+<a id="v0-9-141"></a>
 ### 0.9.141 (CI-Lauf 244; kein eigener QA-Download)
 
-_Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.145](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.145) (Build 248) enthalten._
+**Kurz erklärt:** Der Sicherheitszähler verwendet die richtige Gesamtzahl und zeigt für den damaligen Stand „9 von 9“ statt etwa „9 von 4“.
+
+**Wo anschauen:** Kind → „Erweiterte Einstellungen → Sicherheit“.
+
+_Für 0.9.141 gibt es in den veröffentlichten QA-Releases keinen eigenen Download. Dokumentierter Stand: CI-Lauf 244. Der nächste verfügbare Download ist [v0.9.145](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.145) mit Build 248; seine Versionshinweise zusätzlich beachten._
 
 - **Sicherheitszähler mit richtiger Gesamtzahl.** Bei Kind →
   „Erweiterte Einstellungen“ → „Sicherheit“ konnte „9 von 4“ stehen.
@@ -519,9 +706,14 @@ _Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.145](https:/
   einschalten und den Zähler beobachten. Ab 0.9.143 zählt zusätzlich
   „QUIC unterbinden“ mit; dort lautet die Gesamtzahl 10.
 
+<a id="v0-9-140"></a>
 ### 0.9.140 (CI-Lauf 243; kein eigener QA-Download)
 
-_Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.145](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.145) (Build 248) enthalten._
+**Kurz erklärt:** Nach vollständigem Entkoppeln wird der Bildschirmzeit-Zugriff zurückgegeben, damit sich die App wieder löschen lässt.
+
+**Wo anschauen:** Letzte Eltern-Verbindung auf einem dafür vorgesehenen Testgerät entfernen.
+
+_Für 0.9.140 gibt es in den veröffentlichten QA-Releases keinen eigenen Download. Dokumentierter Stand: CI-Lauf 243. Der nächste verfügbare Download ist [v0.9.145](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.145) mit Build 248; seine Versionshinweise zusätzlich beachten._
 
 - **Nach vollständigem Entkoppeln wieder löschbar.** Nach
   „iPhone entkoppeln“ auf dem Kinder-iPhone beziehungsweise dem Entfernen
@@ -533,9 +725,14 @@ _Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.145](https:/
   anschließend löschen. Dafür die Testeinrichtung vorher dokumentieren;
   die Simulation kann diese iOS-Berechtigung nicht prüfen.
 
+<a id="v0-9-139"></a>
 ### 0.9.139 (Build 242)
 
-_Simulator-Download: [v0.9.139](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.139)._
+**Kurz erklärt:** Ein neu installiertes Eltern-iPhone kann seine alte Verbindung ersetzen, während Regeln und Limits erhalten bleiben.
+
+**Wo anschauen:** Kinder-iPhone → Eltern-PIN → „Gerät → Eltern-iPhones → Neu koppeln“.
+
+_Veröffentlichter QA-Download: [v0.9.139](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.139), Build 242. Für Fehlerberichte müssen Version 0.9.139 und Build 242 aus der App genannt werden._
 
 - **Neu installiertes Eltern-iPhone wieder verbinden.** Auf dem
   Kinder-iPhone unter Eltern-PIN → „Gerät“ → „Eltern-iPhones“ gibt es
@@ -547,9 +744,14 @@ _Simulator-Download: [v0.9.139](https://github.com/Familiydevice/familydevice-qa
   Eintrag übrig bleiben, Regeln und Limits bleiben erhalten. Auch einen
   abgebrochenen Kopplungsversuch prüfen: die alte Verbindung bleibt bestehen.
 
+<a id="v0-9-138"></a>
 ### 0.9.138 (CI-Lauf 241; kein eigener QA-Download)
 
-_Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.139](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.139) (Build 242) enthalten._
+**Kurz erklärt:** Lange ausbleibende Eltern-Verbindungen werden erkannt; das Kind sieht eine Warnung und bei vollständigem Ausfall einen Schutzstatus mit Möglichkeiten zum erneuten Koppeln.
+
+**Wo anschauen:** Kinder-Startseite; Langzeittest mit echten Test-iPhones.
+
+_Für 0.9.138 gibt es in den veröffentlichten QA-Releases keinen eigenen Download. Dokumentierter Stand: CI-Lauf 241. Der nächste verfügbare Download ist [v0.9.139](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.139) mit Build 242; seine Versionshinweise zusätzlich beachten._
 
 - **Schutz, wenn sich kein Eltern-iPhone mehr meldet.** Zunächst steht
   auf der Kinder-Startseite „Deine Eltern melden sich nicht“. Bleiben alle
@@ -566,9 +768,14 @@ _Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.139](https:/
   gilt eine Frist von sieben Tagen. Danach Rückkehr eines Eltern-iPhones
   und Entsperren prüfen. Der Simulator ersetzt diesen Verbindungstest nicht.
 
+<a id="v0-9-137"></a>
 ### 0.9.137 (CI-Lauf 240; kein eigener QA-Download)
 
-_Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.139](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.139) (Build 242) enthalten._
+**Kurz erklärt:** „Mehr Zeit anfragen“ kann direkt vom Sperrbildschirm eine 30-Minuten-Anfrage senden und berücksichtigt bereits offene oder gerade abgelehnte Anfragen.
+
+**Wo anschauen:** Sperrbildschirm einer blockierten App und Anfrage auf dem Eltern-iPhone.
+
+_Für 0.9.137 gibt es in den veröffentlichten QA-Releases keinen eigenen Download. Dokumentierter Stand: CI-Lauf 240. Der nächste verfügbare Download ist [v0.9.139](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.139) mit Build 242; seine Versionshinweise zusätzlich beachten._
 
 - **Vom Sperrbildschirm direkt mehr Zeit anfragen.** „Mehr Zeit anfragen“
   sendet eine Anfrage über 30 Minuten an die Eltern, ohne dass das Kind
@@ -580,9 +787,14 @@ _Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.139](https:/
   danach öffnen: es darf keine zweite identische Anfrage entstehen.
   Außerdem eine Wiederholung nach Ablehnung prüfen.
 
+<a id="v0-9-136"></a>
 ### 0.9.136 (CI-Lauf 239; kein eigener QA-Download)
 
-_Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.139](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.139) (Build 242) enthalten._
+**Kurz erklärt:** Erlaubte Social-Media-Profile öffnen nicht das ganze Netzwerk; aufgebrauchte Bildschirmzeit und vorgemerkte Anfragen werden verständlicher behandelt.
+
+**Wo anschauen:** Safari, Kinder-Startseite und „Mehr Zeit anfragen“.
+
+_Für 0.9.136 gibt es in den veröffentlichten QA-Releases keinen eigenen Download. Dokumentierter Stand: CI-Lauf 239. Der nächste verfügbare Download ist [v0.9.139](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.139) mit Build 242; seine Versionshinweise zusätzlich beachten._
 
 - **Freigegebene Profile öffnen nicht mehr das ganze soziale Netzwerk.**
   Nach dem Anmelden oder dem Besuch eines erlaubten Instagram-Profils
@@ -603,9 +815,14 @@ _Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.139](https:/
   anfragen und familydevice öffnen. Ab 0.9.137 wird die Anfrage bereits
   ohne diesen zusätzlichen App-Start verschickt.
 
+<a id="v0-9-135"></a>
 ### 0.9.135 (Build 238)
 
-_Simulator-Download: [v0.9.135](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.135)._
+**Kurz erklärt:** Die Einrichtung erklärt Nutzen und Nachteile jeder Freigabe; ein Aufenthalt beginnt nach Verlassen und Rückkehr mit der neuen Ankunftszeit.
+
+**Wo anschauen:** Einrichtung auf beiden iPhones und Ortsanzeige beim Kind.
+
+_Veröffentlichter QA-Download: [v0.9.135](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.135), Build 238. Für Fehlerberichte müssen Version 0.9.135 und Build 238 aus der App genannt werden._
 
 - **Einrichtung sagt, warum – und was es kostet.** Jede Frage in der
   Einrichtung (Mitteilungen, Standort, Bewegung, Netzwerkfilter), der Schritt
@@ -619,9 +836,14 @@ _Simulator-Download: [v0.9.135](https://github.com/Familiydevice/familydevice-qa
   Prüfen: mit Ortsverlauf kurz das Zuhause verlassen und zurückkommen; auf
   der Kinderseite steht „seit“ mit der Uhrzeit der Rückkehr.
 
+<a id="v0-9-134"></a>
 ### 0.9.134 (CI-Lauf 237; kein eigener QA-Download)
 
-_Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.135](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.135) (Build 238) enthalten._
+**Kurz erklärt:** Eltern können für soziale Netzwerke einzelne Profile dauerhaft erlauben; das Kind kann weitere Profile anfragen.
+
+**Wo anschauen:** Kind → „Soziale Netzwerke“; erlaubte und gesperrte Profile in Safari.
+
+_Für 0.9.134 gibt es in den veröffentlichten QA-Releases keinen eigenen Download. Dokumentierter Stand: CI-Lauf 237. Der nächste verfügbare Download ist [v0.9.135](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.135) mit Build 238; seine Versionshinweise zusätzlich beachten._
 
 - **Soziale Netzwerke: nur freigegebene Profile.** Neue Zeile „Soziale
   Netzwerke“ beim Kind, gleich unter „Sicherheit“: ein Schalter je Netzwerk
@@ -644,9 +866,14 @@ _Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.135](https:/
   ist vom Home-Bildschirm verschwunden. Im Simulator nur die Zeile „Soziale
   Netzwerke“ und das Hinzufügen/Entfernen von Profilen ansehen.
 
+<a id="v0-9-133"></a>
 ### 0.9.133 (CI-Lauf 236; kein eigener QA-Download)
 
-_Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.135](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.135) (Build 238) enthalten._
+**Kurz erklärt:** Der Tor-Schutz berücksichtigt auch Brücken und blendet bekannte Tor-, VPN- und Proxy-Apps auf dem Kinder-iPhone aus.
+
+**Wo anschauen:** Sicherheit → „VPN, Proxy & Tor blockieren“ auf einem Test-iPhone.
+
+_Für 0.9.133 gibt es in den veröffentlichten QA-Releases keinen eigenen Download. Dokumentierter Stand: CI-Lauf 236. Der nächste verfügbare Download ist [v0.9.135](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.135) mit Build 238; seine Versionshinweise zusätzlich beachten._
 
 - **Tor auch über Brücken gesperrt.** Mit „VPN, Proxy & Tor blockieren“
   verschwinden auf dem Kinder-iPhone 48 Tor-, VPN- und Proxy-Apps vom
@@ -658,9 +885,14 @@ _Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.135](https:/
   ist wieder da. Mit Schalter an und schon laufendem Orbot-VPN: kein Internet
   über Orbot.
 
+<a id="v0-9-132"></a>
 ### 0.9.132 (CI-Lauf 235; kein eigener QA-Download)
 
-_Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.135](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.135) (Build 238) enthalten._
+**Kurz erklärt:** Eine neue Sperrliste erfasst VPN, Proxy und Tor; die Pornografie-Liste berücksichtigt zusätzlich Suchmaschinen ohne sichere Suche.
+
+**Wo anschauen:** „Sicherheit“ und Netzwerk → „Regeln“.
+
+_Für 0.9.132 gibt es in den veröffentlichten QA-Releases keinen eigenen Download. Dokumentierter Stand: CI-Lauf 235. Der nächste verfügbare Download ist [v0.9.135](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.135) mit Build 238; seine Versionshinweise zusätzlich beachten._
 
 - **Neue Sperrliste: VPN, Proxy & Tor.** Fünfter Schalter neben den anderen
   Sperrlisten (Kind → „Erweiterte Limits“ → „Sicherheit“, Netzwerk →
@@ -674,9 +906,14 @@ _Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.135](https:/
   Safari, dass es nicht verfügbar ist – das ist gewollt.
 - **Pornografie-Liste sperrt auch Suchmaschinen ohne sichere Suche.**
 
+<a id="v0-9-131"></a>
 ### 0.9.131 (CI-Lauf 234; kein eigener QA-Download)
 
-_Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.135](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.135) (Build 238) enthalten._
+**Kurz erklärt:** Der Werbefilter erfasst mehr Pop-ups und Weiterleitungen; eine weitere Sperrliste richtet sich gegen Raubkopien und illegales Streaming.
+
+**Wo anschauen:** Werbefilter und Sperrlisten in „Sicherheit“.
+
+_Für 0.9.131 gibt es in den veröffentlichten QA-Releases keinen eigenen Download. Dokumentierter Stand: CI-Lauf 234. Der nächste verfügbare Download ist [v0.9.135](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.135) mit Build 238; seine Versionshinweise zusätzlich beachten._
 
 - **Werbefilter fängt auch Pop-ups.** „Werbung & Tracker blockieren“ sperrt
   jetzt zusätzlich Pop-up- und Weiterleitungswerbung (rund 48.000 Domains
@@ -689,9 +926,14 @@ _Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.135](https:/
   an. Prüfen: einschalten, eine bekannte illegale Streamingseite aufrufen –
   sie lädt nicht.
 
+<a id="v0-9-130"></a>
 ### 0.9.130 (CI-Lauf 233; kein eigener QA-Download)
 
-_Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.135](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.135) (Build 238) enthalten._
+**Kurz erklärt:** Neue Schalter blockieren Pornografie, Pillen und Drogen sowie Glücksspiel und Poker; ausdrücklich erlaubte Domains bleiben ausgenommen.
+
+**Wo anschauen:** „Sicherheit“, Netzwerk → „Regeln“ und damaliges Eltern-Menü „VPN & Filter“.
+
+_Für 0.9.130 gibt es in den veröffentlichten QA-Releases keinen eigenen Download. Dokumentierter Stand: CI-Lauf 233. Der nächste verfügbare Download ist [v0.9.135](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.135) mit Build 238; seine Versionshinweise zusätzlich beachten._
 
 - **Neue Sperrlisten: Pornografie, Pillen & Drogen, Glücksspiel & Poker.**
   Neben „Werbung & Tracker“ und „Schadsoftware & Phishing“ gibt es drei neue
@@ -705,9 +947,14 @@ _Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.135](https:/
   aufrufen – sie lädt nicht; Schalter aus – sie lädt wieder. Eine Domain unter
   „Immer erlauben“ geht trotz Liste durch.
 
+<a id="v0-9-129"></a>
 ### 0.9.129 (CI-Lauf 232; kein eigener QA-Download)
 
-_Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.135](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.135) (Build 238) enthalten._
+**Kurz erklärt:** Eltern können offene Anfragen durch Wischen erlauben oder ablehnen; Antippen öffnet weiter die ausführliche Entscheidung.
+
+**Wo anschauen:** Anfragen auf der Familien- und Kinderseite des Eltern-iPhones.
+
+_Für 0.9.129 gibt es in den veröffentlichten QA-Releases keinen eigenen Download. Dokumentierter Stand: CI-Lauf 232. Der nächste verfügbare Download ist [v0.9.135](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.135) mit Build 238; seine Versionshinweise zusätzlich beachten._
 
 - **Anfragen mit Wischen beantworten.** Offene Anfragen auf der Familienseite
   und der Kinderseite: nach rechts wischen erlaubt für die angefragte Dauer,
@@ -716,9 +963,14 @@ _Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.135](https:/
   Prüfen: vom Kinder-iPhone eine Anfrage schicken, auf dem Eltern-iPhone
   wischen; das Kind bekommt die Antwort.
 
+<a id="v0-9-128"></a>
 ### 0.9.128 (Build 231)
 
-_Simulator-Download: [v0.9.128](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.128)._
+**Kurz erklärt:** Das damalige Eltern-VPN startet erst nach bewusstem Einschalten; bei einer frischen Einrichtung erscheint kein automatischer VPN-Dialog mehr.
+
+**Wo anschauen:** Damals: Profil → „VPN & Filter“ und Netzwerk-Seite.
+
+_Veröffentlichter QA-Download: [v0.9.128](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.128), Build 231. Für Fehlerberichte müssen Version 0.9.128 und Build 231 aus der App genannt werden._
 
 - **VPN auf dem Eltern-iPhone erst nach Einschalten.** Das Eltern-iPhone
   startet die Netzwerk-Messung (VPN) nicht mehr von selbst, und die Frage
@@ -728,9 +980,14 @@ _Simulator-Download: [v0.9.128](https://github.com/Familiydevice/familydevice-qa
   Prüfen: App frisch installieren – kein VPN-Hinweis von iOS; Schalter an –
   iOS fragt nach dem VPN.
 
+<a id="v0-9-127"></a>
 ### 0.9.127 (Build 230)
 
-_Simulator-Download: [v0.9.127](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.127)._
+**Kurz erklärt:** Die Nutzungs-Zeitleiste zeigt Tage mit Sommer- oder Winterzeit bei den richtigen Uhrzeiten; die Sperrregeln selbst waren nicht betroffen.
+
+**Wo anschauen:** Tagesverlauf an einem Tag mit Zeitumstellung.
+
+_Veröffentlichter QA-Download: [v0.9.127](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.127), Build 230. Für Fehlerberichte müssen Version 0.9.127 und Build 230 aus der App genannt werden._
 
 _Zuerst als Build 229 erstellt; der veröffentlichte QA-Download wurde auf Build 230 aktualisiert._
 
@@ -743,9 +1000,14 @@ _Zuerst als Build 229 erstellt; der veröffentlichte QA-Download wurde auf Build
   Zeitumstellung ansehen; die Nachtruhe beginnt und endet bei den
   eingestellten Uhrzeiten.
 
+<a id="v0-9-126"></a>
 ### 0.9.126 (Build 225)
 
-_Simulator-Download: [v0.9.126](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.126)._
+**Kurz erklärt:** Der Anfrage-Knopf auf Safaris Internet-Sperrseite führt über die Website zurück in die passende Internet-Anfrage der App.
+
+**Wo anschauen:** Safari-Sperrseite → „Zeit anfragen“ → familydevice.
+
+_Veröffentlichter QA-Download: [v0.9.126](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.126), Build 225. Für Fehlerberichte müssen Version 0.9.126 und Build 225 aus der App genannt werden._
 
 - **„Zeit anfragen“ auf der Safari-Sperrseite geht über die Website.** Ist
   das ganze Internet gesperrt und das Kind öffnet in Safari eine Seite,
@@ -760,9 +1022,14 @@ _Simulator-Download: [v0.9.126](https://github.com/Familiydevice/familydevice-qa
   bis, Mehr Zeit anfragen, die Seite /anfrage) laufen; bis sie da sind, sind
   diese Texte in allen Sprachen deutsch.
 
+<a id="v0-9-125"></a>
 ### 0.9.125 (Build 224)
 
-_Simulator-Download: [v0.9.125](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.125)._
+**Kurz erklärt:** Internetfreigaben lassen getrennte App- und Website-Sperren bestehen; gültige Gesamtfreigaben und „Alles frei bis …“ werden konsistenter berücksichtigt.
+
+**Wo anschauen:** Internet-Anfrage während einer Nachtruhe, Gesamtfreigabe und Statuszeilen.
+
+_Veröffentlichter QA-Download: [v0.9.125](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.125), Build 224. Für Fehlerberichte müssen Version 0.9.125 und Build 224 aus der App genannt werden._
 
 - **Nachgezogen nach einer Durchsicht von 0.9.123/0.9.124.** Eine Freigabe
   fürs Internet öffnet nur die Internetsperre – Apps und Websites einer
@@ -785,9 +1052,14 @@ Prüfen auf echten Test-iPhones: Internet während einer aktiven Nachtruhe
 freigeben, anschließend die getrennten App- und Website-Sperren sowie die
 Statusanzeige kontrollieren.
 
+<a id="v0-9-124"></a>
 ### 0.9.124 (Build 223)
 
-_Simulator-Download: [v0.9.124](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.124)._
+**Kurz erklärt:** Als harmlos markierte, immer erlaubte Apps behalten ihre Verbindung auch bei einer Sperre des gesamten Internets.
+
+**Wo anschauen:** „Immer erlaubt“ und die Kachel „Internet“.
+
+_Veröffentlichter QA-Download: [v0.9.124](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.124), Build 223. Für Fehlerberichte müssen Version 0.9.124 und Build 223 aus der App genannt werden._
 
 - **Harmlose Apps kommen durch die Internetsperre.** Apps, die ihr auf ihrer
   Seite als harmlos markiert habt („Immer erlaubt“), behalten ihre
@@ -798,9 +1070,14 @@ _Simulator-Download: [v0.9.124](https://github.com/Familiydevice/familydevice-qa
   unten: harmlose Apps, iCloud, Push und familydevice bleiben erreichbar, eine
   erlaubte Anfrage lässt das Internet so lange durch.
 
+<a id="v0-9-123"></a>
 ### 0.9.123 (CI-Lauf 222; kein eigener QA-Download)
 
-_Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.124](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.124) (Build 223) enthalten._
+**Kurz erklärt:** Zusätzliche Bildschirmzeit gibt das ganze iPhone frei; Zeitpläne erscheinen als Limit-Kacheln und auch ausgeblendete Apps sowie das Internet können angefragt werden.
+
+**Wo anschauen:** „Limits“, Kinder-Startseite und Internet-Sperrseite.
+
+_Für 0.9.123 gibt es in den veröffentlichten QA-Releases keinen eigenen Download. Dokumentierter Stand: CI-Lauf 222. Der nächste verfügbare Download ist [v0.9.124](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.124) mit Build 223; seine Versionshinweise zusätzlich beachten._
 
 - **Mehr Zeit heißt das ganze iPhone.** Wird die Bildschirmzeit genehmigt
   („Mehr Zeit anfragen“ → „Erlauben“) oder von den Eltern verlängert, sind für
@@ -830,9 +1107,14 @@ _Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.124](https:/
   „frei bis …“. Andere Apps als Safari bekommen keine Seite, sie laufen nach
   der Freigabe einfach wieder.
 
+<a id="v0-9-122"></a>
 ### 0.9.122 (Build 221)
 
-_Simulator-Download: [v0.9.122](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.122)._
+**Kurz erklärt:** Nicht mehr verwendete Eltern-Verbindungen können einzeln entfernt werden; eine neu installierte Eltern-App startet mit einer frischen Kopplung.
+
+**Wo anschauen:** Kinder-iPhone → Eltern-Code → „Gerät → Eltern-iPhones“.
+
+_Veröffentlichter QA-Download: [v0.9.122](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.122), Build 221. Für Fehlerberichte müssen Version 0.9.122 und Build 221 aus der App genannt werden._
 
 - **Ein totes Eltern-iPhone loswerden.** Auf dem Kinder-iPhone unter
   Eltern-Code → „Gerät“ → „Eltern-iPhones“ steht zu jedem gekoppelten
@@ -853,9 +1135,14 @@ Prüfen auf echten Test-iPhones: eine zusätzliche Eltern-Verbindung entfernen
 und danach vom verbleibenden Eltern-iPhone eine Regel ändern. Die letzte
 Verbindung nur in einer dafür vorgesehenen Testeinrichtung entfernen.
 
+<a id="v0-9-121"></a>
 ### 0.9.121 (CI-Lauf 220; kein eigener QA-Download)
 
-_Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.122](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.122) (Build 221) enthalten._
+**Kurz erklärt:** Limits, Internetsperren und Zeitpläne sind zentral erreichbar; „+ Limit“ ist der gemeinsame Einstieg und weitere Optionen liegen unter „Erweiterte Einstellungen“.
+
+**Wo anschauen:** Kinderseite → „Erweiterte Einstellungen“, Limit-Kacheln und „+ Limit“.
+
+_Für 0.9.121 gibt es in den veröffentlichten QA-Releases keinen eigenen Download. Dokumentierter Stand: CI-Lauf 220. Der nächste verfügbare Download ist [v0.9.122](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.122) mit Build 221; seine Versionshinweise zusätzlich beachten._
 
 - **Alle Limits an einem Ort.** Auf der Kinderseite ganz unten steht jetzt die
   Zeile „Erweiterte Einstellungen“ (mit dem Status als Wert, orange wenn dort
@@ -878,9 +1165,14 @@ Prüfen in der Simulation: „Erweiterte Einstellungen“ öffnen, alle Limit-
 Kacheln und „+ Limit“ durchgehen und einen Zeitplan bearbeiten. Echte Sperren
 auf einem Test-iPhone prüfen.
 
+<a id="v0-9-120"></a>
 ### 0.9.120 (Build 219)
 
-_Simulator-Download: [v0.9.120](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.120)._
+**Kurz erklärt:** Einstellungen des Eltern-iPhones und des Kindes sind getrennt; das damalige Eltern-VPN und seine Filter liegen im Profil-Menü.
+
+**Wo anschauen:** Eltern-Profil, damaliges „VPN & Filter“ und Kinder-Einstellungen.
+
+_Veröffentlichter QA-Download: [v0.9.120](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.120), Build 219. Für Fehlerberichte müssen Version 0.9.120 und Build 219 aus der App genannt werden._
 
 - **Eltern und Kinder strikt getrennt.** Alles zum eigenen Eltern-iPhone steckt
   im Profil-Symbol oben rechts: „Meine Nutzung“ und neu „VPN & Filter“. Das
@@ -898,9 +1190,14 @@ Prüfen auf einem echten Eltern-iPhone mit dieser Version: Profil-Menü und „V
 & Filter“ öffnen, VPN aus- und einschalten und die gemeinsam geschalteten
 Filter kontrollieren. Die Kinder-Einstellungen müssen weiter zum Kind gehören.
 
+<a id="v0-9-119"></a>
 ### 0.9.119 (Build 218)
 
-_Simulator-Download: [v0.9.119](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.119)._
+**Kurz erklärt:** Das damalige Eltern-VPN, Werbefilter und Phishing-Schutz stehen als zusammengehöriger Abschnitt mit gekoppelten Schaltern bereit.
+
+**Wo anschauen:** Damals hinter dem Zahnrad; ab 0.9.120 im Profil-Menü.
+
+_Veröffentlichter QA-Download: [v0.9.119](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.119), Build 218. Für Fehlerberichte müssen Version 0.9.119 und Build 218 aus der App genannt werden._
 
 - Erster Stand von VPN, Werbefilter und Phishing-Schutz als ein Abschnitt mit
   gekoppelten Schaltern – noch hinter dem Zahnrad, in 0.9.120 ins Profil-Menü
@@ -911,9 +1208,14 @@ Prüfen auf einem echten Eltern-iPhone mit dieser Version: die gekoppelten VPN-
 und Filter-Schalter öffnen, ihren Zustand ändern und danach die Netzwerk-Seite
 kontrollieren.
 
+<a id="v0-9-118"></a>
 ### 0.9.118 (Build 217)
 
-_Simulator-Download: [v0.9.118](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.118)._
+**Kurz erklärt:** Ein zunächst aktiver Filter blendet Apple-Apps, Erweiterungen und harmlose Apps in den Nutzungslisten aus; ein Tipp zeigt sie wieder.
+
+**Wo anschauen:** Kinderseite → Apps → „Jetzt“ und „Heute“.
+
+_Veröffentlichter QA-Download: [v0.9.118](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.118), Build 217. Für Fehlerberichte müssen Version 0.9.118 und Build 217 aus der App genannt werden._
 
 - In den Apps-Listen („Jetzt“ und „Heute“) ist der Filter ein Symbol, das
   standardmäßig an ist: Es blendet Apples Apps, Erweiterungen anderer Apps und
@@ -923,9 +1225,14 @@ Prüfen in der Simulation: auf der Kinderseite zwischen „Jetzt“ und „Heute
 wechseln und jeweils den Filter umschalten. Die zusätzlichen Apps sollen
 erscheinen und wieder verschwinden.
 
+<a id="v0-9-117"></a>
 ### 0.9.117 (Build 216)
 
-_Simulator-Download: [v0.9.117](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.117)._
+**Kurz erklärt:** „Jetzt“ und „Heute“ verbergen dieselben harmlosen Apps; eine Erklärung nennt den jeweiligen Zeitraum und die Datenquelle.
+
+**Wo anschauen:** Apps-Listen und das „i“ bei der Apps-Überschrift.
+
+_Veröffentlichter QA-Download: [v0.9.117](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.117), Build 216. Für Fehlerberichte müssen Version 0.9.117 und Build 216 aus der App genannt werden._
 
 - Als harmlos markierte Apps bleiben auch aus Apples Listen draußen, „Jetzt“
   und „Heute“ verbergen dieselben Apps. Das „i“ im Apps-Kopf erklärt: „Jetzt“ =
@@ -935,9 +1242,14 @@ Prüfen auf einem echten Test-iPhone: eine als harmlos markierte App in den
 Listen kontrollieren und das „i“ neben der Apps-Überschrift öffnen. Beide
 Zeiträume müssen verständlich erklärt sein.
 
+<a id="v0-9-116"></a>
 ### 0.9.116 (Build 215)
 
-_Simulator-Download: [v0.9.116](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.116)._
+**Kurz erklärt:** Tageslimits können für jeden Wochentag oder getrennt fürs Wochenende eingestellt werden; Orts- und Aktivitätsanzeigen wurden angepasst.
+
+**Wo anschauen:** Limit-Editor → „Woche“, Tagesverlauf und „Bewegung & Orte“.
+
+_Veröffentlichter QA-Download: [v0.9.116](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.116), Build 215. Für Fehlerberichte müssen Version 0.9.116 und Build 215 aus der App genannt werden._
 
 - **Tageslimits pro Wochentag:** Im Limit-Editor wählt „Woche“ zwischen jeden
   Tag gleich, Wochenende getrennt oder jeder Tag einzeln (0 = ganztägig
@@ -951,9 +1263,14 @@ Prüfen in der Simulation: im Limit-Editor alle drei Wochen-Einstellungen
 durchgehen und einen einzelnen Wochentag ändern. Für einen echten Ortstest das
 Kinder-iPhone aus dem Ort hinaus und zurückbringen.
 
+<a id="v0-9-115"></a>
 ### 0.9.115 (Build 214)
 
-_Simulator-Download: [v0.9.115](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.115)._
+**Kurz erklärt:** Häufige Aktionen sind mit wenigen Schritten erreichbar; bei nur einem Kind öffnet dessen Seite direkt und die Ortsanzeige ist präsenter.
+
+**Wo anschauen:** Startseite, Kinderseite, Profil und erweiterte Einstellungen.
+
+_Veröffentlichter QA-Download: [v0.9.115](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.115), Build 214. Für Fehlerberichte müssen Version 0.9.115 und Build 214 aus der App genannt werden._
 
 - **Zwei-Tipp-Regel:** Alltägliches liegt auf der Kinderseite, der Rest unter
   „Erweiterte Einstellungen“ (Zahnrad). Mit einem Kind ist dessen Seite die
@@ -966,9 +1283,14 @@ Prüfen in der Simulation: Familien mit einem und mehreren Kindern ansehen,
 dann von der Kinderseite die erweiterten Einstellungen und das Profil-Menü
 öffnen.
 
+<a id="v0-9-114"></a>
 ### 0.9.114 (Build 213)
 
-_Simulator-Download: [v0.9.114](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.114)._
+**Kurz erklärt:** Der Tagesverlauf trennt Apples Nutzungsdaten von der Netzwerk-Schätzung; App-Seiten beginnen mit Freigeben, Sperren und Ausblenden.
+
+**Wo anschauen:** Tagesverlauf, „Bewegung & Orte“ und einzelne App-Seite.
+
+_Veröffentlichter QA-Download: [v0.9.114](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.114), Build 213. Für Fehlerberichte müssen Version 0.9.114 und Build 213 aus der App genannt werden._
 
 - Der Tagesverlauf zeigt den Tag des Kindes aus Apples Bildschirmzeit:
   stündliche Balken der fünf meistgenutzten Apps, jede App mit Minuten,
@@ -982,9 +1304,14 @@ Nutzungsdaten mit der getrennt beschrifteten Netzwerk-Schätzung vergleichen.
 In der Simulation zusätzlich „Bewegung & Orte“ und die drei Aktionen auf einer
 App-Seite öffnen.
 
+<a id="v0-9-113"></a>
 ### 0.9.113 (Build 212)
 
-_Simulator-Download: [v0.9.113](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.113)._
+**Kurz erklärt:** „Heute“ zeigt Apples Bildschirmzeit, „Jetzt“ bleibt die Netzwerk-Schätzung; längere Verbindungen und verständliche App-Namen werden berücksichtigt.
+
+**Wo anschauen:** Kinderseite → Apps → „Heute“ und „Jetzt“.
+
+_Veröffentlichter QA-Download: [v0.9.113](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.113), Build 212. Für Fehlerberichte müssen Version 0.9.113 und Build 212 aus der App genannt werden._
 
 - **„Heute“ nutzt Apples Bildschirmzeit.** Auf der Kinderseite zeigt
   „Heute“ die App-Nutzung mit Minuten, Aktivierungen und Mitteilungen aus
@@ -997,9 +1324,14 @@ _Simulator-Download: [v0.9.113](https://github.com/Familiydevice/familydevice-qa
   ein Video laufen lassen und „Jetzt“ beobachten. Die Simulation prüft
   die Darstellung, nicht Apples echte Nutzungsdaten.
 
+<a id="v0-9-112"></a>
 ### 0.9.112 (Build 211)
 
-_Simulator-Download: [v0.9.112](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.112)._
+**Kurz erklärt:** Netzwerkverkehr bei gesperrtem Bildschirm erhöht die Datenmenge, aber nicht mehr die geschätzten Nutzungsminuten oder Öffnungen.
+
+**Wo anschauen:** Apps-Anzeige und Erklärung auf der Kinderseite; Sperren des Test-iPhones.
+
+_Veröffentlichter QA-Download: [v0.9.112](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.112), Build 211. Für Fehlerberichte müssen Version 0.9.112 und Build 211 aus der App genannt werden._
 
 - **Gesperrter Bildschirm zählt keine zusätzlichen App-Minuten.**
   Hintergrundverkehr bei gesperrtem iPhone erhöht die gemessene Datenmenge,
@@ -1011,9 +1343,14 @@ _Simulator-Download: [v0.9.112](https://github.com/Familiydevice/familydevice-qa
   gemessenen App-Minuten danach vergleichen. Zusätzlich den Erklärungstext
   auf der Kinderseite öffnen.
 
+<a id="v0-9-111"></a>
 ### 0.9.111 (Build 210)
 
-_Simulator-Download: [v0.9.111](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.111)._
+**Kurz erklärt:** Die Bildschirmzeit-Karte zeigt die angerechnete Zeit am Tageslimit; die gemessene entsperrte Zeit wird getrennt angezeigt.
+
+**Wo anschauen:** Kinderseite und Familienübersicht.
+
+_Veröffentlichter QA-Download: [v0.9.111](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.111), Build 210. Für Fehlerberichte müssen Version 0.9.111 und Build 210 aus der App genannt werden._
 
 - **Bildschirmzeit-Karte zeigt den Zähler, der das Limit entscheidet.**
   Auf der Kinderseite und in der Familienübersicht steht die angerechnete
@@ -1023,9 +1360,14 @@ _Simulator-Download: [v0.9.111](https://github.com/Familiydevice/familydevice-qa
   beide Werte ansehen. Die Zeit am Limit muss zum Sperrstatus passen;
   die entsperrte Zeit darf unabhängig davon höher sein.
 
+<a id="v0-9-110"></a>
 ### 0.9.110 (CI-Lauf 209; kein eigener QA-Download)
 
-_Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.111](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.111) (Build 210) enthalten._
+**Kurz erklärt:** Das Simulator-Paket wurde verkleinert und enthält neutralisierte Build-Pfade; es gibt keinen eigenen veröffentlichten QA-Download.
+
+**Wo anschauen:** Installation und Simulation mit dem nächsten verfügbaren Download.
+
+_Für 0.9.110 gibt es in den veröffentlichten QA-Releases keinen eigenen Download. Dokumentierter Stand: CI-Lauf 209. Der nächste verfügbare Download ist [v0.9.111](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.111) mit Build 210; seine Versionshinweise zusätzlich beachten._
 
 - **Kleineres Simulator-Paket.** Der Simulator-Build wurde von etwa
   42 auf etwa 33 MB verkleinert; Pfade des Build-Rechners werden neutralisiert.
@@ -1033,9 +1375,14 @@ _Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.111](https:/
   starten und die Simulation öffnen. Die Seiten müssen sich weiterhin
   vollständig bedienen lassen.
 
+<a id="v0-9-109"></a>
 ### 0.9.109 (Build 208)
 
-_Simulator-Download: [v0.9.109](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.109)._
+**Kurz erklärt:** Der Umschalter „Jetzt“ erscheint in der gewählten App-Sprache.
+
+**Wo anschauen:** Kinderseite → Apps; beispielsweise auf Englisch öffnen.
+
+_Veröffentlichter QA-Download: [v0.9.109](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.109), Build 208. Für Fehlerberichte müssen Version 0.9.109 und Build 208 aus der App genannt werden._
 
 - **„Jetzt“ ist übersetzt.** Der Umschalter „Jetzt“ neben „Heute“ auf
   der Kinderseite erscheint jetzt in der gewählten App-Sprache statt
@@ -1043,9 +1390,14 @@ _Simulator-Download: [v0.9.109](https://github.com/Familiydevice/familydevice-qa
   Prüfen in der Simulation: die App etwa auf Englisch oder Französisch
   öffnen und beide Umschalter sowie die zugehörigen App-Listen ansehen.
 
+<a id="v0-9-108"></a>
 ### 0.9.108 (Build 207)
 
-_Simulator-Download: [v0.9.108](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.108)._
+**Kurz erklärt:** Fertige Simulator-Builds werden als versionierte Releases und über „Neuester Build“ bereitgestellt.
+
+**Wo anschauen:** QA-Download, Versionsanzeige und Simulation.
+
+_Veröffentlichter QA-Download: [v0.9.108](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.108), Build 207. Für Fehlerberichte müssen Version 0.9.108 und Build 207 aus der App genannt werden._
 
 - **Simulator-Downloads erscheinen als Releases.** Die Veröffentlichung
   im QA-Repository wurde vervollständigt, damit der fertige Build als
@@ -1054,9 +1406,14 @@ _Simulator-Download: [v0.9.108](https://github.com/Familiydevice/familydevice-qa
   in der App Version 0.9.108 mit Build 207 kontrollieren; anschließend die
   Simulation öffnen.
 
+<a id="v0-9-107"></a>
 ### 0.9.107 (CI-Lauf 206; kein eigener QA-Download)
 
-_Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.108](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.108) (Build 207) enthalten._
+**Kurz erklärt:** Die automatische Übertragung der Simulator-Builds ins QA-Repository wurde weiter eingerichtet.
+
+**Wo anschauen:** Bereitstellung und Installation des nächsten verfügbaren Downloads.
+
+_Für 0.9.107 gibt es in den veröffentlichten QA-Releases keinen eigenen Download. Dokumentierter Stand: CI-Lauf 206. Der nächste verfügbare Download ist [v0.9.108](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.108) mit Build 207; seine Versionshinweise zusätzlich beachten._
 
 - **Übertragung der QA-Builds eingerichtet.** Die automatische
   Bereitstellung im QA-Repository wurde weiter eingerichtet.
@@ -1064,9 +1421,14 @@ _Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.108](https:/
   nach README durchführen und die angezeigte Version mit dem gewählten
   Release vergleichen.
 
+<a id="v0-9-106"></a>
 ### 0.9.106 (CI-Lauf 205; kein eigener QA-Download)
 
-_Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.108](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.108) (Build 207) enthalten._
+**Kurz erklärt:** Automatische Simulator-Builds mit derselben Build-Nummer wie bei TestFlight wurden vorbereitet.
+
+**Wo anschauen:** QA-Veröffentlichung; Fortsetzung in 0.9.107 und 0.9.108.
+
+_Für 0.9.106 gibt es in den veröffentlichten QA-Releases keinen eigenen Download. Dokumentierter Stand: CI-Lauf 205. Der nächste verfügbare Download ist [v0.9.108](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.108) mit Build 207; seine Versionshinweise zusätzlich beachten._
 
 - **Automatische Simulator-Builds vorbereitet.** Neue Builds sollen
   im QA-Repository mit derselben Build-Nummer wie bei TestFlight erscheinen.
@@ -1075,9 +1437,14 @@ _Diese Änderungen sind im nächsten verfügbaren QA-Download [v0.9.108](https:/
   Prüfen mit dem nächsten verfügbaren QA-Download: den Build auf einem
   Test-Mac installieren und Version sowie Build-Nummer kontrollieren.
 
+<a id="v0-9-105"></a>
 ### 0.9.105 (Build 204)
 
-_Simulator-Download: [v0.9.105](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.105)._
+**Kurz erklärt:** Der erste veröffentlichte Simulator-Build erlaubt die Eltern-/Kind-Simulation und einen Tagesverlauf hinter der Bildschirmzeit-Karte.
+
+**Wo anschauen:** Simulation → Kinderseite → Bildschirmzeit-Karte → Tagesverlauf.
+
+_Veröffentlichter QA-Download: [v0.9.105](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.105), Build 204. Für Fehlerberichte müssen Version 0.9.105 und Build 204 aus der App genannt werden._
 
 - **Erster hier veröffentlichter Simulator-Build.** In der Simulation
   lassen sich die Eltern- und Kinderansichten mit der Beispielfamilie
