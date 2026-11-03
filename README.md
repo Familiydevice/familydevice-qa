@@ -28,6 +28,14 @@ Fehlerbericht maßgeblich.
 
 _Der Release-Tag ist [ios-v0.9.159](https://github.com/Familiydevice/familydevice/tree/ios-v0.9.159). Der Build wird im [CI-Lauf 276](https://github.com/Familiydevice/familydevice/actions/runs/41549136925) erstellt. Der [Simulator-Download v0.9.159](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.159) erscheint nach erfolgreicher Veröffentlichung. Unter „Einstellungen → Über“ muss Version 0.9.159 mit Build 276 stehen._
 
+**Veröffentlichungsstand:** Der Simulator-Download mit Build 276 ist
+veröffentlicht. TestFlight wurde bei der Signierung gestoppt, weil die
+Apple-Profile die Berechtigung für zeitkritische Mitteilungen noch nicht
+enthalten. Die Freischaltung im Apple-Developer-Portal steht aus;
+eine Prüfung zwischen echten iPhones ist damit noch nicht freigegeben.
+[CI-Lauf 277](https://github.com/Familiydevice/familydevice/actions/runs/41550873393)
+enthält zusätzlich eine klare Meldung für diese fehlende Freischaltung.
+
 - **Mitteilungen bleiben bei einem fehlgeschlagenen Versand vorgemerkt.**
   Wenn das Senden hakt und gleich danach ein weiterer Abgleich läuft,
   wird die wartende Mitteilung nicht mehr versehentlich als erledigt
