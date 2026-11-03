@@ -24,17 +24,37 @@ Für 0.9.127 wurde der QA-Download von Build 229 auf Build 230 aktualisiert.
 Die Versions- und Build-Anzeige des verwendeten Downloads ist für einen
 Fehlerbericht maßgeblich.
 
+### 0.9.160 (Build 279)
+
+_Der Release-Tag ist [ios-v0.9.160](https://github.com/Familiydevice/familydevice/tree/ios-v0.9.160). Der Build wird im [CI-Lauf 279](https://github.com/Familiydevice/familydevice/actions/runs/41551993846) erstellt. Der [Simulator-Download v0.9.160](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.160) erscheint nach erfolgreicher Veröffentlichung. Unter „Einstellungen → Über“ muss Version 0.9.160 mit Build 279 stehen._
+
+- **Die Push-Korrektur bekommt einen korrigierten Releaseprozess.** Diese
+  Version enthält die unten beschriebenen Reparaturen für wartende
+  Mitteilungen und die Anzeige von Push-Fehlern. Die Veröffentlichung von
+  0.9.159 wurde durch eine zusätzliche Prüfung von Signierungsprofilen
+  gestoppt. Jetzt wird vor dem TestFlight-Upload direkt geprüft, dass die
+  fertige, signierte App zeitkritische Mitteilungen und Produktions-Push
+  unterstützt. Der Release-Build läuft noch; eine erfolgreiche
+  iPhone-Veröffentlichung ist damit noch nicht bestätigt.
+- **Auf echten iPhones prüfen, sobald TestFlight bereitsteht:** Beide
+  Geräte aktualisieren, eine neue Anfrage über „Mehr Zeit anfragen“ senden
+  und bei geschlossener Eltern-App auf die Mitteilung warten. Auch eine
+  Regelmeldung sowie die Antwort auf eine Anfrage prüfen. Danach mit
+  einem Fokus wiederholen, der zeitkritische Mitteilungen erlaubt.
+  Simulator und automatische Tests bestätigen keine echte Zustellung
+  zwischen zwei iPhones. Diese Prüfung steht noch aus.
+
 ### 0.9.159 (Build 276)
 
 _Der Release-Tag ist [ios-v0.9.159](https://github.com/Familiydevice/familydevice/tree/ios-v0.9.159). Der Build wird im [CI-Lauf 276](https://github.com/Familiydevice/familydevice/actions/runs/41549136925) erstellt. Der [Simulator-Download v0.9.159](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.159) erscheint nach erfolgreicher Veröffentlichung. Unter „Einstellungen → Über“ muss Version 0.9.159 mit Build 276 stehen._
 
-**Veröffentlichungsstand:** Der Simulator-Download mit Build 276 ist
-veröffentlicht. TestFlight wurde bei der Signierung gestoppt, weil die
-Apple-Profile die Berechtigung für zeitkritische Mitteilungen noch nicht
-enthalten. Die Freischaltung im Apple-Developer-Portal steht aus;
-eine Prüfung zwischen echten iPhones ist damit noch nicht freigegeben.
+**Veröffentlichungsstand:** Der Simulator-Download wurde veröffentlicht.
+TestFlight wurde bei einer zusätzlichen Prüfung der Signierungsprofile
+gestoppt. Eine notwendige Freischaltung im Apple-Developer-Portal ist
+dadurch nicht nachgewiesen. Der korrigierte Releaseprozess wird mit
+0.9.160 geprüft.
 [CI-Lauf 277](https://github.com/Familiydevice/familydevice/actions/runs/41550873393)
-enthält zusätzlich eine klare Meldung für diese fehlende Freischaltung.
+enthält einen weiteren Signierungsversuch, der ebenfalls gestoppt wurde.
 
 - **Mitteilungen bleiben bei einem fehlgeschlagenen Versand vorgemerkt.**
   Wenn das Senden hakt und gleich danach ein weiterer Abgleich läuft,
