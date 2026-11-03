@@ -27,7 +27,7 @@ Fehlerbericht maßgeblich.
 
 ### Schnellüberblick: alle Versionen
 
-Die Tabelle enthält jede Version von **0.9.105 bis 0.9.160**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
+Die Tabelle enthält jede Version von **0.9.105 bis 0.9.161**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
 
 Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, keine neu ausgeführten Tests. Frühere Menüs können später entfernt worden sein; das Eltern-VPN beispielsweise ab 0.9.146. Echte Sperren, iCloud-Kopplung und Push benötigen weiterhin Prüfungen auf echten Test-iPhones.
 
@@ -35,6 +35,7 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 
 | Version | Download / dokumentierter Stand | Was hat sich geändert? |
 |---|---|---|
+| [0.9.161](#v0-9-161) | [Release-CI Build 287](https://github.com/Familiydevice/familydevice/actions/runs/41713374000), Veröffentlichung läuft | Eine neue Freigabe bleibt auch bei verspäteten Games-Limitmeldungen wirksam. Leere App-Auswahlen werden gespeichert; freigegebene Games erscheinen grün. |
 | [0.9.160](#v0-9-160) | [Build 279](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.160) | Push-Berechtigung bei Apple freigeschaltet, Signierungsprofil erneuert und die signierte iPhone-App vor dem TestFlight-Upload geprüft. |
 | [0.9.159](#v0-9-159) | [Build 277](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.159) | Wartende Mitteilungen gehen bei einem schnellen erneuten Abgleich nicht mehr verloren; Fehler bei iCloud-Mitteilungen werden sichtbar. |
 | [0.9.158](#v0-9-158) | [Build 275](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.158) | QA-Build 275 ist veröffentlicht; eine freigegebene Beschreibung seiner inhaltlichen Änderungen fehlt noch. |
@@ -91,6 +92,17 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 | [0.9.107](#v0-9-107) | CI 206, kein eigener Download | Die automatische Übertragung der Simulator-Builds ins QA-Repository wurde weiter eingerichtet. |
 | [0.9.106](#v0-9-106) | CI 205, kein eigener Download | Automatische Simulator-Builds mit derselben Build-Nummer wie bei TestFlight wurden vorbereitet. |
 | [0.9.105](#v0-9-105) | [Build 204](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.105) | Der erste veröffentlichte Simulator-Build erlaubt die Eltern-/Kind-Simulation und einen Tagesverlauf hinter der Bildschirmzeit-Karte. |
+
+<a id="v0-9-161"></a>
+### 0.9.161 (Build 287)
+
+**Kurz erklärt:** War die Games-Zeit aufgebraucht, konnte eine verspätete Limitmeldung die Spiele trotz einer inzwischen erteilten Freigabe wieder sperren. Die App prüft Freigaben jetzt zum Zeitpunkt, an dem sie die Sperren tatsächlich aktualisiert. Das gilt für die Schnellaktion „frei“ und für eine direkte Bildschirmzeit-Freigabe. Unter „Erweiterte Einstellungen → Limits“ zeigt die Games-Kachel eine laufende Freigabe grün mit ihrer Endzeit, statt gleichzeitig rot „Aufgebraucht“ anzuzeigen.
+
+Wird die App-Auswahl einer Gruppe oder eines Tageslimits vollständig geleert und gespeichert, bleibt sie nun leer. Bisher konnte der Tageslimit-Editor die Änderung verwerfen oder der Gruppen-Editor eine ältere Auswahl auf dem Kinder-iPhone erneut verwenden.
+
+**Wo anschauen:** Auf der Kinderseite unter „Erweiterte Einstellungen → Limits → Games“ und unter „Priorität“. Die Schnellaktion für eine Freigabe und die direkte Bildschirmzeit-Freigabe sollen Games auch bei aufgebrauchtem Games-Limit öffnen; nach dem Ende der Freigabe gilt das Limit wieder. Eine geleerte Games-Auswahl soll nach erneutem Öffnen des Editors und nach einem Abgleich leer bleiben.
+
+**Prüfstand:** 382 Core-/Sync-Tests und der Build der iPhone-App einschließlich Erweiterungen sind auf dem macOS-Runner von ATP7 erfolgreich durchgelaufen ([Prüflauf 286](https://github.com/Familiydevice/familydevice/actions/runs/41712132049)). Darunter sind Tests für eine wartende Limitmeldung, beide Freigabewege und das Ende der Freigabe. Echte iOS-Sperren sind im Simulator nicht überprüfbar; eine Prüfung auf einem echten Kinder-iPhone ist noch nicht erfolgt. [Release-CI 287](https://github.com/Familiydevice/familydevice/actions/runs/41713374000) baut TestFlight und den QA-Download; die Veröffentlichung läuft noch.
 
 <a id="v0-9-160"></a>
 ### 0.9.160 (Build 279)
