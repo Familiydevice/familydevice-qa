@@ -26,16 +26,17 @@ Fehlerbericht maßgeblich.
 
 ### 0.9.160 (Build 279)
 
-_Der Release-Tag ist [ios-v0.9.160](https://github.com/Familiydevice/familydevice/tree/ios-v0.9.160). Der Build wird im [CI-Lauf 279](https://github.com/Familiydevice/familydevice/actions/runs/41551993846) erstellt. Der [Simulator-Download v0.9.160](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.160) erscheint nach erfolgreicher Veröffentlichung. Unter „Einstellungen → Über“ muss Version 0.9.160 mit Build 279 stehen._
+_Der Release-Tag ist [ios-v0.9.160](https://github.com/Familiydevice/familydevice/tree/ios-v0.9.160). [CI-Lauf 279](https://github.com/Familiydevice/familydevice/actions/runs/41551993846) ist erfolgreich: Signierung, Prüfung der fertigen App und TestFlight-Upload sind bestätigt. Der [Simulator-Download v0.9.160](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.160) ist veröffentlicht. Unter „Einstellungen → Über“ muss Version 0.9.160 mit Build 279 stehen. Auf dem iPhone erscheint der Build nach Apples TestFlight-Verarbeitung._
 
-- **Die Push-Korrektur bekommt einen korrigierten Releaseprozess.** Diese
+- **Die Push-Korrektur ist jetzt für die iPhone-Verteilung signiert.** Diese
   Version enthält die unten beschriebenen Reparaturen für wartende
   Mitteilungen und die Anzeige von Push-Fehlern. Die Veröffentlichung von
-  0.9.159 wurde durch eine zusätzliche Prüfung von Signierungsprofilen
-  gestoppt. Jetzt wird vor dem TestFlight-Upload direkt geprüft, dass die
+  0.9.159 war bei der Signierung gestoppt. Die fehlende Apple-Berechtigung
+  für zeitkritische Mitteilungen ist jetzt für die Haupt-App aktiviert
+  und das Signierungsprofil erneuert. Vor dem TestFlight-Upload wurde
+  direkt geprüft, dass die
   fertige, signierte App zeitkritische Mitteilungen und Produktions-Push
-  unterstützt. Der Release-Build läuft noch; eine erfolgreiche
-  iPhone-Veröffentlichung ist damit noch nicht bestätigt.
+  unterstützt. Der vollständige Release-Lauf ist erfolgreich.
 - **Auf echten iPhones prüfen, sobald TestFlight bereitsteht:** Beide
   Geräte aktualisieren, eine neue Anfrage über „Mehr Zeit anfragen“ senden
   und bei geschlossener Eltern-App auf die Mitteilung warten. Auch eine
@@ -44,15 +45,15 @@ _Der Release-Tag ist [ios-v0.9.160](https://github.com/Familiydevice/familydevic
   Simulator und automatische Tests bestätigen keine echte Zustellung
   zwischen zwei iPhones. Diese Prüfung steht noch aus.
 
-### 0.9.159 (Build 276)
+### 0.9.159 (Build 277)
 
-_Der Release-Tag ist [ios-v0.9.159](https://github.com/Familiydevice/familydevice/tree/ios-v0.9.159). Der Build wird im [CI-Lauf 276](https://github.com/Familiydevice/familydevice/actions/runs/41549136925) erstellt. Der [Simulator-Download v0.9.159](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.159) erscheint nach erfolgreicher Veröffentlichung. Unter „Einstellungen → Über“ muss Version 0.9.159 mit Build 276 stehen._
+_Der Release-Tag ist [ios-v0.9.159](https://github.com/Familiydevice/familydevice/tree/ios-v0.9.159). Der Build wird im [CI-Lauf 277](https://github.com/Familiydevice/familydevice/actions/runs/41550873393) erstellt. Der [Simulator-Download v0.9.159](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.159) erscheint nach erfolgreicher Veröffentlichung. Unter „Einstellungen → Über“ muss Version 0.9.159 mit Build 277 stehen._
 
 **Veröffentlichungsstand:** Der Simulator-Download wurde veröffentlicht.
-TestFlight wurde bei einer zusätzlichen Prüfung der Signierungsprofile
-gestoppt. Eine notwendige Freischaltung im Apple-Developer-Portal ist
-dadurch nicht nachgewiesen. Der korrigierte Releaseprozess wird mit
-0.9.160 geprüft.
+TestFlight wurde bei der Signierung gestoppt. Die spätere Xcode-Prüfung
+bestätigte die fehlende Berechtigung für zeitkritische Mitteilungen im
+Profil der Haupt-App. Die Freischaltung und das erneuerte Profil sind
+mit 0.9.160 erfolgreich geprüft.
 [CI-Lauf 277](https://github.com/Familiydevice/familydevice/actions/runs/41550873393)
 enthält einen weiteren Signierungsversuch, der ebenfalls gestoppt wurde.
 
@@ -72,7 +73,8 @@ enthält einen weiteren Signierungsversuch, der ebenfalls gestoppt wurde.
   erscheinen können, wenn iOS und dieser Fokus zeitkritische Mitteilungen
   zulassen. Die dafür vorgesehene Berechtigung ging bisher beim Erstellen
   des veröffentlichten Builds wieder verloren.
-  **Echtes Gerät erforderlich:** Beide iPhones auf 0.9.159 aktualisieren.
+  **Echtes Gerät erforderlich:** Dafür den Nachfolger 0.9.160 auf beiden
+  iPhones verwenden; 0.9.159 wurde nicht auf TestFlight veröffentlicht.
   Mit geschlossener Eltern-App eine neue Anfrage über „Mehr Zeit anfragen“
   senden und zusätzlich eine Regelmeldung sowie die Antwort auf eine
   Anfrage prüfen; anschließend mit einem Fokus wiederholen, der
