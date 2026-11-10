@@ -27,7 +27,7 @@ Fehlerbericht maßgeblich.
 
 ### Schnellüberblick: alle Versionen
 
-Die Tabelle enthält jede Version von **0.9.105 bis 0.9.165**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
+Die Tabelle enthält jede Version von **0.9.105 bis 0.9.166**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
 
 Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, keine neu ausgeführten Tests. Frühere Menüs können später entfernt worden sein; das Eltern-VPN beispielsweise ab 0.9.146. Echte Sperren, iCloud-Kopplung und Push benötigen weiterhin Prüfungen auf echten Test-iPhones.
 
@@ -35,6 +35,7 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 
 | Version | Download / dokumentierter Stand | Was hat sich geändert? |
 |---|---|---|
+| [0.9.166](#v0-9-166) | [Build 303](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.166) | Fehlt auf dem Kinder-iPhone eine Freigabe, sperrt es sich selbst: alle Apps außer Notfall-Apps ausgeblendet, die Eltern bekommen eine Erklärung. Unter „Sicherheit“ abschaltbar, Standard an. |
 | [0.9.165](#v0-9-165) | [Build 296](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.165) | Eltern bekommen einen Alarm, wenn auf dem Kinder-iPhone Freigaben fehlen; „Alles erlauben“ fragt offene Berechtigungen der Reihe nach an. |
 | [0.9.164](#v0-9-164) | [Build 294](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.164) | Das Paywall zeigt die Abo-Preisstaffel; der Schutzprozess bleibt aktiv, solange er die Durchsetzungssperre hält. |
 | [0.9.163](#v0-9-163) | [Build 293](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.163) | Ein Kind lässt sich erst nach Abo oder Testphase koppeln; ohne App-Store-Produkt bietet das Paywall einen erneuten Versuch. |
@@ -96,6 +97,19 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 | [0.9.107](#v0-9-107) | CI 206, kein eigener Download | Die automatische Übertragung der Simulator-Builds ins QA-Repository wurde weiter eingerichtet. |
 | [0.9.106](#v0-9-106) | CI 205, kein eigener Download | Automatische Simulator-Builds mit derselben Build-Nummer wie bei TestFlight wurden vorbereitet. |
 | [0.9.105](#v0-9-105) | [Build 204](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.105) | Der erste veröffentlichte Simulator-Build erlaubt die Eltern-/Kind-Simulation und einen Tagesverlauf hinter der Bildschirmzeit-Karte. |
+
+<a id="v0-9-166"></a>
+### 0.9.166 (Build 303)
+
+**Kurz erklärt:** Fehlt auf dem Kinder-iPhone eine Freigabe, die der Schutz braucht – Standort, Bewegung & Fitness, Netzwerkfilter oder Hintergrundaktualisierung –, versetzt sich das iPhone selbst in den Block-Modus: Alle Apps werden vom Home-Bildschirm ausgeblendet, außer Telefon, Nachrichten, FaceTime, Karten, Health, „Wo ist?“, Einstellungen, den „Immer erlaubt“-Apps und familydevice. In familydevice steht dann ganz oben, welche Freigaben fehlen und wie sie wieder eingeschaltet werden. Die Eltern bekommen eine zeitkritische Mitteilung „Achtung: … – iPhone gesperrt“ mit den fehlenden Freigaben und dem Weg zum Beheben; sie ersetzt die einfache „Freigaben fehlen“-Meldung, solange gesperrt ist.
+
+Neu ist der Eltern-Schalter: Unter **Sicherheit** auf der Kinderseite lässt sich „Bei fehlenden Freigaben alle Apps sperren“ aus- und einschalten. **Standard ist an.** Ausgeschaltet bleibt das Kind bei fehlenden Freigaben normal nutzbar, die Warnung an die Eltern kommt weiterhin.
+
+Bewusst nicht als Sperre gewertet werden „Standort nur beim Verwenden“, Mitteilungen, lokales Netzwerk und der Stromsparmodus (iOS meldet Hintergrundaktualisierung dann als „eingeschränkt“, nicht als „aus“).
+
+**Wo anschauen:** Auf dem Eltern-iPhone die Kinderseite → Sicherheit öffnen und den Schalter prüfen (Standard an). Auf dem Kinder-iPhone eine der Freigaben in den iOS-Einstellungen ausschalten: Nach dem nächsten Wecken von familydevice (App öffnen oder Push) sollen nur noch die Notfall-Apps, „Immer erlaubt“ und familydevice sichtbar sein. familydevice öffnen → roter Hinweis „Alle Apps ausgeblendet – Freigaben fehlen“ mit „Einstellungen öffnen“ und der Anleitung. Freigabe wieder erteilen → die Apps kommen zurück. Auf dem Eltern-iPhone soll die Mitteilung „iPhone gesperrt“ mit Ton erscheinen, auch bei aktivem Fokus.
+
+**Prüfstand:** 338 Core-/Sync-Tests lokal grün, darunter neue Fälle für den Sperr-Alarm (ersetzt die Freigabe-Warnung), den Schalter (aus = keine Sperre) und den Default an. App und Notification-Service bauen lokal. Ob iOS wirklich alle Apps ausblendet, Notfall-Apps sichtbar bleiben, Push ankommt und ein Fokus durchdrungen wird, lässt sich nur mit zwei echten iPhones prüfen. Build 303 stammt aus [CI-Lauf 303](https://github.com/Familiydevice/familydevice/actions/runs/42920059262); Ergebnis und QA-Download beim verwendeten Build prüfen.
 
 <a id="v0-9-165"></a>
 ### 0.9.165 (Build 296)
