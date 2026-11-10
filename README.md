@@ -27,7 +27,7 @@ Fehlerbericht maßgeblich.
 
 ### Schnellüberblick: alle Versionen
 
-Die Tabelle enthält jede Version von **0.9.105 bis 0.9.162**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
+Die Tabelle enthält jede Version von **0.9.105 bis 0.9.165**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
 
 Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, keine neu ausgeführten Tests. Frühere Menüs können später entfernt worden sein; das Eltern-VPN beispielsweise ab 0.9.146. Echte Sperren, iCloud-Kopplung und Push benötigen weiterhin Prüfungen auf echten Test-iPhones.
 
@@ -35,6 +35,9 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 
 | Version | Download / dokumentierter Stand | Was hat sich geändert? |
 |---|---|---|
+| [0.9.165](#v0-9-165) | [Build 296](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.165) | Eltern bekommen einen Alarm, wenn auf dem Kinder-iPhone Freigaben fehlen; „Alles erlauben“ fragt offene Berechtigungen der Reihe nach an. |
+| [0.9.164](#v0-9-164) | [Build 294](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.164) | Das Paywall zeigt die Abo-Preisstaffel; der Schutzprozess bleibt aktiv, solange er die Durchsetzungssperre hält. |
+| [0.9.163](#v0-9-163) | [Build 293](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.163) | Ein Kind lässt sich erst nach Abo oder Testphase koppeln; ohne App-Store-Produkt bietet das Paywall einen erneuten Versuch. |
 | [0.9.162](#v0-9-162) | [Build 291](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.162) | Kinder können auf dem Sperrbildschirm nur die geöffnete App oder die ganze Gruppe anfragen. |
 | [0.9.161](#v0-9-161) | [Build 287](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.161) | Eine neue Freigabe bleibt auch bei verspäteten Games-Limitmeldungen wirksam. Leere App-Auswahlen werden gespeichert; freigegebene Games erscheinen grün. |
 | [0.9.160](#v0-9-160) | [Build 279](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.160) | Push-Berechtigung bei Apple freigeschaltet, Signierungsprofil erneuert und die signierte iPhone-App vor dem TestFlight-Upload geprüft. |
@@ -93,6 +96,31 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 | [0.9.107](#v0-9-107) | CI 206, kein eigener Download | Die automatische Übertragung der Simulator-Builds ins QA-Repository wurde weiter eingerichtet. |
 | [0.9.106](#v0-9-106) | CI 205, kein eigener Download | Automatische Simulator-Builds mit derselben Build-Nummer wie bei TestFlight wurden vorbereitet. |
 | [0.9.105](#v0-9-105) | [Build 204](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.105) | Der erste veröffentlichte Simulator-Build erlaubt die Eltern-/Kind-Simulation und einen Tagesverlauf hinter der Bildschirmzeit-Karte. |
+
+<a id="v0-9-165"></a>
+### 0.9.165 (Build 296)
+
+**Kurz erklärt:** Fehlt auf dem Kinder-iPhone eine Freigabe, die die Regeln brauchen, meldet das Eltern-iPhone das jetzt als zeitkritischen Alarm „Achtung: … – Freigaben fehlen“ mit den konkreten Punkten: Standort, Bewegung & Fitness, Mitteilungen, Netzwerkfilter und Hintergrundaktualisierung. Der Alarm kommt auch dann, wenn die Freigabe schon beim ersten Bericht nach dem Koppeln fehlte – nicht nur bei einer Änderung. Pro Problem-Set erscheint er einmal, damit ein dauerhaft fehlender Standort nicht jede Abgleichrunde klingelt.
+
+Dazu: „Bildschirmzeit freischalten“ liest den Status beim Zurückkehren in die App neu und öffnet die Einstellungen, wenn iOS nicht mehr fragt. In der Einrichtung fordert „Alles erlauben“ die offenen Berechtigungen nacheinander an und prüft nach jedem Dialog den neuen Stand. Der Apple-Einrichtungsassistent merkt sich seine Bestätigungen und lässt sich über „Von vorne beginnen“ zurücksetzen. Ist der iCloud-Speicher voll, nennt die Kopplung den Weg zum Freimachen statt einer rohen CloudKit-Fehlermeldung.
+
+**Wo anschauen:** Auf dem Eltern-iPhone unter „Erweiterte Einstellungen“ des Kindes die Zeilen unter „Gesperrt …“ prüfen (z. B. „Standort nicht erlaubt“). Auf dem Kinder-iPhone eine Freigabe in den iOS-Einstellungen ausschalten und den nächsten Bericht abwarten: Das Eltern-iPhone soll die Alarm-Mitteilung mit Ton zeigen, auch bei aktivem Fokus. Danach die Freigabe wieder einschalten; dann folgt „Freigaben geändert“. Auf dem Eltern-iPhone „Bildschirmzeit freischalten“ antippen, die Freigabe in den Einstellungen erteilen und zurückkehren: Die Zeile soll ohne Neustart auf „Bildschirmzeit“ wechseln.
+
+**Prüfstand:** 328 Core-/Sync-Tests sind lokal erfolgreich durchgelaufen, darunter fünf neue Fälle für den Freigabe-Alarm (erster Bericht mit Standort aus, dauerhaft aus, Freigabe erteilt, eigene Filter-Pause, unverändert). Der Build der iPhone-App einschließlich Erweiterungen war lokal erfolgreich. Echte iOS-Sperren, Push-Zustellung und das Durchdringen eines Fokus sind im Simulator nicht überprüfbar und brauchen zwei echte iPhones. Build 296 stammt aus [CI-Lauf 296](https://github.com/Familiydevice/familydevice/actions/runs/42896250806); dessen Ergebnis und der QA-Download sind beim verwendeten Build zu prüfen.
+
+<a id="v0-9-164"></a>
+### 0.9.164 (Build 294)
+
+**Kurz erklärt:** Das Paywall zeigt die Preisstaffel des Familien-Abos. Der Schutzprozess bleibt außerdem am Leben, solange er die gemeinsame Durchsetzungssperre hält, damit die Sperren nicht durch einen beendeten Prozess ins Leere laufen.
+
+**Wo anschauen:** Auf dem Eltern-iPhone das Paywall öffnen und die Preisstufen prüfen. Auf dem Kinder-iPhone eine laufende Sperre beobachten und nach einiger Zeit erneut öffnen: Die Sperre soll bestehen bleiben.
+
+<a id="v0-9-163"></a>
+### 0.9.163 (Build 293)
+
+**Kurz erklärt:** Ein Kind lässt sich erst koppeln, wenn ein Abo oder eine Testphase es abdeckt. Liefert der App Store kein Produkt (offline, Aussetzer, fehlende Vereinbarung), sagt das Paywall das und bietet einen erneuten Versuch, statt die Kopplung trotzdem zu öffnen. Für Familien, die bereits Kinder eingerichtet haben, bleibt der bisherige Weg offen.
+
+**Wo anschauen:** Auf dem Eltern-iPhone „Kinder-iPhone hinzufügen“ öffnen. Ohne Abo soll das Paywall erscheinen und „Abbrechen“ nicht in die Kopplung führen; mit Abo oder Testphase geht es weiter. Bei fehlendem App-Store-Produkt soll die Meldung zum erneuten Versuch erscheinen.
 
 <a id="v0-9-162"></a>
 ### 0.9.162 (Build 291)
