@@ -36,7 +36,7 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 | Version | Download / dokumentierter Stand | Was hat sich geändert? |
 |---|---|---|
 | [0.9.166](#v0-9-166) | [Build 303](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.166) | Fehlt auf dem Kinder-iPhone eine Freigabe, sperrt es sich selbst: alle Apps außer Notfall-Apps ausgeblendet, die Eltern bekommen eine Erklärung. Unter „Sicherheit“ abschaltbar, Standard an. |
-| [0.9.165](#v0-9-165) | [Build 296](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.165) | Eltern bekommen einen Alarm, wenn auf dem Kinder-iPhone Freigaben fehlen; „Alles erlauben“ fragt offene Berechtigungen der Reihe nach an. |
+| [0.9.165](#v0-9-165) | [Build 302](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.165) | Eltern bekommen einen Alarm, wenn auf dem Kinder-iPhone Freigaben fehlen; „Alles erlauben“ fragt offene Berechtigungen der Reihe nach an. |
 | [0.9.164](#v0-9-164) | [Build 294](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.164) | Das Paywall zeigt die Abo-Preisstaffel; der Schutzprozess bleibt aktiv, solange er die Durchsetzungssperre hält. |
 | [0.9.163](#v0-9-163) | [Build 293](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.163) | Ein Kind lässt sich erst nach Abo oder Testphase koppeln; ohne App-Store-Produkt bietet das Paywall einen erneuten Versuch. |
 | [0.9.162](#v0-9-162) | [Build 291](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.162) | Kinder können auf dem Sperrbildschirm nur die geöffnete App oder die ganze Gruppe anfragen. |
@@ -112,7 +112,7 @@ Bewusst nicht als Sperre gewertet werden „Standort nur beim Verwenden“, Mitt
 **Prüfstand:** 338 Core-/Sync-Tests lokal grün, darunter neue Fälle für den Sperr-Alarm (ersetzt die Freigabe-Warnung), den Schalter (aus = keine Sperre) und den Default an. App und Notification-Service bauen lokal. Ob iOS wirklich alle Apps ausblendet, Notfall-Apps sichtbar bleiben, Push ankommt und ein Fokus durchdrungen wird, lässt sich nur mit zwei echten iPhones prüfen. Build 303 stammt aus [CI-Lauf 303](https://github.com/Familiydevice/familydevice/actions/runs/42920059262); Ergebnis und QA-Download beim verwendeten Build prüfen.
 
 <a id="v0-9-165"></a>
-### 0.9.165 (Build 296)
+### 0.9.165 (Build 302)
 
 **Kurz erklärt:** Fehlt auf dem Kinder-iPhone eine Freigabe, die die Regeln brauchen, meldet das Eltern-iPhone das jetzt als zeitkritischen Alarm „Achtung: … – Freigaben fehlen“ mit den konkreten Punkten: Standort, Bewegung & Fitness, Mitteilungen, Netzwerkfilter und Hintergrundaktualisierung. Der Alarm kommt auch dann, wenn die Freigabe schon beim ersten Bericht nach dem Koppeln fehlte – nicht nur bei einer Änderung. Pro Problem-Set erscheint er einmal, damit ein dauerhaft fehlender Standort nicht jede Abgleichrunde klingelt.
 
@@ -121,6 +121,8 @@ Dazu: „Bildschirmzeit freischalten“ liest den Status beim Zurückkehren in d
 **Wo anschauen:** Auf dem Eltern-iPhone unter „Erweiterte Einstellungen“ des Kindes die Zeilen unter „Gesperrt …“ prüfen (z. B. „Standort nicht erlaubt“). Auf dem Kinder-iPhone eine Freigabe in den iOS-Einstellungen ausschalten und den nächsten Bericht abwarten: Das Eltern-iPhone soll die Alarm-Mitteilung mit Ton zeigen, auch bei aktivem Fokus. Danach die Freigabe wieder einschalten; dann folgt „Freigaben geändert“. Auf dem Eltern-iPhone „Bildschirmzeit freischalten“ antippen, die Freigabe in den Einstellungen erteilen und zurückkehren: Die Zeile soll ohne Neustart auf „Bildschirmzeit“ wechseln.
 
 **Prüfstand:** 328 Core-/Sync-Tests sind lokal erfolgreich durchgelaufen, darunter fünf neue Fälle für den Freigabe-Alarm (erster Bericht mit Standort aus, dauerhaft aus, Freigabe erteilt, eigene Filter-Pause, unverändert). Der Build der iPhone-App einschließlich Erweiterungen war lokal erfolgreich. Echte iOS-Sperren, Push-Zustellung und das Durchdringen eines Fokus sind im Simulator nicht überprüfbar und brauchen zwei echte iPhones. Build 296 stammt aus [CI-Lauf 296](https://github.com/Familiydevice/familydevice/actions/runs/42896250806); dessen Ergebnis und der QA-Download sind beim verwendeten Build zu prüfen.
+
+_Zuerst als Build 296 erstellt; der veröffentlichte QA-Download wurde auf Build 302 aktualisiert._
 
 <a id="v0-9-164"></a>
 ### 0.9.164 (Build 294)
