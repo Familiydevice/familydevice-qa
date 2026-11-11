@@ -27,7 +27,7 @@ Fehlerbericht maßgeblich.
 
 ### Schnellüberblick: alle Versionen
 
-Die Tabelle enthält jede Version von **0.9.105 bis 0.9.167**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
+Die Tabelle enthält jede Version von **0.9.105 bis 0.9.168**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
 
 Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, keine neu ausgeführten Tests. Frühere Menüs können später entfernt worden sein; das Eltern-VPN beispielsweise ab 0.9.146. Echte Sperren, iCloud-Kopplung und Push benötigen weiterhin Prüfungen auf echten Test-iPhones.
 
@@ -35,6 +35,7 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 
 | Version | Download / dokumentierter Stand | Was hat sich geändert? |
 |---|---|---|
+| [0.9.168](#v0-9-168) | [Build 308](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.168) | Die Benachrichtigungen haben jetzt einen einzigen Text (App, Erweiterung, Simulation) – sie können nicht mehr auseinanderlaufen. Dazu: die Push-Prüfung, die App-Einstellungen und das Entfernen freigeschalteter Profile sind jetzt erreichbar. |
 | [0.9.167](#v0-9-167) | [Build 307](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.167) | Der Sperrbildschirm greift nur noch, wenn wirklich eine Freigabe fehlt, lässt sich sofort abschalten und meldet sich bei den Eltern laut. Dazu: keine doppelten Benachrichtigungen, abgelaufene Anträge lassen sich nicht mehr genehmigen. |
 | [0.9.166](#v0-9-166) | [Build 303](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.166) | Fehlt auf dem Kinder-iPhone eine Freigabe, sperrt es sich selbst: alle Apps außer Notfall-Apps ausgeblendet, die Eltern bekommen eine Erklärung. Unter „Sicherheit“ abschaltbar, Standard an. |
 | [0.9.165](#v0-9-165) | [Build 302](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.165) | Eltern bekommen einen Alarm, wenn auf dem Kinder-iPhone Freigaben fehlen; „Alles erlauben“ fragt offene Berechtigungen der Reihe nach an. |
@@ -98,6 +99,19 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 | [0.9.107](#v0-9-107) | CI 206, kein eigener Download | Die automatische Übertragung der Simulator-Builds ins QA-Repository wurde weiter eingerichtet. |
 | [0.9.106](#v0-9-106) | CI 205, kein eigener Download | Automatische Simulator-Builds mit derselben Build-Nummer wie bei TestFlight wurden vorbereitet. |
 | [0.9.105](#v0-9-105) | [Build 204](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.105) | Der erste veröffentlichte Simulator-Build erlaubt die Eltern-/Kind-Simulation und einen Tagesverlauf hinter der Bildschirmzeit-Karte. |
+
+<a id="v0-9-168"></a>
+### 0.9.168 (Build 308)
+
+**Kurz erklärt:** Die Mitteilungen an die Eltern kommen jetzt aus einer Quelle: App, Benachrichtigungs-Erweiterung und Simulation zeigen exakt denselben Text. Vorher stand derselbe Satz an drei Stellen – eine Änderung war an einem Ort angekommen und an den anderen nicht.
+
+Dazu sind die Seiten, die es gab, aber die niemand fand: **Erweiterte Einstellungen** zeigt jetzt die Push-Prüfung dieses iPhones (Mitteilungen erlaubt, bei Apple registriert, iCloud-Mitteilungen, Hintergrundaktualisierung – jeweils mit dem Weg zum Beheben), das Profilmenü der Eltern hat **App-Einstellungen** (Einrichtungsassistent, Simulation), freigeschaltete Social-Profile lassen sich mit **Entfernen** wieder rausnehmen, und die Apps unter **„Immer erlaubt“** werden einzeln aufgeführt statt nur gezählt.
+
+Kleinere Korrekturen: Auf der Netzwerk-Seite erscheinen gesperrte Apps jetzt ausgegraut (vorher sahen sie frei aus), „Stand“ bei den Limits nennt den Tag, wenn der Bericht nicht von heute ist, und die Nutzungs-Seite fragt die Bewegung erst ab, wenn man sie antippt – nicht bei jedem Öffnen.
+
+**Wo anschauen:** Auf dem Eltern-iPhone **Erweiterte Einstellungen** des Kindes öffnen und ganz unten die Push-Prüfung lesen: alle vier Punkte müssen grün sein, sonst kommen Mitteilungen erst beim Öffnen der App an. Im Profilmenü **App-Einstellungen** prüfen. Unter **Sicherheit → Immer erlaubt** die Apps ansehen, die dort freigegeben sind. Auf der Kinderseite **Netzwerk → Apps** öffnen: gesperrte Apps müssen ausgegraut sein. Auf der Nutzungs-Seite (Kopfleiste, Symbol „Nutzung & Bewegung“) darf die Bewegung-Freigabe **nicht** von selbst kommen – erst beim Antippen der Zeile.
+
+**Prüfstand:** 411 Core-/Sync-Tests lokal grün, App und alle acht Erweiterungen bauen lokal. Ob die Mitteilungen in beiden Wegen (App und Erweiterung) wirklich nur einmal ankommen, lässt sich nur mit einem echten iPhone im Hintergrund prüfen. Build 308 stammt aus [CI-Lauf 308](https://github.com/Familiydevice/familydevice/actions/runs/42946485358); Ergebnis und QA-Download beim verwendeten Build prüfen.
 
 <a id="v0-9-167"></a>
 ### 0.9.167 (Build 307)
