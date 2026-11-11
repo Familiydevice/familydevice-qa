@@ -35,7 +35,7 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 
 | Version | Download / dokumentierter Stand | Was hat sich geändert? |
 |---|---|---|
-| [0.9.167](#v0-9-167) | [Build 306](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.167) | Der Sperrbildschirm greift nur noch, wenn wirklich eine Freigabe fehlt, lässt sich sofort abschalten und meldet sich bei den Eltern laut. Dazu: keine doppelten Benachrichtigungen, abgelaufene Anträge lassen sich nicht mehr genehmigen. |
+| [0.9.167](#v0-9-167) | [Build 307](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.167) | Der Sperrbildschirm greift nur noch, wenn wirklich eine Freigabe fehlt, lässt sich sofort abschalten und meldet sich bei den Eltern laut. Dazu: keine doppelten Benachrichtigungen, abgelaufene Anträge lassen sich nicht mehr genehmigen. |
 | [0.9.166](#v0-9-166) | [Build 303](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.166) | Fehlt auf dem Kinder-iPhone eine Freigabe, sperrt es sich selbst: alle Apps außer Notfall-Apps ausgeblendet, die Eltern bekommen eine Erklärung. Unter „Sicherheit“ abschaltbar, Standard an. |
 | [0.9.165](#v0-9-165) | [Build 302](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.165) | Eltern bekommen einen Alarm, wenn auf dem Kinder-iPhone Freigaben fehlen; „Alles erlauben“ fragt offene Berechtigungen der Reihe nach an. |
 | [0.9.164](#v0-9-164) | [Build 294](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.164) | Das Paywall zeigt die Abo-Preisstaffel; der Schutzprozess bleibt aktiv, solange er die Durchsetzungssperre hält. |
@@ -100,7 +100,7 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 | [0.9.105](#v0-9-105) | [Build 204](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.105) | Der erste veröffentlichte Simulator-Build erlaubt die Eltern-/Kind-Simulation und einen Tagesverlauf hinter der Bildschirmzeit-Karte. |
 
 <a id="v0-9-167"></a>
-### 0.9.167 (Build 306)
+### 0.9.167 (Build 307)
 
 **Kurz erklärt:** Der Sperrbildschirm aus 0.9.166 greift jetzt nur noch, wenn wirklich eine Freigabe fehlt: Der Stromsparmodus sperrt das iPhone nicht mehr, und wenn die Eltern den Schalter „Bei fehlenden Freigaben alle Apps sperren“ unter **Sicherheit** ausschalten, ist die Sperre sofort weg (vorher konnte sie noch bis zu einer halben Stunde stehen). Die Eltern bekommen die Sperr-Meldung jetzt sofort und laut – auch wenn die App gerade nicht offen ist – und sehen im Eltern-Teil zusätzlich „iPhone gesperrt“ beim Kind.
 
@@ -108,7 +108,7 @@ Dazu die wichtigsten Korrekturen aus der App-Prüfung: Eine Freigabe-Meldung kom
 
 **Wo anschauen:** Auf dem Eltern-iPhone die Kinderseite → **Sicherheit** → den Schalter „Bei fehlenden Freigaben alle Apps sperren“ prüfen (Standard an) und einmal aus- und wieder einschalten. Auf dem Kinder-iPhone eine Freigabe (z. B. Standort) in den iOS-Einstellungen ausschalten: Nach dem nächsten Wecken von familydevice sollen alle Apps außer Telefon, Nachrichten, FaceTime, Karten, Health, „Wo ist?“, Einstellungen, „Immer erlaubt“ und familydevice ausgeblendet sein. Auf dem Eltern-iPhone soll die Meldung „Achtung: … – iPhone gesperrt“ mit Ton kommen, auch bei aktivem Fokus, und auf der Kinderseite „iPhone gesperrt“ stehen. Danach den Schalter auf dem Eltern-iPhone ausschalten: Das iPhone soll die Apps ohne Neustart zurückbekommen. Ebenfalls prüfen: eine Anfrage, die älter als eine Stunde offen ist, lässt sich nicht mehr genehmigen, und unter Netzwerk → Apps erscheinen gesperrte Apps ausgegraut.
 
-**Prüfstand:** 411 Core-/Sync-Tests lokal grün, darunter neue Fälle für das Policy-Rückschreiben, die Sperrgründe und den Schalter. App und alle acht Erweiterungen bauen lokal. Ob iOS die Apps wirklich ausblendet, die Push ankommt und ein Fokus durchdrungen wird, lässt sich nur mit zwei echten iPhones prüfen. Build 306 stammt aus [CI-Lauf 306](https://github.com/Familiydevice/familydevice/actions/runs/42939055236); Ergebnis und QA-Download beim verwendeten Build prüfen.
+**Prüfstand:** 411 Core-/Sync-Tests lokal grün, darunter neue Fälle für das Policy-Rückschreiben, die Sperrgründe und den Schalter. App und alle acht Erweiterungen bauen lokal. Ob iOS die Apps wirklich ausblendet, die Push ankommt und ein Fokus durchdrungen wird, lässt sich nur mit zwei echten iPhones prüfen. Build 307 stammt aus [CI-Lauf 306](https://github.com/Familiydevice/familydevice/actions/runs/42941051654); Ergebnis und QA-Download beim verwendeten Build prüfen.
 
 <a id="v0-9-166"></a>
 ### 0.9.166 (Build 303)
