@@ -27,7 +27,7 @@ Fehlerbericht maßgeblich.
 
 ### Schnellüberblick: alle Versionen
 
-Die Tabelle enthält jede Version von **0.9.105 bis 0.9.174**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
+Die Tabelle enthält jede Version von **0.9.105 bis 0.9.175**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
 
 Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, keine neu ausgeführten Tests. Frühere Menüs können später entfernt worden sein; das Eltern-VPN beispielsweise ab 0.9.146. Echte Sperren, iCloud-Kopplung und Push benötigen weiterhin Prüfungen auf echten Test-iPhones.
 
@@ -35,6 +35,7 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 
 | Version | Download / dokumentierter Stand | Was hat sich geändert? |
 |---|---|---|
+| [0.9.175](#v0-9-175) | [Build 319](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.175) | Nach „App löschen und neu installieren“ bleibt das Elternprofil auch erreichbar: Das Kind sieht das Eltern-iPhone wieder und die Eltern erreichen es wieder. |
 | [0.9.174](#v0-9-174) | [Build 318](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.174) | Die Abos sind wieder im App Store erhältlich (vorher: in keinem Land) – das Bezahlfenster findet die Preise wieder. |
 | [0.9.173](#v0-9-173) | [Build 316](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.173) | Nach „App löschen und neu installieren“ bleibt das Elternprofil erhalten: Rolle und Name kommen aus dem Keychain, die Regeln mit dem nächsten Abgleich. Dazu: die Abos sind wieder in allen Ländern im App Store erhältlich. |
 | [0.9.172](#v0-9-172) | [Build 313](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.172) | Die Vorführung sagt jetzt, dass der Weg auf der Karte erfunden ist – keine echten Ortsdaten. |
@@ -105,6 +106,15 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 | [0.9.107](#v0-9-107) | CI 206, kein eigener Download | Die automatische Übertragung der Simulator-Builds ins QA-Repository wurde weiter eingerichtet. |
 | [0.9.106](#v0-9-106) | CI 205, kein eigener Download | Automatische Simulator-Builds mit derselben Build-Nummer wie bei TestFlight wurden vorbereitet. |
 | [0.9.105](#v0-9-105) | [Build 204](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.105) | Der erste veröffentlichte Simulator-Build erlaubt die Eltern-/Kind-Simulation und einen Tagesverlauf hinter der Bildschirmzeit-Karte. |
+
+<a id="v0-9-175"></a>
+### 0.9.175 (Build 319)
+
+**Kurz erklärt:** Nach „App löschen und neu installieren“ kam der Datenabgleich zurück, das **Elternprofil** aber nicht. Grund: Der Ausgangskasten – die iCloud-Zone des Kindes, in die das Eltern-iPhone seine Nachrichten schreibt – stand nur in der App. Die App ging mit dem Container verloren, die iCloud-Freigabe des Kindes aber nicht. Die App holt den Ausgangskasten jetzt aus den geteilten Zonen zurück: Das Kind sieht das Eltern-iPhone wieder (es hält die Verbindung sonst für verloren und sperrt sich selbst), und die Eltern erreichen das Kind wieder.
+
+**Wo anschauen:** Auf dem Eltern-iPhone die App löschen und neu installieren (TestFlight-Build 319). Nach dem ersten Start muss das Kind ohne neues Koppeln wieder in der Liste stehen, und auf dem **Kinder**-iPhone darf die Meldung „Kein Eltern-Phone mehr – gesperrt“ **nicht** kommen. Das Kinder-iPhone muss wieder im Vordergrund sein (nicht gesperrt) und die Regeln des Eltern-iPhones bekommen.
+
+**Prüfstand:** 415 Core-/Sync-Tests lokal grün, App, Watch und alle acht Erweiterungen bauen lokal. Build 319 stammt aus [CI-Lauf 319](https://github.com/Familiydevice/familydevice/actions/runs/43106288896); Ergebnis und QA-Download beim verwendeten Build prüfen.
 
 <a id="v0-9-174"></a>
 ### 0.9.174 (Build 318)
