@@ -27,7 +27,7 @@ Fehlerbericht maßgeblich.
 
 ### Schnellüberblick: alle Versionen
 
-Die Tabelle enthält jede Version von **0.9.105 bis 0.9.169**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
+Die Tabelle enthält jede Version von **0.9.105 bis 0.9.170**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
 
 Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, keine neu ausgeführten Tests. Frühere Menüs können später entfernt worden sein; das Eltern-VPN beispielsweise ab 0.9.146. Echte Sperren, iCloud-Kopplung und Push benötigen weiterhin Prüfungen auf echten Test-iPhones.
 
@@ -35,6 +35,7 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 
 | Version | Download / dokumentierter Stand | Was hat sich geändert? |
 |---|---|---|
+| [0.9.170](#v0-9-170) | [Build 311](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.170) | Die Vorführung überschreibt die echten Sperren nicht mehr und sagt, was sie nicht tut. Die Eltern sehen, was das Kinder-iPhone wirklich sperrt, und ein Trennen kommt auch offline an. |
 | [0.9.169](#v0-9-169) | [Build 309](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.169) | Der Status der Sperren steht jetzt an allen Seiten gleich: „Alles frei bis 16:30“ statt mal „Alles frei“ und mal „Nichts gesperrt“. |
 | [0.9.168](#v0-9-168) | [Build 308](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.168) | Die Benachrichtigungen haben jetzt einen einzigen Text (App, Erweiterung, Simulation) – sie können nicht mehr auseinanderlaufen. Dazu: die Push-Prüfung, die App-Einstellungen und das Entfernen freigeschalteter Profile sind jetzt erreichbar. |
 | [0.9.167](#v0-9-167) | [Build 307](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.167) | Der Sperrbildschirm greift nur noch, wenn wirklich eine Freigabe fehlt, lässt sich sofort abschalten und meldet sich bei den Eltern laut. Dazu: keine doppelten Benachrichtigungen, abgelaufene Anträge lassen sich nicht mehr genehmigen. |
@@ -100,6 +101,19 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 | [0.9.107](#v0-9-107) | CI 206, kein eigener Download | Die automatische Übertragung der Simulator-Builds ins QA-Repository wurde weiter eingerichtet. |
 | [0.9.106](#v0-9-106) | CI 205, kein eigener Download | Automatische Simulator-Builds mit derselben Build-Nummer wie bei TestFlight wurden vorbereitet. |
 | [0.9.105](#v0-9-105) | [Build 204](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.105) | Der erste veröffentlichte Simulator-Build erlaubt die Eltern-/Kind-Simulation und einen Tagesverlauf hinter der Bildschirmzeit-Karte. |
+
+<a id="v0-9-170"></a>
+### 0.9.170 (Build 311)
+
+**Kurz erklärt:** Die **Simulation** läuft auf dem iPhone der Eltern. Sie hat jetzt eigene Speicherorte und überschreibt die echten Sperren desselben Geräts nicht mehr – vorher konnte die Vorführung die Sperren der Eltern löschen. Sie sagt außerdem, was sie nicht tut: Ausblenden, Kontensperre und Inhaltsfilter sind in der Simulation nur angezeigt. Auf der Seite des Kindes steht das dabei.
+
+Die Eltern sehen jetzt **was das Kinder-iPhone wirklich sperrt** – nicht ihre eigene Rechnung aus den Regeln. Das stimmt auch dann, wenn das Kind lokal etwas freigeschaltet hat.
+
+Weiter: Ein **Trennen** kommt auch an, wenn das iPhone gerade offline ist (vorher blieb die Meldung im Postfach und das Kinder-iPhone sperrte sich selbst dauerhaft ein). Das Lebenszeichen hat eine eigene Uhr – ein aus anderer Ursache gesendeter Zustand verschiebt es nicht mehr. Die Standort-Historie kommt in Blöcken von sieben Tagen statt einem Tag pro Schlag. Auf dem Kinder-Home gibt es nur noch **ein Blatt** statt sieben (ein zweites über einem ersten hat iOS immer zerschossen). Das lokale Netz wird im Vordergrund noch einmal geprüft.
+
+**Wo anschauen:** Auf dem Eltern-iPhone eine **Simulation** starten und prüfen, dass eine echte Sperre (z. B. eine Gruppe, die gerade läuft) danach weiter besteht und dass auf der Kinderseite „Simulation – Ausblenden, Kontensperre und Inhaltsfilter sind hier nur angezeigt" steht. Die Simulation beenden: Die Sperren müssen zurückkommen. Auf der Kinderseite prüfen, ob unter der Statuszeile steht, welche Gruppen das iPhone gerade wirklich sperrt. Das Kinder-iPhone einmal vom WLAN nehmen und auf dem Eltern-iPhone trennen: Nach der Verbindung muss das Kinder-iPhone wieder frei sein.
+
+**Prüfstand:** 411 Core-/Sync-Tests lokal grün, App, Watch und alle acht Erweiterungen bauen lokal. Build 311 stammt aus [CI-Lauf 311](https://github.com/Familiydevice/familydevice/actions/runs/42952708672); Ergebnis und QA-Download beim verwendeten Build prüfen.
 
 <a id="v0-9-169"></a>
 ### 0.9.169 (Build 309)
