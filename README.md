@@ -27,7 +27,7 @@ Fehlerbericht maßgeblich.
 
 ### Schnellüberblick: alle Versionen
 
-Die Tabelle enthält jede Version von **0.9.105 bis 0.9.171**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
+Die Tabelle enthält jede Version von **0.9.105 bis 0.9.172**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
 
 Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, keine neu ausgeführten Tests. Frühere Menüs können später entfernt worden sein; das Eltern-VPN beispielsweise ab 0.9.146. Echte Sperren, iCloud-Kopplung und Push benötigen weiterhin Prüfungen auf echten Test-iPhones.
 
@@ -35,6 +35,7 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 
 | Version | Download / dokumentierter Stand | Was hat sich geändert? |
 |---|---|---|
+| [0.9.172](#v0-9-172) | [Build 313](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.172) | Die Vorführung sagt jetzt, dass der Weg auf der Karte erfunden ist – keine echten Ortsdaten. |
 | [0.9.171](#v0-9-171) | [Build 312](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.171) | Die Eltern sehen jetzt, was das Kinder-iPhone wirklich sperrt, und der Sperrbildschirm sagt, was er tut: nur das Netz der Apps. |
 | [0.9.170](#v0-9-170) | [Build 311](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.170) | Die Vorführung überschreibt die echten Sperren nicht mehr und sagt, was sie nicht tut. Die Eltern sehen, was das Kinder-iPhone wirklich sperrt, und ein Trennen kommt auch offline an. |
 | [0.9.169](#v0-9-169) | [Build 309](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.169) | Der Status der Sperren steht jetzt an allen Seiten gleich: „Alles frei bis 16:30“ statt mal „Alles frei“ und mal „Nichts gesperrt“. |
@@ -102,6 +103,17 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 | [0.9.107](#v0-9-107) | CI 206, kein eigener Download | Die automatische Übertragung der Simulator-Builds ins QA-Repository wurde weiter eingerichtet. |
 | [0.9.106](#v0-9-106) | CI 205, kein eigener Download | Automatische Simulator-Builds mit derselben Build-Nummer wie bei TestFlight wurden vorbereitet. |
 | [0.9.105](#v0-9-105) | [Build 204](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.105) | Der erste veröffentlichte Simulator-Build erlaubt die Eltern-/Kind-Simulation und einen Tagesverlauf hinter der Bildschirmzeit-Karte. |
+
+<a id="v0-9-172"></a>
+### 0.9.172 (Build 313)
+
+**Kurz erklärt:** In der **Simulation** (Eltern und Kind auf einem iPhone) zeigt die Karte einen erfundenen Weg – ein erfundener Weg, der wie eine echte Aufzeichnung aussah. Unter den Orten steht jetzt ausdrücklich: „Achtung: Das ist eine Vorführung – der Weg ist erfunden, keine echten Ortsdaten.“
+
+Sonst nichts Sichtbares: Die Aufbewahrungsfristen (30 Tage für Aktivität, Standort, Sitzungen und Netz) stehen jetzt an einer Stelle im Programm, und die vier Wörter der Sperrlogik – gesperrt, ausgeblendet, frei, Schild – sind an einer Stelle erklärt.
+
+**Wo anschauen:** Auf dem Eltern-iPhone die **Simulation** starten, die Kinderseite → **Orte** öffnen und den Hinweis unter der Schalterzeile lesen. Er muss da sein und orange sein.
+
+**Prüfstand:** 411 Core-/Sync-Tests lokal grün, App, Watch und alle acht Erweiterungen bauen lokal. Build 313 stammt aus [CI-Lauf 313](https://github.com/Familiydevice/familydevice/actions/runs/42956557956); Ergebnis und QA-Download beim verwendeten Build prüfen.
 
 <a id="v0-9-171"></a>
 ### 0.9.171 (Build 312)
