@@ -27,7 +27,7 @@ Fehlerbericht maßgeblich.
 
 ### Schnellüberblick: alle Versionen
 
-Die Tabelle enthält jede Version von **0.9.105 bis 0.9.172**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
+Die Tabelle enthält jede Version von **0.9.105 bis 0.9.173**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
 
 Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, keine neu ausgeführten Tests. Frühere Menüs können später entfernt worden sein; das Eltern-VPN beispielsweise ab 0.9.146. Echte Sperren, iCloud-Kopplung und Push benötigen weiterhin Prüfungen auf echten Test-iPhones.
 
@@ -35,6 +35,7 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 
 | Version | Download / dokumentierter Stand | Was hat sich geändert? |
 |---|---|---|
+| [0.9.173](#v0-9-173) | [Build 316](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.173) | Nach „App löschen und neu installieren“ bleibt das Elternprofil erhalten: Rolle und Name kommen aus dem Keychain, die Regeln mit dem nächsten Abgleich. Dazu: die Abos sind wieder in allen Ländern im App Store erhältlich. |
 | [0.9.172](#v0-9-172) | [Build 313](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.172) | Die Vorführung sagt jetzt, dass der Weg auf der Karte erfunden ist – keine echten Ortsdaten. |
 | [0.9.171](#v0-9-171) | [Build 312](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.171) | Die Eltern sehen jetzt, was das Kinder-iPhone wirklich sperrt, und der Sperrbildschirm sagt, was er tut: nur das Netz der Apps. |
 | [0.9.170](#v0-9-170) | [Build 311](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.170) | Die Vorführung überschreibt die echten Sperren nicht mehr und sagt, was sie nicht tut. Die Eltern sehen, was das Kinder-iPhone wirklich sperrt, und ein Trennen kommt auch offline an. |
@@ -103,6 +104,17 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 | [0.9.107](#v0-9-107) | CI 206, kein eigener Download | Die automatische Übertragung der Simulator-Builds ins QA-Repository wurde weiter eingerichtet. |
 | [0.9.106](#v0-9-106) | CI 205, kein eigener Download | Automatische Simulator-Builds mit derselben Build-Nummer wie bei TestFlight wurden vorbereitet. |
 | [0.9.105](#v0-9-105) | [Build 204](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.105) | Der erste veröffentlichte Simulator-Build erlaubt die Eltern-/Kind-Simulation und einen Tagesverlauf hinter der Bildschirmzeit-Karte. |
+
+<a id="v0-9-173"></a>
+### 0.9.173 (Build 316)
+
+**Kurz erklärt:** Wer die App löscht und neu installiert, bekommt sein **Elternprofil zurück**: Der Keychain auf dem iPhone überlebt das Löschen, und die App hat die Kopplung trotzdem weggeworfen („die Bänder führen nirgendwohin“). Sie führen nirgendwohin, solange das iCloud-Postfach fehlt – aber das Postfach lässt sich neu anlegen, die Kopplung nicht. Jetzt stellt die App sie wieder her: Rolle und Name aus dem Keychain, ein neues iCloud-Postfach, und die Regeln sowie die offenen Anfragen kommen mit dem nächsten Abgleich zurück. Der Name des Geräts liegt jetzt ebenfalls im Keychain.
+
+**Außerdem behoben:** Die Abos waren im App Store freigegeben, aber in **keinem einzigen Land** erhältlich – deshalb sagte die App „Der App Store ist gerade nicht erreichbar“. Sie sind jetzt in 175 Ländern verfügbar; das Bezahlfenster lädt die Abos bei jedem Öffnen neu und nennt den Grund, wenn der App Store nichts liefert (nicht angemeldet? offline?).
+
+**Wo anschauen:** Auf dem Eltern-iPhone die App löschen und neu installieren (TestFlight-Build 316). Die App muss **ohne** den Willkommens-Schirm in die Eltern-Ansicht gehen und nach dem Abgleich wieder das Kind zeigen – ohne neues Koppeln. Der Name des Eltern-iPhones muss wie vorher sein (z. B. „Mama“), nicht „iPhone“. Danach **Familien-Abo** öffnen: Die Preise müssen da sein (kein „Der App Store ist gerade nicht erreichbar“).
+
+**Prüfstand:** 415 Core-/Sync-Tests lokal grün (davon vier für die Wiederherstellung nach der Neuinstallation), App, Watch und alle acht Erweiterungen bauen lokal. Build 316 stammt aus [CI-Lauf 316](https://github.com/Familiydevice/familydevice/actions/runs/43002747456); Ergebnis und QA-Download beim verwendeten Build prüfen.
 
 <a id="v0-9-172"></a>
 ### 0.9.172 (Build 313)
