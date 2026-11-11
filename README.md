@@ -27,7 +27,7 @@ Fehlerbericht maßgeblich.
 
 ### Schnellüberblick: alle Versionen
 
-Die Tabelle enthält jede Version von **0.9.105 bis 0.9.170**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
+Die Tabelle enthält jede Version von **0.9.105 bis 0.9.171**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
 
 Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, keine neu ausgeführten Tests. Frühere Menüs können später entfernt worden sein; das Eltern-VPN beispielsweise ab 0.9.146. Echte Sperren, iCloud-Kopplung und Push benötigen weiterhin Prüfungen auf echten Test-iPhones.
 
@@ -35,6 +35,7 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 
 | Version | Download / dokumentierter Stand | Was hat sich geändert? |
 |---|---|---|
+| [0.9.171](#v0-9-171) | [Build 312](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.171) | Die Eltern sehen jetzt, was das Kinder-iPhone wirklich sperrt, und der Sperrbildschirm sagt, was er tut: nur das Netz der Apps. |
 | [0.9.170](#v0-9-170) | [Build 311](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.170) | Die Vorführung überschreibt die echten Sperren nicht mehr und sagt, was sie nicht tut. Die Eltern sehen, was das Kinder-iPhone wirklich sperrt, und ein Trennen kommt auch offline an. |
 | [0.9.169](#v0-9-169) | [Build 309](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.169) | Der Status der Sperren steht jetzt an allen Seiten gleich: „Alles frei bis 16:30“ statt mal „Alles frei“ und mal „Nichts gesperrt“. |
 | [0.9.168](#v0-9-168) | [Build 308](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.168) | Die Benachrichtigungen haben jetzt einen einzigen Text (App, Erweiterung, Simulation) – sie können nicht mehr auseinanderlaufen. Dazu: die Push-Prüfung, die App-Einstellungen und das Entfernen freigeschalteter Profile sind jetzt erreichbar. |
@@ -101,6 +102,19 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 | [0.9.107](#v0-9-107) | CI 206, kein eigener Download | Die automatische Übertragung der Simulator-Builds ins QA-Repository wurde weiter eingerichtet. |
 | [0.9.106](#v0-9-106) | CI 205, kein eigener Download | Automatische Simulator-Builds mit derselben Build-Nummer wie bei TestFlight wurden vorbereitet. |
 | [0.9.105](#v0-9-105) | [Build 204](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.105) | Der erste veröffentlichte Simulator-Build erlaubt die Eltern-/Kind-Simulation und einen Tagesverlauf hinter der Bildschirmzeit-Karte. |
+
+<a id="v0-9-171"></a>
+### 0.9.171 (Build 312)
+
+**Kurz erklärt:** Die Eltern sahen bisher ihre **eigene Rechnung** aus den Regeln, wenn sie den Sperrzustand des Kindes ansehen – das Kinder-iPhone meldet jetzt selbst, welche Gruppen es gerade wirklich gesperrt hat. Stimmt es nicht (das Kind hat lokal etwas freigeschaltet), sieht man den Unterschied.
+
+Der Sperrbildschirm sagt jetzt auch, was er tut: „Ganzes Internet sperren“ sperrt das **Netzwerk** der Apps – die Apps selbst bleiben bedienbar, nur ohne Internet (Apple und iCloud bleiben erreichbar). Und eine Anfrage für „Bildschirmzeit“ sagt dem Kind, dass für diese Zeit **alles** frei ist, auch die Nachtregel.
+
+Dazu: Eine Sperre über alle Gruppen endet jetzt mit der Gruppe, statt dauerhaft zu stehen. Schnellaktionen nennen die Apps, die ohnehin gesperrt sind (dort ändert die Aktion nichts). Der Hinweis „Mitteilungen kommen ohne Vorschau“ in der Push-Prüfung konnte bisher nie erscheinen – jetzt schon.
+
+**Wo anschauen:** Auf dem Eltern-iPhone die Kindesseite öffnen: Unter der Statuszeile steht, welche Gruppen das Kinder-iPhone gerade sperrt. Auf dem Kinder-iPhone eine Freigabe entziehen (z. B. Standort) und nach dem nächsten Bericht prüfen, ob die Elternseite das anzeigt. Auf dem Kinder-iPhone eine App mit „Zeit anfragen“ (Bildschirmzeit) anfragen: Der Hinweis muss sagen, dass für diese Zeit alles frei ist. Unter **Netzwerk → Ganzes Internet** prüfen, dass der Hinweis zum Netzwerk (nicht zu den Apps) dasteht.
+
+**Prüfstand:** 411 Core-/Sync-Tests lokal grün, App, Watch und alle acht Erweiterungen bauen lokal. Build 312 stammt aus [CI-Lauf 312](https://github.com/Familiydevice/familydevice/actions/runs/42954901542); Ergebnis und QA-Download beim verwendeten Build prüfen.
 
 <a id="v0-9-170"></a>
 ### 0.9.170 (Build 311)
