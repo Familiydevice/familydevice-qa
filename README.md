@@ -27,7 +27,7 @@ Fehlerbericht maßgeblich.
 
 ### Schnellüberblick: alle Versionen
 
-Die Tabelle enthält jede Version von **0.9.105 bis 0.9.173**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
+Die Tabelle enthält jede Version von **0.9.105 bis 0.9.174**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
 
 Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, keine neu ausgeführten Tests. Frühere Menüs können später entfernt worden sein; das Eltern-VPN beispielsweise ab 0.9.146. Echte Sperren, iCloud-Kopplung und Push benötigen weiterhin Prüfungen auf echten Test-iPhones.
 
@@ -35,6 +35,7 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 
 | Version | Download / dokumentierter Stand | Was hat sich geändert? |
 |---|---|---|
+| [0.9.174](#v0-9-174) | [Build 318](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.174) | Die Abos sind wieder im App Store erhältlich (vorher: in keinem Land) – das Bezahlfenster findet die Preise wieder. |
 | [0.9.173](#v0-9-173) | [Build 316](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.173) | Nach „App löschen und neu installieren“ bleibt das Elternprofil erhalten: Rolle und Name kommen aus dem Keychain, die Regeln mit dem nächsten Abgleich. Dazu: die Abos sind wieder in allen Ländern im App Store erhältlich. |
 | [0.9.172](#v0-9-172) | [Build 313](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.172) | Die Vorführung sagt jetzt, dass der Weg auf der Karte erfunden ist – keine echten Ortsdaten. |
 | [0.9.171](#v0-9-171) | [Build 312](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.171) | Die Eltern sehen jetzt, was das Kinder-iPhone wirklich sperrt, und der Sperrbildschirm sagt, was er tut: nur das Netz der Apps. |
@@ -104,6 +105,17 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 | [0.9.107](#v0-9-107) | CI 206, kein eigener Download | Die automatische Übertragung der Simulator-Builds ins QA-Repository wurde weiter eingerichtet. |
 | [0.9.106](#v0-9-106) | CI 205, kein eigener Download | Automatische Simulator-Builds mit derselben Build-Nummer wie bei TestFlight wurden vorbereitet. |
 | [0.9.105](#v0-9-105) | [Build 204](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.105) | Der erste veröffentlichte Simulator-Build erlaubt die Eltern-/Kind-Simulation und einen Tagesverlauf hinter der Bildschirmzeit-Karte. |
+
+<a id="v0-9-174"></a>
+### 0.9.174 (Build 318)
+
+**Kurz erklärt:** Die Familien-Abos waren im App Store **freigegeben, aber in keinem einzigen Land erhältlich**. Deshalb hat der App Store der App keine Preise geliefert, und im Bezahlfenster stand „Der App Store ist gerade nicht erreichbar.“ Seit 0.9.173 sind alle sechs Stufen in **175 Ländern** verfügbar – ohne dass etwas an der App geändert werden musste.
+
+Dazu neu in diesem Build: Das Bezahlfenster lädt die Preise bei jedem Öffnen und bei jedem Zurückkommen in den Vordergrund neu und nennt den Grund, wenn der App Store nichts liefert (nicht angemeldet? offline?), statt nur einen allgemeinen Satz zu zeigen. Die Texte sind in 21 Sprachen übersetzt.
+
+**Wo anschauen:** Auf dem Eltern-iPhone **Familien-Abo** öffnen: Die sechs Preise müssen erscheinen (1 Kind 10 €, je weiteres Kind 1 € mehr). Kein „Der App Store ist gerade nicht erreichbar“. Nach einem Neustart des iPhones wieder öffnen – die Preise müssen wieder da sein.
+
+**Prüfstand:** 415 Core-/Sync-Tests lokal grün, App, Watch und alle acht Erweiterungen bauen lokal. Die Verfügbarkeit der Abos wurde direkt in App Store Connect geprüft (sechs Stufen APPROVED, je in 175 Ländern). Build 318 stammt aus [CI-Lauf 318](https://github.com/Familiydevice/familydevice/actions/runs/43021827488); Ergebnis und QA-Download beim verwendeten Build prüfen.
 
 <a id="v0-9-173"></a>
 ### 0.9.173 (Build 316)
