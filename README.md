@@ -27,7 +27,7 @@ Fehlerbericht maßgeblich.
 
 ### Schnellüberblick: alle Versionen
 
-Die Tabelle enthält jede Version von **0.9.105 bis 0.9.168**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
+Die Tabelle enthält jede Version von **0.9.105 bis 0.9.169**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
 
 Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, keine neu ausgeführten Tests. Frühere Menüs können später entfernt worden sein; das Eltern-VPN beispielsweise ab 0.9.146. Echte Sperren, iCloud-Kopplung und Push benötigen weiterhin Prüfungen auf echten Test-iPhones.
 
@@ -35,6 +35,7 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 
 | Version | Download / dokumentierter Stand | Was hat sich geändert? |
 |---|---|---|
+| [0.9.169](#v0-9-169) | [Build 309](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.169) | Der Status der Sperren steht jetzt an allen Seiten gleich: „Alles frei bis 16:30“ statt mal „Alles frei“ und mal „Nichts gesperrt“. |
 | [0.9.168](#v0-9-168) | [Build 308](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.168) | Die Benachrichtigungen haben jetzt einen einzigen Text (App, Erweiterung, Simulation) – sie können nicht mehr auseinanderlaufen. Dazu: die Push-Prüfung, die App-Einstellungen und das Entfernen freigeschalteter Profile sind jetzt erreichbar. |
 | [0.9.167](#v0-9-167) | [Build 307](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.167) | Der Sperrbildschirm greift nur noch, wenn wirklich eine Freigabe fehlt, lässt sich sofort abschalten und meldet sich bei den Eltern laut. Dazu: keine doppelten Benachrichtigungen, abgelaufene Anträge lassen sich nicht mehr genehmigen. |
 | [0.9.166](#v0-9-166) | [Build 303](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.166) | Fehlt auf dem Kinder-iPhone eine Freigabe, sperrt es sich selbst: alle Apps außer Notfall-Apps ausgeblendet, die Eltern bekommen eine Erklärung. Unter „Sicherheit“ abschaltbar, Standard an. |
@@ -99,6 +100,17 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 | [0.9.107](#v0-9-107) | CI 206, kein eigener Download | Die automatische Übertragung der Simulator-Builds ins QA-Repository wurde weiter eingerichtet. |
 | [0.9.106](#v0-9-106) | CI 205, kein eigener Download | Automatische Simulator-Builds mit derselben Build-Nummer wie bei TestFlight wurden vorbereitet. |
 | [0.9.105](#v0-9-105) | [Build 204](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.105) | Der erste veröffentlichte Simulator-Build erlaubt die Eltern-/Kind-Simulation und einen Tagesverlauf hinter der Bildschirmzeit-Karte. |
+
+<a id="v0-9-169"></a>
+### 0.9.169 (Build 309)
+
+**Kurz erklärt:** Der Sperr-Status steht jetzt überall gleich: „Alles frei bis 16:30“, „Gesperrt: YouTube, Games“, „Ausgeblendet bis 21:00“. Vorher stand derselbe Satz an drei Stellen in der App, und zwei davon sagten Verschiedenes – auf der einen Seite „Alles frei“, auf der anderen „Nichts gesperrt“. Das ist jetzt eine Quelle im Programm.
+
+Dazu drei Kleinigkeiten: Der Hinweis bei den App-Minuten nennt den Zeitraum, den „Jetzt“ wirklich zeigt (5 Minuten auf älteren Kinder-iPhones, 15 auf den aktuellen); der alte Kauf-Fehler bleibt nicht länger auf dem Bezahlbildschirm stehen; und die Update-Sperre sagt dem Kind, dass das **Eltern**-iPhone die neuere Version hat.
+
+**Wo anschauen:** Auf dem Eltern-iPhone das Kind öffnen und die Statuszeile mit der Elternliste vergleichen – beide müssen jetzt dasselbe sagen. In den **Erweiterten Einstellungen** des Kindes steht dieselbe Zeile. Den Info-Knopf („i“) neben den App-Minuten antippen: Der Text muss den Zeitraum nennen, der oben ausgewählt ist. Auf dem Kinder-iPhone eine App öffnen, die noch keine Regeln kennt (vor dem ersten Abgleich): Es soll jetzt ein Satz erscheinen statt gar nichts.
+
+**Prüfstand:** 411 Core-/Sync-Tests lokal grün, App, Watch und alle acht Erweiterungen bauen lokal. Build 309 stammt aus [CI-Lauf 309](https://github.com/Familiydevice/familydevice/actions/runs/42948795726); Ergebnis und QA-Download beim verwendeten Build prüfen.
 
 <a id="v0-9-168"></a>
 ### 0.9.168 (Build 308)
