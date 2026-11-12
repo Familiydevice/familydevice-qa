@@ -27,7 +27,7 @@ Fehlerbericht maßgeblich.
 
 ### Schnellüberblick: alle Versionen
 
-Die Tabelle enthält jede Version von **0.9.105 bis 0.9.175**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
+Die Tabelle enthält jede Version von **0.9.105 bis 0.9.176**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
 
 Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, keine neu ausgeführten Tests. Frühere Menüs können später entfernt worden sein; das Eltern-VPN beispielsweise ab 0.9.146. Echte Sperren, iCloud-Kopplung und Push benötigen weiterhin Prüfungen auf echten Test-iPhones.
 
@@ -35,6 +35,7 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 
 | Version | Download / dokumentierter Stand | Was hat sich geändert? |
 |---|---|---|
+| [0.9.176](#v0-9-176) | [Build 322](https://github.com/Familiydevice/familydevice/actions/runs/43330359487) – Veröffentlichung läuft | Repariert die in 0.9.175 noch unvollständige Wiederherstellung: Elternrolle und gespeicherter Name werden erkannt, das fehlende Kind kommt mit seinen bisherigen Regeln beim Abgleich zurück. |
 | [0.9.175](#v0-9-175) | [Build 319](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.175) | Nach „App löschen und neu installieren“ bleibt das Elternprofil auch erreichbar: Das Kind sieht das Eltern-iPhone wieder und die Eltern erreichen es wieder. |
 | [0.9.174](#v0-9-174) | [Build 318](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.174) | Die Abos sind wieder im App Store erhältlich (vorher: in keinem Land) – das Bezahlfenster findet die Preise wieder. |
 | [0.9.173](#v0-9-173) | [Build 316](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.173) | Nach „App löschen und neu installieren“ bleibt das Elternprofil erhalten: Rolle und Name kommen aus dem Keychain, die Regeln mit dem nächsten Abgleich. Dazu: die Abos sind wieder in allen Ländern im App Store erhältlich. |
@@ -106,6 +107,15 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 | [0.9.107](#v0-9-107) | CI 206, kein eigener Download | Die automatische Übertragung der Simulator-Builds ins QA-Repository wurde weiter eingerichtet. |
 | [0.9.106](#v0-9-106) | CI 205, kein eigener Download | Automatische Simulator-Builds mit derselben Build-Nummer wie bei TestFlight wurden vorbereitet. |
 | [0.9.105](#v0-9-105) | [Build 204](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.105) | Der erste veröffentlichte Simulator-Build erlaubt die Eltern-/Kind-Simulation und einen Tagesverlauf hinter der Bildschirmzeit-Karte. |
+
+<a id="v0-9-176"></a>
+### 0.9.176 (Build 322)
+
+**Kurz erklärt:** Die Wiederherstellung aus 0.9.173/0.9.175 war noch unvollständig: Nach einer Neuinstallation konnte erneut die Namensabfrage erscheinen, und trotz Push-Nachrichten blieb das Kind aus der Übersicht verschwunden. Jetzt erkennt die App die vorhandene Eltern-Kopplung im leeren App-Speicher und übernimmt die gespeicherte Rolle und den gespeicherten Namen. Beim Abgleich wird das fehlende Kind mit seinen bisherigen Regeln wieder angelegt. Das funktioniert auch, wenn die Eltern-Einrichtung inzwischen erneut abgeschlossen wurde. Es werden keine neuen Standardregeln über die Regeln des Kindes geschrieben.
+
+**Wo anschauen:** Eine bereits gekoppelte Eltern-App auf 0.9.176 aktualisieren und einmal öffnen; damit wird auch ein bisher nur lokal gespeicherter Name gesichert. Anschließend auf einem Test-Eltern-iPhone löschen und dieselbe Version installieren. Nach eventuell erneut nötigen iOS-Freigaben muss das Kind in der **Elternübersicht** nach dem Abgleich wieder erscheinen. In **Limits** die bisherigen Regeln kontrollieren, eine ändern und am Kinder-iPhone prüfen. Außerdem eine bereits mit 0.9.175 neu eingerichtete, leere Eltern-App direkt aktualisieren und prüfen, ob das Kind zurückkommt. Voraussetzung sind noch vorhandene Kopplungsschlüssel; eine zuvor ausdrücklich getrennte Verbindung wird nicht wiederhergestellt.
+
+**Prüfstand:** 423 Swift-Tests sowie Skripttests und der iOS-Geräte-Build auf dem macOS-Runner bestanden ([Prüflauf](https://github.com/Familiydevice/familydevice/actions/runs/43329286965)). Neue Tests löschen den echten lokalen Dateicontainer, behalten Kopplung und externe Postfächer und prüfen Wiederherstellung sowie eine Regeländerung in beide Richtungen. Echter iCloud-Abgleich auf Test-iPhones ist damit noch nicht abgenommen. [Release-Lauf 322](https://github.com/Familiydevice/familydevice/actions/runs/43330359487) erstellt TestFlight- und Simulator-Build; Veröffentlichung läuft.
 
 <a id="v0-9-175"></a>
 ### 0.9.175 (Build 319)
