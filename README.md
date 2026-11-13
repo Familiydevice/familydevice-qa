@@ -27,7 +27,7 @@ Fehlerbericht maßgeblich.
 
 ### Schnellüberblick: alle Versionen
 
-Die Tabelle enthält jede Version von **0.9.105 bis 0.9.179**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
+Die Tabelle enthält jede Version von **0.9.105 bis 0.9.180**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
 
 Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, keine neu ausgeführten Tests. Frühere Menüs können später entfernt worden sein; das Eltern-VPN beispielsweise ab 0.9.146. Echte Sperren, iCloud-Kopplung und Push benötigen weiterhin Prüfungen auf echten Test-iPhones.
 
@@ -35,6 +35,7 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 
 | Version | Download / dokumentierter Stand | Was hat sich geändert? |
 |---|---|---|
+| [0.9.180](#v0-9-180) | [Build 336](https://github.com/Familiydevice/familydevice/actions/runs/43504188434) | „Alles erlauben“ steht in der Freigabeseite direkt über „Weiter“. |
 | [0.9.179](#v0-9-179) | [Build 334](https://github.com/Familiydevice/familydevice/actions/runs/43493410278) | Die Einrichtungsseite prüft „Lokales Netzwerk“ beim Zurückwechseln aus den iOS-Einstellungen erneut. Bei erteilter Freigabe erscheint ein grüner Haken. |
 | [0.9.178](#v0-9-178) | [Build 331](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.178) | Ohne aktives, passendes Familien-Abo lassen sich Kinder-iPhones nicht mehr steuern. Das Abo-Fenster unterscheidet fehlende Angebote von Ladefehlern und ist vollständig übersetzt. |
 | [0.9.177](#v0-9-177) | [CI-Build 325](https://github.com/Familiydevice/familydevice/actions/runs/43338284943) | Nach einem Update kommen fehlende Kinder auch aus bereits abgeholten iCloud-Daten zurück, ohne auf eine neue Nachricht vom Kinder-iPhone zu warten. |
@@ -110,6 +111,15 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 | [0.9.107](#v0-9-107) | CI 206, kein eigener Download | Die automatische Übertragung der Simulator-Builds ins QA-Repository wurde weiter eingerichtet. |
 | [0.9.106](#v0-9-106) | CI 205, kein eigener Download | Automatische Simulator-Builds mit derselben Build-Nummer wie bei TestFlight wurden vorbereitet. |
 | [0.9.105](#v0-9-105) | [Build 204](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.105) | Der erste veröffentlichte Simulator-Build erlaubt die Eltern-/Kind-Simulation und einen Tagesverlauf hinter der Bildschirmzeit-Karte. |
+
+<a id="v0-9-180"></a>
+### 0.9.180 (Build 336)
+
+Im Eltern- und Kinder-Setup findest du **Alles erlauben** direkt über **Weiter**. Beide Buttons stehen in derselben Karte unter der Freigabeliste. Wenn iOS keine offenen Freigaben mehr abfragen kann, wird „Alles erlauben“ grau.
+
+**Wo anschauen** – Öffne im Setup **Freigaben**. Prüfe die beiden Buttons unten und tippe auf „Alles erlauben“, solange noch Freigaben offen sind. In der englischen App stehen dort „Allow All“ und „Continue“.
+
+[Simulatorprüfung](https://github.com/Familiydevice/familydevice/actions/runs/43500204131) · [Release-Build](https://github.com/Familiydevice/familydevice/actions/runs/43504188434)
 
 <a id="v0-9-179"></a>
 ### 0.9.179 (Build 334)
