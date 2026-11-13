@@ -27,7 +27,7 @@ Fehlerbericht maßgeblich.
 
 ### Schnellüberblick: alle Versionen
 
-Die Tabelle enthält jede Version von **0.9.105 bis 0.9.176**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
+Die Tabelle enthält jede Version von **0.9.105 bis 0.9.177**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
 
 Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, keine neu ausgeführten Tests. Frühere Menüs können später entfernt worden sein; das Eltern-VPN beispielsweise ab 0.9.146. Echte Sperren, iCloud-Kopplung und Push benötigen weiterhin Prüfungen auf echten Test-iPhones.
 
@@ -35,6 +35,7 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 
 | Version | Download / dokumentierter Stand | Was hat sich geändert? |
 |---|---|---|
+| [0.9.177](#v0-9-177) | [CI-Build 325](https://github.com/Familiydevice/familydevice/actions/runs/43338284943) | Nach einem Update kommen fehlende Kinder auch aus bereits abgeholten iCloud-Daten zurück, ohne auf eine neue Nachricht vom Kinder-iPhone zu warten. |
 | [0.9.176](#v0-9-176) | [Build 322](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.176) | Repariert die in 0.9.175 noch unvollständige Wiederherstellung: Elternrolle und gespeicherter Name werden erkannt, das fehlende Kind kommt mit seinen bisherigen Regeln beim Abgleich zurück. |
 | [0.9.175](#v0-9-175) | [Build 319](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.175) | Nach „App löschen und neu installieren“ bleibt das Elternprofil auch erreichbar: Das Kind sieht das Eltern-iPhone wieder und die Eltern erreichen es wieder. |
 | [0.9.174](#v0-9-174) | [Build 318](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.174) | Die Abos sind wieder im App Store erhältlich (vorher: in keinem Land) – das Bezahlfenster findet die Preise wieder. |
@@ -107,6 +108,15 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 | [0.9.107](#v0-9-107) | CI 206, kein eigener Download | Die automatische Übertragung der Simulator-Builds ins QA-Repository wurde weiter eingerichtet. |
 | [0.9.106](#v0-9-106) | CI 205, kein eigener Download | Automatische Simulator-Builds mit derselben Build-Nummer wie bei TestFlight wurden vorbereitet. |
 | [0.9.105](#v0-9-105) | [Build 204](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.105) | Der erste veröffentlichte Simulator-Build erlaubt die Eltern-/Kind-Simulation und einen Tagesverlauf hinter der Bildschirmzeit-Karte. |
+
+<a id="v0-9-177"></a>
+### 0.9.177 (Build 325)
+
+**Kurz erklärt:** In 0.9.176 konnte der Elternname bereits wieder da sein, während noch „Kinder-iPhone verbinden“ erschien. Sobald neue Nachrichten vom Kinder-iPhone kamen, erschien auch das Kind wieder. Jetzt liest die App bei einem fehlenden Kind auch die bereits abgeholten, verschlüsselten Kind-Daten aus iCloud erneut. So muss das Kinder-iPhone nicht erst eine neue Nachricht senden. Die alten Regeln werden wiederhergestellt; alte Freigaben, Trennungsbefehle und Benachrichtigungen werden dabei nicht erneut ausgeführt. Das Datum der ursprünglichen Kind-Meldung bleibt erhalten.
+
+**Wo anschauen:** Eine Eltern-App, die nach der Neuinstallation in 0.9.175/0.9.176 bereits Nachrichten abgeholt hat, aber noch kein Kind zeigt, auf 0.9.177 aktualisieren. Nach dem Öffnen muss das Kind aus den vorhandenen iCloud-Daten wieder in der **Elternübersicht** erscheinen – auch ohne neue Nachricht des Kindes. Danach in **Limits** die bisherigen Regeln kontrollieren. Die Kinder-App darf für diesen Fall auf 0.9.175 bleiben; es gibt kein neues Kopplungsverfahren. Voraussetzung sind weiterhin vorhandene Kopplungsschlüssel und vollständig gespeicherte Kind-Daten. Ein inzwischen wieder sichtbares Profil muss nicht erneut eingerichtet werden.
+
+**Prüfstand:** Der Fehler wurde mit unverändertem 0.9.176 durch zwei gezielt fehlschlagende Tests reproduziert ([Nachweis](https://github.com/Familiydevice/familydevice/actions/runs/43336420349)). Mit der Korrektur bestehen 427 Swift-Tests, Skripttests und der iOS-Geräte-Build auf dem macOS-Runner ([Prüflauf](https://github.com/Familiydevice/familydevice/actions/runs/43336953961)). Geprüft sind auch ein fehlender Cloud-Cursor, eine Wiederholung nach Ladefehler und der Schutz bereits neuerer Kind-Daten. Der Nutzer bestätigte die Wiederherstellung unter 0.9.176 nach neuen Push-Nachrichten; der neue Weg ohne neue Nachricht wurde automatisiert geprüft. [Release-Lauf 325](https://github.com/Familiydevice/familydevice/actions/runs/43338284943) erstellt die TestFlight- und Simulator-Pakete; den Veröffentlichungsstatus dort beziehungsweise bei den [QA-Releases](https://github.com/Familiydevice/familydevice-qa/releases) prüfen.
 
 <a id="v0-9-176"></a>
 ### 0.9.176 (Build 322)
