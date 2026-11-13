@@ -1,0 +1,41 @@
+name: release
+
+# The CI of the main repository (Familiydevice/familydevice, job
+# qa-simulator) force-pushes every simulator build as the single commit of
+# branch `build`: familydevice-simulator.zip, version, build (TestFlight's
+# build number) and commit. This workflow turns that into the release
+# v<version> — created once per version, its zip replaced on a rebuild —
+# so the "latest" link in the README always points at the newest build.
+
+on:
+  push:
+    branches: [build]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create or update the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VERSION=$(cat version)
+          BUILD=$(cat build)
+          COMMIT=$(cat commit)
+          TAG="v$VERSION"
+          TITLE="familydevice $VERSION (Build $BUILD)"
+          NOTES="Simulator-Build (Debug, ad-hoc signiert, arm64 + x86_64) von Commit $COMMIT im Haupt-Repo, Build $BUILD wie bei TestFlight. Installation: siehe README."
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" familydevice-simulator.zip --clobber
+            gh release edit "$TAG" --title "$TITLE" --notes "$NOTES" --latest
+          else
+            # The tag points at main, not at the build branch that is overwritten.
+            gh release create "$TAG" familydevice-simulator.zip --target main \
+              --title "$TITLE" --notes "$NOTES" --latest
+          fi
+          echo "$TITLE → https://github.com/${{ github.repository }}/releases/tag/$TAG" >> "$GITHUB_STEP_SUMMARY"
