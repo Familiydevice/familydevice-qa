@@ -27,7 +27,7 @@ Fehlerbericht maßgeblich.
 
 ### Schnellüberblick: alle Versionen
 
-Die Tabelle enthält jede Version von **0.9.105 bis 0.9.177**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
+Die Tabelle enthält jede Version von **0.9.105 bis 0.9.178**. Ein CI-Stand ohne veröffentlichten Download ist ausdrücklich gekennzeichnet. Ein Klick auf die Version führt zur ausführlichen Erklärung mit Prüfpunkten.
 
 Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, keine neu ausgeführten Tests. Frühere Menüs können später entfernt worden sein; das Eltern-VPN beispielsweise ab 0.9.146. Echte Sperren, iCloud-Kopplung und Push benötigen weiterhin Prüfungen auf echten Test-iPhones.
 
@@ -35,6 +35,7 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 
 | Version | Download / dokumentierter Stand | Was hat sich geändert? |
 |---|---|---|
+| [0.9.178](#v0-9-178) | [CI-Build 331](https://github.com/Familiydevice/familydevice/actions/runs/43351051261) | Ohne aktives, passendes Familien-Abo lassen sich Kinder-iPhones nicht mehr steuern. Das Abo-Fenster unterscheidet fehlende Angebote von Ladefehlern und ist vollständig übersetzt. |
 | [0.9.177](#v0-9-177) | [CI-Build 325](https://github.com/Familiydevice/familydevice/actions/runs/43338284943) | Nach einem Update kommen fehlende Kinder auch aus bereits abgeholten iCloud-Daten zurück, ohne auf eine neue Nachricht vom Kinder-iPhone zu warten. |
 | [0.9.176](#v0-9-176) | [Build 322](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.176) | Repariert die in 0.9.175 noch unvollständige Wiederherstellung: Elternrolle und gespeicherter Name werden erkannt, das fehlende Kind kommt mit seinen bisherigen Regeln beim Abgleich zurück. |
 | [0.9.175](#v0-9-175) | [Build 319](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.175) | Nach „App löschen und neu installieren“ bleibt das Elternprofil auch erreichbar: Das Kind sieht das Eltern-iPhone wieder und die Eltern erreichen es wieder. |
@@ -108,6 +109,19 @@ Die Texte beschreiben die **dokumentierten Änderungen der damaligen Version**, 
 | [0.9.107](#v0-9-107) | CI 206, kein eigener Download | Die automatische Übertragung der Simulator-Builds ins QA-Repository wurde weiter eingerichtet. |
 | [0.9.106](#v0-9-106) | CI 205, kein eigener Download | Automatische Simulator-Builds mit derselben Build-Nummer wie bei TestFlight wurden vorbereitet. |
 | [0.9.105](#v0-9-105) | [Build 204](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.105) | Der erste veröffentlichte Simulator-Build erlaubt die Eltern-/Kind-Simulation und einen Tagesverlauf hinter der Bildschirmzeit-Karte. |
+
+<a id="v0-9-178"></a>
+### 0.9.178 (Build 331)
+
+**Kurz erklärt:** Ohne aktives, passendes Familien-Abo kann man keine Kinder-iPhones hinzufügen, Regeln ändern oder Zeitanfragen erlauben bzw. ablehnen. Das gilt auch für Aktionen aus Mitteilungen und für Steuerbefehle, die auf eine Verbindung warten. Bereits eingerichtete Regeln bleiben auf den Kinder-iPhones aktiv. Die Vorführung bleibt kostenlos.
+
+**Wo anschauen:** Auf einem echten Eltern-iPhone ohne aktives Abo muss das Abo-Fenster erscheinen. Auch nach Neustart, über eine Mitteilung oder nach Wiederherstellen der Verbindung darf sich keine Regel ändern lassen. Mit einem aktiven Abo für genügend Kinder müssen diese Aktionen wieder möglich sein. Echte Käufe, Familienfreigabe und Gerätezustellung sind gesondert auf echten Test-iPhones zu prüfen.
+
+**Fehlende Angebote:** Liefert Apple keine kaufbaren Abos, steht jetzt „Abo-Angebot nicht verfügbar“. Die Anzeige behauptet dann keinen Verbindungsfehler. „Erneut versuchen“ und „Käufe wiederherstellen“ bleiben erreichbar. Prüfen in deutscher und englischer App-Sprache; im Simulator lässt sich diese Anzeige mit `-FDScreen paywall-unavailable` aufrufen.
+
+**App-Store-Konfiguration:** Die USA wurden auf Betreiberwunsch für die App und alle sechs Abos ausgeschlossen; die übrigen 174 Länder bleiben freigegeben. Anders als in den älteren Hinweisen vermutet, waren die Abos nicht in null Ländern verfügbar: Die frühere Diagnose hatte einen API-Fehler als null Länder ausgegeben. In App Store Connect sind noch Vertrags-/Steuerangaben offen. Der US-Ausschluss ersetzt diese Apple-Voraussetzung nicht und belegt keine erfolgreiche Kaufprüfung.
+
+**Prüfstand:** [Vorabprüfung erfolgreich](https://github.com/Familiydevice/familydevice/actions/runs/43348569370): 434 Kern-/Synchronisationstests, 3 Tests der Aboverwaltung, Länder- und Übersetzungsprüfungen sowie Geräte-Build. Der UI-Test auf iPhone 17 Pro / iOS 26.5 prüft die deutsche und englische Anzeige und betätigt jeweils „Erneut versuchen“; die Bilder wurden zusätzlich visuell geprüft. [CI-Build 331](https://github.com/Familiydevice/familydevice/actions/runs/43351051261) erstellt derzeit den TestFlight- und QA-Download. Echte Käufe sind wegen der offenen Apple-Vertragsangaben noch nicht bestätigt.
 
 <a id="v0-9-177"></a>
 ### 0.9.177 (Build 325)
