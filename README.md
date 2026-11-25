@@ -12,6 +12,14 @@ dieselbe wie bei TestFlight.)
 
 ## Was ist neu
 
+### 0.9.187 · Simulator-Build 347
+
+Öffnet auf dem Eltern-iPhone den Schutzstatus eines Kindes. Wenn die App auf dem Kinder-iPhone zu alt ist, um eine neue Regel zu verstehen, zeigt der Status an, auf welchem Gerät ihr familydevice aktualisieren sollt.
+
+In den Schnellaktionen steht „Internet aus“ weiter vorn. Prüft auf einem echten Kinder-iPhone, ob bei aktiver Sperre sowohl Safari als auch eine andere App keine neuen Inhalte laden. Öffnet anschließend eine Webseite in einer „Immer erlaubt“-App und prüft bei eingeschaltetem Internet, ob der eingestellte Webseitenfilter greift.
+
+[Simulator-Release 0.9.187 (Build 347)](https://github.com/Familiydevice/familydevice-qa/releases/tag/v0.9.187)
+
 Die Historie enthält die iOS-Versionen seit dem ersten QA-Release
 0.9.105, neueste Version oben. Die Einträge beschreiben den damaligen Stand;
 spätere Änderungen stehen weiter oben.
